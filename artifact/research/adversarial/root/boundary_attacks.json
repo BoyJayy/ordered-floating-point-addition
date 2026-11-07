@@ -1,0 +1,110 @@
+{
+  "status": "PASS: explicit counterexamples to stronger claims",
+  "outside_corridor": {
+    "precision": 7,
+    "one_addend": 512,
+    "markers": [
+      72,
+      76,
+      80,
+      84,
+      88,
+      92
+    ],
+    "outputs": [
+      584,
+      592,
+      592,
+      592,
+      600,
+      608
+    ],
+    "gap_deviations": [
+      4,
+      -4,
+      -4,
+      4,
+      4
+    ],
+    "support": 5,
+    "total_deviation": 20,
+    "refutes": "support<=m and variation<=5m without the two-binade condition"
+  },
+  "wrong_tie_rule": {
+    "precision": 4,
+    "initial": 8,
+    "block": [
+      9,
+      -9
+    ],
+    "ties_even": 7,
+    "ties_away": 9,
+    "refutes": "same parity formula under arbitrary rounding"
+  },
+  "sum_then_round": {
+    "blocks": [
+      [
+        9,
+        -9
+      ],
+      [
+        5,
+        -5
+      ]
+    ],
+    "initial": 8,
+    "ordered_outputs": [
+      7,
+      8
+    ],
+    "real_sum_then_round_outputs": [
+      8,
+      8
+    ]
+  },
+  "promise_distinction": {
+    "R": 128,
+    "exact_sum": "255/4",
+    "rounded_sum": 64,
+    "meaning": "rounded-state promise alone differs from exact-and-rounded promise"
+  },
+  "approximation": {
+    "family": "outputs x or x-1",
+    "zero_message_answer": "x",
+    "absolute_error_bound": 1,
+    "meaning": "exact-output lower bounds do not transfer to this tolerance"
+  },
+  "arbitrary_multiset_order": {
+    "precision": 11,
+    "k": 5,
+    "block": [
+      128,
+      132,
+      136,
+      140,
+      144,
+      365,
+      348,
+      325,
+      308,
+      285,
+      -128,
+      -132,
+      -136,
+      -140,
+      -144,
+      -365,
+      -348,
+      -325,
+      -308,
+      -285
+    ],
+    "zero_start_output": 1,
+    "meaning": "F(0)=0 holds for the constructed slot orders, not all permutations"
+  },
+  "interaction": {
+    "protocol": "decoder sends x to block owner; owner computes and returns F_a(x)",
+    "communication": "2w bits",
+    "meaning": "one-way direction and lack of later interaction are essential"
+  }
+}

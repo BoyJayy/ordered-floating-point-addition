@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "model": "integer lattice, binary significand RN ties-to-even, finite exponent range assumed",
+  "seed": 2026110719,
+  "command": "python3 -B independent/check_fp_markers.py",
+  "exhaustive": [
+    {
+      "precision": 4,
+      "markers": 2,
+      "subsets": 4,
+      "marker_evaluations": 8,
+      "padded_length": 4,
+      "fixed_n_counts": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "precision": 5,
+      "markers": 6,
+      "subsets": 64,
+      "marker_evaluations": 384,
+      "padded_length": 12,
+      "fixed_n_counts": [
+        1,
+        6,
+        15,
+        20,
+        15,
+        6,
+        1
+      ]
+    },
+    {
+      "precision": 6,
+      "markers": 14,
+      "subsets": 16384,
+      "marker_evaluations": 229376,
+      "padded_length": 28,
+      "fixed_n_counts": [
+        1,
+        14,
+        91,
+        364,
+        1001,
+        2002,
+        3003,
+        3432,
+        3003,
+        2002,
+        1001,
+        364,
+        91,
+        14,
+        1
+      ]
+    }
+  ],
+  "sampled": [
+    {
+      "precision": 8,
+      "markers": 62,
+      "sampled_cardinalities": [
+        1,
+        2,
+        7,
+        31
+      ],
+      "selected_subsets": 48,
+      "marker_evaluations": 1488,
+      "distinct_pair_checks": 48
+    },
+    {
+      "precision": 11,
+      "markers": 510,
+      "sampled_cardinalities": [
+        1,
+        2,
+        7,
+        31,
+        127
+      ],
+      "selected_subsets": 60,
+      "marker_evaluations": 2052,
+      "distinct_pair_checks": 60
+    },
+    {
+      "precision": 24,
+      "markers": 4194302,
+      "sampled_cardinalities": [
+        1,
+        2,
+        7,
+        31,
+        127,
+        1024
+      ],
+      "selected_subsets": 72,
+      "marker_evaluations": 2556,
+      "distinct_pair_checks": 72
+    },
+    {
+      "precision": 53,
+      "markers": 2251799813685246,
+      "sampled_cardinalities": [
+        1,
+        2,
+        7,
+        31,
+        127,
+        1024
+      ],
+      "selected_subsets": 72,
+      "marker_evaluations": 2556,
+      "distinct_pair_checks": 72
+    }
+  ],
+  "group_index_decoder": [
+    {
+      "precision": 4,
+      "encoded_blocks": 2,
+      "decoded_bits": 2
+    },
+    {
+      "precision": 5,
+      "encoded_blocks": 24,
+      "decoded_bits": 56
+    },
+    {
+      "precision": 6,
+      "encoded_blocks": 528,
+      "decoded_bits": 3056
+    }
+  ]
+}

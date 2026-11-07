@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "scope": "exact finite mathematical checks; no timing or hardware claims",
+  "uniform": {
+    "cases": 347376,
+    "q_values": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "phases": "quarters over one complete ties-even period",
+    "gap_range": "0..2Q inclusive",
+    "status": "PASS"
+  },
+  "fixtures": {
+    "status": "PASS",
+    "old_step_four_bound_fails_in_three_binades": {
+      "p": 8,
+      "k": 3,
+      "operand": 386,
+      "inputs": [
+        136,
+        140,
+        144,
+        148,
+        152,
+        156,
+        160,
+        164,
+        168,
+        172,
+        176,
+        180,
+        184,
+        188
+      ],
+      "outputs": [
+        520,
+        528,
+        528,
+        536,
+        536,
+        544,
+        544,
+        552,
+        552,
+        560,
+        560,
+        568,
+        568,
+        576
+      ],
+      "gaps": [
+        8,
+        0,
+        8,
+        0,
+        8,
+        0,
+        8,
+        0,
+        8,
+        0,
+        8,
+        0,
+        8
+      ],
+      "support": 13,
+      "total_deviation": 52,
+      "residue_deviations": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "unconditional_per_pair_Q_charge_fails": {
+      "p": 6,
+      "k": 4,
+      "u": 51,
+      "v": 291,
+      "rounded": [
+        51,
+        288
+      ],
+      "old_gap": 240,
+      "new_gap": 237,
+      "charge": 18,
+      "q": 16
+    }
+  },
+  "local": {
+    "status": "PASS",
+    "formats": [
+      {
+        "p": 4,
+        "k": 2,
+        "rounder_comparisons": 96,
+        "pair_cases": 1104,
+        "by_crossings": {
+          "0": 632,
+          "1": 472
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 4,
+        "k": 3,
+        "rounder_comparisons": 224,
+        "pair_cases": 5940,
+        "by_crossings": {
+          "0": 2572,
+          "1": 2416,
+          "2": 952
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 4,
+        "k": 4,
+        "rounder_comparisons": 480,
+        "pair_cases": 27144,
+        "by_crossings": {
+          "0": 10176,
+          "1": 10208,
+          "2": 4848,
+          "3": 1912
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      },
+      {
+        "p": 5,
+        "k": 2,
+        "rounder_comparisons": 192,
+        "pair_cases": 4512,
+        "by_crossings": {
+          "0": 2544,
+          "1": 1968
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 5,
+        "k": 3,
+        "rounder_comparisons": 448,
+        "pair_cases": 24420,
+        "by_crossings": {
+          "0": 10516,
+          "1": 9952,
+          "2": 3952
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 5,
+        "k": 4,
+        "rounder_comparisons": 960,
+        "pair_cases": 111864,
+        "by_crossings": {
+          "0": 42088,
+          "1": 41920,
+          "2": 19936,
+          "3": 7920
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      },
+      {
+        "p": 6,
+        "k": 2,
+        "rounder_comparisons": 384,
+        "pair_cases": 18240,
+        "by_crossings": {
+          "0": 10208,
+          "1": 8032
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 6,
+        "k": 3,
+        "rounder_comparisons": 896,
+        "pair_cases": 99012,
+        "by_crossings": {
+          "0": 42532,
+          "1": 40384,
+          "2": 16096
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 6,
+        "k": 4,
+        "rounder_comparisons": 1920,
+        "pair_cases": 454104,
+        "by_crossings": {
+          "0": 171192,
+          "1": 169856,
+          "2": 80832,
+          "3": 32224
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      },
+      {
+        "p": 4,
+        "k": 5,
+        "rounder_comparisons": 992,
+        "pair_cases": 115680,
+        "by_crossings": {
+          "0": 40280,
+          "1": 41408,
+          "2": 20448,
+          "3": 9712,
+          "4": 3832
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 32,
+          "2": 32,
+          "3": 36,
+          "4": 38
+        }
+      },
+      {
+        "p": 4,
+        "k": 6,
+        "rounder_comparisons": 2016,
+        "pair_cases": 477264,
+        "by_crossings": {
+          "0": 160072,
+          "1": 166272,
+          "2": 82880,
+          "3": 40928,
+          "4": 19440,
+          "5": 7672
+        },
+        "max_charge": {
+          "0": 0,
+          "1": 64,
+          "2": 64,
+          "3": 72,
+          "4": 76,
+          "5": 78
+        }
+      }
+    ],
+    "pair_cases": 1339284,
+    "rounder_comparisons": 8608,
+    "counterexamples_to_charge_Q_without_crossing_count": [
+      {
+        "p": 4,
+        "k": 4,
+        "q": 16,
+        "left_quarters": 44,
+        "right_quarters": 300,
+        "old_gap": 64,
+        "new_gap": 61,
+        "crossed_boundaries": 3,
+        "charge": 18
+      },
+      {
+        "p": 4,
+        "k": 5,
+        "q": 32,
+        "left_quarters": 36,
+        "right_quarters": 548,
+        "old_gap": 128,
+        "new_gap": 135,
+        "crossed_boundaries": 4,
+        "charge": 38
+      },
+      {
+        "p": 4,
+        "k": 6,
+        "q": 64,
+        "left_quarters": 36,
+        "right_quarters": 548,
+        "old_gap": 128,
+        "new_gap": 135,
+        "crossed_boundaries": 4,
+        "charge": 70
+      }
+    ]
+  },
+  "global": {
+    "status": "PASS",
+    "seed": 2026110721,
+    "blocks": 600,
+    "prefixes": 20520,
+    "table_comparisons": 430920,
+    "highest_binade_index": 5,
+    "prefixes_by_format": {
+      "p6_K2": 1026,
+      "p6_K3": 1026,
+      "p6_K4": 1026,
+      "p6_K5": 1026,
+      "p6_K6": 1026,
+      "p7_K2": 1026,
+      "p7_K3": 1026,
+      "p7_K4": 1026,
+      "p7_K5": 1026,
+      "p7_K6": 1026,
+      "p8_K2": 1026,
+      "p8_K3": 1026,
+      "p8_K4": 1026,
+      "p8_K5": 1026,
+      "p8_K6": 1026,
+      "p10_K2": 1026,
+      "p10_K3": 1026,
+      "p10_K4": 1026,
+      "p10_K5": 1026,
+      "p10_K6": 1026
+    },
+    "arithmetic": "exact integer quarter units; representable operands only",
+    "scope": "random valid blocks; every query and every prefix checked"
+  }
+}

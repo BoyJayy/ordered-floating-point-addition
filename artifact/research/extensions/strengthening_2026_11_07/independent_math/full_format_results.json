@@ -1,0 +1,52 @@
+{
+  "scope": "finite binary numerical semantics; gradual underflow; signed zeros identified; finite operands; no NaNs or flags",
+  "local": {
+    "status": "PASS",
+    "rounder_comparisons": 30018,
+    "coverage": "all integer exact sums in [-2M,2M], all finite input rank roundtrips"
+  },
+  "exhaustive": {
+    "status": "PASS",
+    "blocks": 984,
+    "prefixes": 1904,
+    "all_input_queries": 35356,
+    "maximum_piece_count": 11,
+    "formats": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "block_lengths": "0..2; all representable finite operands"
+  },
+  "random": {
+    "status": "PASS",
+    "seed": 2026110761,
+    "blocks": 400,
+    "prefixes": 8500,
+    "all_input_queries": 876860,
+    "maximum_piece_count": 120
+  },
+  "fixtures": {
+    "status": "PASS",
+    "overflow_midpoints": "p2,E2: +/-7 -> +/-infinity",
+    "absorbing_infinity": true,
+    "negative_boundary_identity": true,
+    "negative_boundary_piece": "p3,E3, operand -8: inputs0,1 return -8,-7; coarse-side classification would return -8,-8",
+    "invalid_operand_rejections": 4
+  },
+  "status": "PASS",
+  "reference_sha256": "7f098bbfa4f02ca93a614ded6a174c0121c05a5e8f36ac848b4cf56d884958f0"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "seed": 2026110757,
+  "blocks": 240,
+  "prefixes": 4980,
+  "queries": 104580,
+  "maximum_piece_count": 15,
+  "atomic_update_rejections": 3,
+  "invalid_query_rejections": 3,
+  "source_sha256": "c2f2234751e570502a4931bcb21d9cf37958de8ad850104e21236b34ba40e499",
+  "scope": "independent exact integer oracle; full input grids; no device runs"
+}

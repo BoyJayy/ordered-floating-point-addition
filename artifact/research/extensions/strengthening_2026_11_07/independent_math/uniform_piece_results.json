@@ -1,0 +1,50 @@
+{
+  "scope": "independent exact finite checks; no GPU measurements",
+  "uniform": {
+    "status": "PASS",
+    "exhaustive_compositions": 87165,
+    "random_compositions": 160,
+    "query_checks": 904342,
+    "max_lattice_spacing": 128,
+    "max_length": 64,
+    "invariant": "coset modulo H, not necessarily zero residue"
+  },
+  "pieces": {
+    "status": "PASS",
+    "blocks": 560,
+    "prefixes": 19152,
+    "queries": 402192,
+    "prefixes_with_lower_fringe": 561,
+    "total_evaluator_probes": 989920,
+    "maximum_piece_count": 24,
+    "comparison": "full exact binary rounding versus independent uniform piece update"
+  },
+  "fixtures": {
+    "status": "PASS",
+    "nonzero_coset_example": [
+      41,
+      41,
+      49,
+      49
+    ],
+    "observed": {
+      "period_sentinel": {
+        "h": 16,
+        "a8": 56,
+        "thresholds": [
+          3,
+          8
+        ]
+      },
+      "equal_thresholds": {
+        "h": 4,
+        "a8": 8,
+        "thresholds": [
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "kind": "exact rational mathematics; no hardware or GPU measurements",
+  "seed": 20261107,
+  "checks": {
+    "uniform_cases": 11340,
+    "uniform_values": 189912,
+    "clipped_rebased_values": 101080,
+    "fringe_values": 42496,
+    "strict_inclusion_queries": 208
+  },
+  "section_sha256": "b63630a4d76f8b6ab62d70a98e295cb8f4ee10957124d55635d5de66b98fc1eb",
+  "script_sha256": "b6ccade91d3f466281b68165affd34021cc195d3e08c709238850d4bca9d176a",
+  "limits": "finite counterexample search supplements the independent proof review; does not prove the general theorem or test the implementation"
+}

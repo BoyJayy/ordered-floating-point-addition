@@ -1,0 +1,187 @@
+{
+  "seed": 771106,
+  "method": "classical combinatorial number system",
+  "scope": "only constructed threshold family on marker states; not a new coding algorithm",
+  "cases": [
+    {
+      "precision": 4,
+      "input_additions": 2,
+      "threshold_count": 1,
+      "universe": 2,
+      "lower_bound_bits": 1,
+      "matching_family_code_bits": 1,
+      "witness_queries": 2
+    },
+    {
+      "precision": 4,
+      "input_additions": 4,
+      "threshold_count": 2,
+      "universe": 2,
+      "lower_bound_bits": 0,
+      "matching_family_code_bits": 0,
+      "witness_queries": 2
+    },
+    {
+      "precision": 6,
+      "input_additions": 2,
+      "threshold_count": 1,
+      "universe": 14,
+      "lower_bound_bits": 4,
+      "matching_family_code_bits": 4,
+      "witness_queries": 14
+    },
+    {
+      "precision": 6,
+      "input_additions": 4,
+      "threshold_count": 2,
+      "universe": 14,
+      "lower_bound_bits": 7,
+      "matching_family_code_bits": 7,
+      "witness_queries": 14
+    },
+    {
+      "precision": 6,
+      "input_additions": 16,
+      "threshold_count": 8,
+      "universe": 14,
+      "lower_bound_bits": 12,
+      "matching_family_code_bits": 12,
+      "witness_queries": 14
+    },
+    {
+      "precision": 11,
+      "input_additions": 2,
+      "threshold_count": 1,
+      "universe": 510,
+      "lower_bound_bits": 9,
+      "matching_family_code_bits": 9,
+      "witness_queries": 93
+    },
+    {
+      "precision": 11,
+      "input_additions": 4,
+      "threshold_count": 2,
+      "universe": 510,
+      "lower_bound_bits": 17,
+      "matching_family_code_bits": 17,
+      "witness_queries": 97
+    },
+    {
+      "precision": 11,
+      "input_additions": 16,
+      "threshold_count": 8,
+      "universe": 510,
+      "lower_bound_bits": 57,
+      "matching_family_code_bits": 57,
+      "witness_queries": 94
+    },
+    {
+      "precision": 11,
+      "input_additions": 64,
+      "threshold_count": 32,
+      "universe": 510,
+      "lower_bound_bits": 169,
+      "matching_family_code_bits": 169,
+      "witness_queries": 120
+    },
+    {
+      "precision": 11,
+      "input_additions": 256,
+      "threshold_count": 128,
+      "universe": 510,
+      "lower_bound_bits": 410,
+      "matching_family_code_bits": 410,
+      "witness_queries": 201
+    },
+    {
+      "precision": 24,
+      "input_additions": 2,
+      "threshold_count": 1,
+      "universe": 4194302,
+      "lower_bound_bits": 22,
+      "matching_family_code_bits": 22,
+      "witness_queries": 103
+    },
+    {
+      "precision": 24,
+      "input_additions": 4,
+      "threshold_count": 2,
+      "universe": 4194302,
+      "lower_bound_bits": 43,
+      "matching_family_code_bits": 43,
+      "witness_queries": 104
+    },
+    {
+      "precision": 24,
+      "input_additions": 16,
+      "threshold_count": 8,
+      "universe": 4194302,
+      "lower_bound_bits": 161,
+      "matching_family_code_bits": 161,
+      "witness_queries": 110
+    },
+    {
+      "precision": 24,
+      "input_additions": 64,
+      "threshold_count": 32,
+      "universe": 4194302,
+      "lower_bound_bits": 587,
+      "matching_family_code_bits": 587,
+      "witness_queries": 134
+    },
+    {
+      "precision": 24,
+      "input_additions": 256,
+      "threshold_count": 128,
+      "universe": 4194302,
+      "lower_bound_bits": 2100,
+      "matching_family_code_bits": 2100,
+      "witness_queries": 230
+    },
+    {
+      "precision": 53,
+      "input_additions": 2,
+      "threshold_count": 1,
+      "universe": 2251799813685246,
+      "lower_bound_bits": 51,
+      "matching_family_code_bits": 51,
+      "witness_queries": 103
+    },
+    {
+      "precision": 53,
+      "input_additions": 4,
+      "threshold_count": 2,
+      "universe": 2251799813685246,
+      "lower_bound_bits": 101,
+      "matching_family_code_bits": 101,
+      "witness_queries": 104
+    },
+    {
+      "precision": 53,
+      "input_additions": 16,
+      "threshold_count": 8,
+      "universe": 2251799813685246,
+      "lower_bound_bits": 393,
+      "matching_family_code_bits": 393,
+      "witness_queries": 110
+    },
+    {
+      "precision": 53,
+      "input_additions": 64,
+      "threshold_count": 32,
+      "universe": 2251799813685246,
+      "lower_bound_bits": 1515,
+      "matching_family_code_bits": 1515,
+      "witness_queries": 134
+    },
+    {
+      "precision": 53,
+      "input_additions": 256,
+      "threshold_count": 128,
+      "universe": 2251799813685246,
+      "lower_bound_bits": 5812,
+      "matching_family_code_bits": 5812,
+      "witness_queries": 230
+    }
+  ]
+}

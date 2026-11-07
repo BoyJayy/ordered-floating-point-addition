@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: >-
+  Cite the preprint for the mathematical results. If you use the code or
+  retained experimental records, also cite the archived artifact below.
+type: software
+title: >-
+  Reproducibility artifact for Information bounds and exact indices for
+  ordered floating-point addition
+authors:
+  - family-names: Popkov
+    given-names: Artem D.
+    orcid: https://orcid.org/0009-0005-8977-0400
+version: 1.0.0
+date-released: '2026-11-08'
+doi: 10.5281/zenodo.24044237
+url: https://zenodo.org/records/24044237
+keywords:
+  - floating-point arithmetic
+  - ordered summation
+  - information lower bounds
+  - exact indexing
+  - reproducibility
+preferred-citation:
+  type: generic
+  title: Information bounds and exact indices for ordered floating-point addition
+  authors:
+    - family-names: Popkov
+      given-names: Artem D.
+      orcid: https://orcid.org/0009-0005-8977-0400
+  year: 2026
+  month: 11
+  version: '1.0'
+  doi: 10.5281/zenodo.24045377
+  url: https://zenodo.org/records/24045377
+  publisher:
+    name: Zenodo
+  notes: Preprint; has not undergone external peer review.

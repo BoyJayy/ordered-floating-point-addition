@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "model": "integer lattice, exact binary RN ties-to-even",
+  "seed": 2026110721,
+  "exhaustive": [
+    {
+      "precision": 6,
+      "k": 1,
+      "blocks": 1,
+      "probes": 1
+    },
+    {
+      "precision": 8,
+      "k": 2,
+      "blocks": 2,
+      "probes": 8
+    },
+    {
+      "precision": 10,
+      "k": 3,
+      "blocks": 6,
+      "probes": 54
+    },
+    {
+      "precision": 10,
+      "k": 4,
+      "blocks": 24,
+      "probes": 384
+    },
+    {
+      "precision": 11,
+      "k": 5,
+      "blocks": 120,
+      "probes": 3000
+    },
+    {
+      "precision": 12,
+      "k": 6,
+      "blocks": 720,
+      "probes": 25920
+    }
+  ],
+  "rank_decoder_exhaustive": [
+    {
+      "precision": 6,
+      "k": 1,
+      "encoded_blocks": 1,
+      "decoded_bits": 0
+    },
+    {
+      "precision": 8,
+      "k": 2,
+      "encoded_blocks": 2,
+      "decoded_bits": 2
+    },
+    {
+      "precision": 10,
+      "k": 3,
+      "encoded_blocks": 4,
+      "decoded_bits": 8
+    },
+    {
+      "precision": 10,
+      "k": 4,
+      "encoded_blocks": 16,
+      "decoded_bits": 64
+    },
+    {
+      "precision": 11,
+      "k": 5,
+      "encoded_blocks": 64,
+      "decoded_bits": 384
+    },
+    {
+      "precision": 12,
+      "k": 6,
+      "encoded_blocks": 256,
+      "decoded_bits": 2048
+    },
+    {
+      "precision": 12,
+      "k": 7,
+      "encoded_blocks": 1024,
+      "decoded_bits": 10240
+    }
+  ],
+  "sampled": [
+    {
+      "precision": 11,
+      "k": 5,
+      "probes": 324,
+      "comparisons": 12
+    },
+    {
+      "precision": 24,
+      "k": 128,
+      "probes": 539,
+      "comparisons": 12
+    },
+    {
+      "precision": 53,
+      "k": 512,
+      "probes": 540,
+      "comparisons": 12
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "seed": 711202608,
+  "small_blocks": 144,
+  "small_prefixes": 2280,
+  "table_comparisons": 107920,
+  "promise_rejections": 3,
+  "large_domains": [
+    {
+      "p": 24,
+      "domain_states": 1048574,
+      "steps": 256,
+      "support": 128,
+      "queries": 642,
+      "payload_bits": 2602,
+      "fixed_budget_bits": 4645,
+      "serialized_bytes": 581,
+      "rounding_evaluations": 33536
+    },
+    {
+      "p": 53,
+      "domain_states": 562949953421310,
+      "steps": 256,
+      "support": 128,
+      "queries": 642,
+      "payload_bits": 6343,
+      "fixed_budget_bits": 12099,
+      "serialized_bytes": 1513,
+      "rounding_evaluations": 33536
+    }
+  ],
+  "focused_cases": 5,
+  "malformed_payload_rejections": 1,
+  "saved_gpu_comparisons": 20153,
+  "scope": "exact rational sparse algorithm; full-table oracle and saved GPU output comparison; no speed measurement"
+}

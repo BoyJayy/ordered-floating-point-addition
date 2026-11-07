@@ -1,0 +1,5 @@
+Code (.py, .cpp, .mm, .metal and retained assembly .s): MIT.
+Documentation, metadata, input data and result records: CC BY 4.0.
+License texts retain their own legal status.
+See FILE_LICENSES.csv for the complete file mapping.
+The article is distributed separately and is not licensed by this archive.

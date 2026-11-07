@@ -1,0 +1,11 @@
+{
+  "seed": 89623471,
+  "blocks": 84,
+  "query_checks": 18240,
+  "serialization_round_trips": 3444,
+  "modes_tested": [
+    "monotone",
+    "sparse"
+  ],
+  "note": "Quarter-valued addends also test the broader rational interface accepted by the reference."
+}

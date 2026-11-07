@@ -1,0 +1,85 @@
+REPRODUCING THE CHECKS
+
+1. Portable checks
+From the archive root, using Python 3.10 or newer:
+    python3 -B verify_release.py
+    python3 -B run_quick_checks.py
+
+Only Python's standard library is required. The quick checks cover saved-record
+consistency, boundary counterexamples, thresholds at p=4,5,6, K=2..256, and small
+finite-format rounding/index cases. They run in a temporary copy.
+
+2. Additional exact checks
+Make a working copy before the commands below: several scripts write results
+beside their source. Keep new results separate from the retained records.
+Run these commands from the working copy's research/ directory:
+    python3 -B lower_bound/proofcheck.py
+    python3 -B independent/check_fp_markers.py
+    python3 -B independent/extension_permutations.py
+    python3 -B experiments/subset_baseline.py
+    python3 -B experiments/optimistic_reference.py
+    python3 -B experiments/check_corridor_summary.py
+    python3 -B extensions/multibinade_2026_11_07/check_multibinade.py
+    python3 -B extensions/multibinade_2026_11_07/check_sparse.py
+    python3 -B extensions/multibinade_2026_11_07/independent_review/check_independent.py
+    python3 -B extensions/strengthening_2026_11_07/check_staircase.py
+    python3 -B extensions/strengthening_2026_11_07/independent_math/check_rounded_corridor.py
+    python3 -B extensions/strengthening_2026_11_07/independent_math/check_uniform_pieces.py
+    python3 -B extensions/strengthening_2026_11_07/independent_math/crosscheck_parent.py
+    python3 -B extensions/strengthening_2026_11_07/independent_math/check_full_format.py
+    python3 -B extensions/strengthening_2026_11_07/prior_art/independent_section_checks.py
+    python3 -B extensions/strengthening_2026_11_07/prior_art/independent_full_format_checks.py
+
+Some full enumerations take longer than the bounded quick checks. The corridor
+checker compares saved GPU bits; this comparison is not a new GPU run.
+
+3. Solver checks
+These commands require z3-solver (including the two scripts that import it
+indirectly). Run from research/ in the working copy:
+    python3 -B experiments/prove_gadget.py
+    python3 -B experiments/prove_gap.py
+    python3 -B adversarial/math/independent_audit.py
+    python3 -B adversarial/math/reference_crosscheck.py
+    python3 -B adversarial/math/manuscript_scope_check.py
+
+The saved original solver results contain 4 gadget and 192 gap obligations with
+UNSAT status. Earlier unsplit attempts and their UNKNOWN outcomes are retained.
+These are local lemmas, not a machine-checked proof of the whole article.
+
+4. Native CPU checks
+Requirements: a C++20 compiler supporting the flags and formats below. These
+commands reproduce the recorded Apple Clang configuration; other platforms may
+need different compiler flags. Run from research/ in a working copy:
+    mkdir -p build
+    clang++ -std=c++20 -O2 -Wall -Wextra -Werror -ffp-model=strict experiments/native_fold.cpp -o build/native_fold
+    ./build/native_fold > results/raw/native_fold.jsonl
+    clang++ -std=c++20 -O2 -ffp-model=strict -S experiments/native_fold.cpp -o results/raw/native_fold.s
+    clang++ -std=c++20 -O2 -Wall -Wextra -Werror -ffp-model=strict experiments/native_factorial.cpp -o build/native_factorial
+    ./build/native_factorial > results/raw/native_factorial.jsonl
+
+The original C++ runs contain 120,925 binary16/binary32/binary64 queries. The
+programs request and check round-to-nearest and round each addition separately.
+To repeat the later whole-format CPU checks, NumPy is required:
+    python3 -B extensions/strengthening_2026_11_07/check_full_native.py
+The retained NPZ files store operand, input and output bits; that run contains
+23,056 sampled queries and 184,448 native NumPy additions.
+
+5. Metal GPU checks
+Requirements: macOS, Apple developer tools and a compatible Metal device.
+Run from research/ in a working copy:
+    mkdir -p build
+    python3 -B experiments/prepare_metal.py
+    python3 -B experiments/prepare_factorial.py
+    xcrun clang++ -std=c++20 -O2 -Wall -Wextra -Werror -mmacosx-version-min=15.0 -fobjc-arc -framework Foundation -framework Metal experiments/metal_fold.mm -o build/metal_fold
+    ./build/metal_fold experiments/metal_fold.metal results/raw/metal_inputs.bin > results/raw/metal_fold.json
+    ./build/metal_fold experiments/metal_fold.metal results/raw/factorial_inputs.bin results/raw/factorial_outputs.bin > results/raw/metal_factorial.json
+
+The retained runs use binary32 only: 7,560 threshold and 20,153 permutation
+queries, each computed sequentially within one GPU thread. They test correctness,
+not a speedup. The device, compiler and rounding settings are recorded in
+results/environment.json and the raw reports. No CUDA measurements are included.
+
+6. Interpreting results
+EVIDENCE_MAP.json maps the article's tables and sections to the retained files.
+Execution durations in reports are check durations, not performance benchmarks.
+Dependencies are not bundled. No command downloads or installs software.

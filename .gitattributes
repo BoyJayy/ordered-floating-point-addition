@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# Preserve the exact bytes covered by the published artifact checksums.
+artifact/** -text -whitespace
+paper/article.pdf binary
+artifact/research/results/raw/*.s linguist-generated=true
+artifact/**/*.json linguist-generated=true
+artifact/**/*.jsonl linguist-generated=true
+artifact/**/*.smt2 linguist-generated=true

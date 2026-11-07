@@ -1,0 +1,1 @@
+{"attempts":[{"formulation":"direct ToInt rounding","status":"unknown","reason":"10000 ms timeout"},{"formulation":"integer/fraction decomposition without finite phase split","status":"unknown","reason":"10000 ms timeout"}],"conclusion":"No counterexample found; these two queries did not prove the lemma."}

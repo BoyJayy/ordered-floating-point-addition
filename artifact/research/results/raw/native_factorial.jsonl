@@ -1,0 +1,3 @@
+{"precision":11,"blocks":32,"queries":8517,"mismatches":0,"nonidentity_results":5155,"same_multiset":true,"two_binades":true,"scope":"actual CPU factorial witness"}
+{"precision":24,"blocks":64,"queries":22343,"mismatches":0,"nonidentity_results":11751,"same_multiset":true,"two_binades":true,"scope":"actual CPU factorial witness"}
+{"precision":53,"blocks":64,"queries":22337,"mismatches":0,"nonidentity_results":11956,"same_multiset":true,"two_binades":true,"scope":"actual CPU factorial witness"}

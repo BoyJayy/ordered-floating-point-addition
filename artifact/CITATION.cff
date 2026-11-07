@@ -1,0 +1,23 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Please cite this version of the artifact and the associated article separately.",
+  "type": "software",
+  "title": "Reproducibility artifact for Information bounds and exact indices for ordered floating-point addition",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "family-names": "Popkov",
+      "given-names": "Artem D.",
+      "orcid": "https://orcid.org/0009-0005-8977-0400"
+    }
+  ],
+  "abstract": "Code, exact-model checks, counterexamples and retained native CPU/GPU records for ordered floating-point addition. GPU records cover binary32 only.",
+  "keywords": [
+    "floating-point arithmetic",
+    "ordered summation",
+    "reproducibility",
+    "communication complexity",
+    "exact indexing"
+  ],
+  "doi": "10.5281/zenodo.24044237"
+}

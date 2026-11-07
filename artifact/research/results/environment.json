@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Europe/Moscow",
+  "architecture": "arm64",
+  "python": "3.15.1",
+  "system": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+  "native_compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "metal_host_compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "gpu": "Apple M5 Pro",
+  "metal_language": "3.1",
+  "metal_math_mode": "MTLMathModeSafe",
+  "z3": "5.3.2",
+  "note": "Recorded execution environment for the retained CPU, binary32 Metal GPU and SMT results."
+}

@@ -1,0 +1,138 @@
+{
+  "scope": "exact mathematical finite checks, no device runs",
+  "local": {
+    "status": "PASS",
+    "pair_cases": 1495456,
+    "lower_fringe_pairs": 2776,
+    "independent_rounder_comparisons": 11095,
+    "formats": [
+      {
+        "p": 4,
+        "k": 2,
+        "pair_cases": 2256,
+        "lower_fringe_pairs": 48,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 4,
+        "k": 3,
+        "pair_cases": 11990,
+        "lower_fringe_pairs": 110,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 4,
+        "k": 4,
+        "pair_cases": 54522,
+        "lower_fringe_pairs": 234,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      },
+      {
+        "p": 5,
+        "k": 2,
+        "pair_cases": 9120,
+        "lower_fringe_pairs": 96,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 5,
+        "k": 3,
+        "pair_cases": 49062,
+        "lower_fringe_pairs": 222,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 5,
+        "k": 4,
+        "pair_cases": 224202,
+        "lower_fringe_pairs": 474,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      },
+      {
+        "p": 6,
+        "k": 2,
+        "pair_cases": 36672,
+        "lower_fringe_pairs": 192,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 4
+        }
+      },
+      {
+        "p": 6,
+        "k": 3,
+        "pair_cases": 198470,
+        "lower_fringe_pairs": 446,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "p": 6,
+        "k": 4,
+        "pair_cases": 909162,
+        "lower_fringe_pairs": 954,
+        "max_charge_by_crossings": {
+          "0": 0,
+          "1": 16,
+          "2": 16,
+          "3": 18
+        }
+      }
+    ]
+  },
+  "strict_inclusion": {
+    "status": "PASS",
+    "formats": 56,
+    "precisions": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "operand": "-33/4, then any number of zero operands",
+    "exact_minimum": "2^(p-1)-1/4",
+    "rounded_output": "x-8"
+  },
+  "trajectories": {
+    "status": "PASS",
+    "seed": 2026110733,
+    "blocks": 560,
+    "prefixes": 19152,
+    "queries": 402192,
+    "prefixes_with_exact_sum_outside_corridor": 562,
+    "operands": "p-bit representable; all nonzero absolute operands >=1",
+    "domain": "every X* marker, every tested prefix"
+  },
+  "status": "PASS"
+}

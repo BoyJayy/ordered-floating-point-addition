@@ -1,0 +1,27 @@
+name: Reproducibility checks
+
+"on":
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify archived files and licenses
+        run: python3 -B artifact/verify_release.py
+      - name: Run bounded exact arithmetic checks
+        run: python3 -B artifact/run_quick_checks.py

@@ -1,0 +1,1549 @@
+{
+  "status": "PASS",
+  "p": 6,
+  "m": 2,
+  "X_star": [
+    40,
+    44
+  ],
+  "K_min": 2,
+  "K_max": 256,
+  "checked_blocks": 32895,
+  "checked_queries": 65790,
+  "rounded_operations": 131580,
+  "oracle": "independent enumerated-format nearest-even rounding; exact integer arithmetic",
+  "result": "K distinct transfers on the full X*; hence B>=ceil(log2 K)",
+  "scope": "finite check of a separately proved all-K family; not a GPU measurement",
+  "records": [
+    {
+      "K": 2,
+      "distinct_maps": 2,
+      "exact_bits_lower_bound": 1,
+      "first_query_answers_sha256": "7050028baf045102bfdf8bf2169a017fdf70ef139a777c351bfa2898c8c5c015"
+    },
+    {
+      "K": 3,
+      "distinct_maps": 3,
+      "exact_bits_lower_bound": 2,
+      "first_query_answers_sha256": "bc14395d917d7afbd3a70aabf5ec70a97c729ee412b56e45737fc5b90c3ae0ca"
+    },
+    {
+      "K": 4,
+      "distinct_maps": 4,
+      "exact_bits_lower_bound": 2,
+      "first_query_answers_sha256": "aa82ed61596c79e29d8502d4643d88e81f3a05eba597d861c44347016984a57e"
+    },
+    {
+      "K": 5,
+      "distinct_maps": 5,
+      "exact_bits_lower_bound": 3,
+      "first_query_answers_sha256": "7bb89663617f1bf2729e73f65bd598a38237e90ec68ec77605a6d4f95c875ba8"
+    },
+    {
+      "K": 6,
+      "distinct_maps": 6,
+      "exact_bits_lower_bound": 3,
+      "first_query_answers_sha256": "dd60f706cf012404fe0caa21ceae1544e714843ef11d3473b117b5547e9c0ecf"
+    },
+    {
+      "K": 7,
+      "distinct_maps": 7,
+      "exact_bits_lower_bound": 3,
+      "first_query_answers_sha256": "5c0c889d3ba788883fd0a63ffb1803dd534d01a51a433974d3fef20ece222e03"
+    },
+    {
+      "K": 8,
+      "distinct_maps": 8,
+      "exact_bits_lower_bound": 3,
+      "first_query_answers_sha256": "92f29be104e1bab186fc4979243328a84662b4fd44ab0824ec4c9c8071c422f7"
+    },
+    {
+      "K": 9,
+      "distinct_maps": 9,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "af993801e0d5e84ab98eed2b78c8c35edfe9c37171c5478c9a6caf33f54aed97"
+    },
+    {
+      "K": 10,
+      "distinct_maps": 10,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "3ca5e5e540316a53464c124180296ed25fd0b3e1043771cd77d66a74e9beb20c"
+    },
+    {
+      "K": 11,
+      "distinct_maps": 11,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "760825498a5bc1b4f60947b10c64fde32ea9ef22317b8173e062efb9390318ee"
+    },
+    {
+      "K": 12,
+      "distinct_maps": 12,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "1d3d2878b925a451e4c938f7eea3ce81970e92e017667f9c653ca50818ee8265"
+    },
+    {
+      "K": 13,
+      "distinct_maps": 13,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "86d204028a69e6e4bdea739317341e2ff4fc8a06a590871e2faed23dc20a3692"
+    },
+    {
+      "K": 14,
+      "distinct_maps": 14,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "1e67666b0afb425b0406d310542fc89728a3a584f875d29f72d09c7cecb0a60b"
+    },
+    {
+      "K": 15,
+      "distinct_maps": 15,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "1d470d30d60f95115c0b8feb2bbebbed6a93368898d07b91fc73c70373f44d3e"
+    },
+    {
+      "K": 16,
+      "distinct_maps": 16,
+      "exact_bits_lower_bound": 4,
+      "first_query_answers_sha256": "92f95074109f2d099e08d50cd06c40fe5018b91db826d46d51ed2fa3e197ccf0"
+    },
+    {
+      "K": 17,
+      "distinct_maps": 17,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "4356d74a81ca0056e6436f77db2803000b91f5148f85bb45813fe33b7bbfc4f0"
+    },
+    {
+      "K": 18,
+      "distinct_maps": 18,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "35ac423e166ce2ce77aeb5f293283b91c2307120073afce3f59769652e8da1e0"
+    },
+    {
+      "K": 19,
+      "distinct_maps": 19,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "cc8846174ec7c9127047d1c881090c0f420ef515c989243dd84a17359ff93c47"
+    },
+    {
+      "K": 20,
+      "distinct_maps": 20,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "4fe744b7b3d34d02ea68ea57a30c3a26425f9a9a2425cd854d30fbaef6902acf"
+    },
+    {
+      "K": 21,
+      "distinct_maps": 21,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "faebceb12a85a9163f6f8d9414d2a100ca7d1c431f6a7f99388ffba7a3f5c7d3"
+    },
+    {
+      "K": 22,
+      "distinct_maps": 22,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "2fc34d25a309e78751aa89159bb6b8d511945ea9d4e3515db3224ad52e3b6ac9"
+    },
+    {
+      "K": 23,
+      "distinct_maps": 23,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "bc0e195bc5af4995cd7aaa81e52bf49fa019283d936cef8a02f6547b1e331d0e"
+    },
+    {
+      "K": 24,
+      "distinct_maps": 24,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "33d344d901d39f038d8fe444681e7649e953aecb846d35ff20272954770ea9ab"
+    },
+    {
+      "K": 25,
+      "distinct_maps": 25,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "0f900f3c19a3bd521482d753e42f290024aa873a3958a903db599a81cd633fda"
+    },
+    {
+      "K": 26,
+      "distinct_maps": 26,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "6cbe3381d90c1494f1c61c616984e12fcd9388cdc1e1e24ed1f05125a008f1bf"
+    },
+    {
+      "K": 27,
+      "distinct_maps": 27,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "69de23a16d03cd7ae326fa3ff38de4102aa92ecfc096875d77ee948c912be777"
+    },
+    {
+      "K": 28,
+      "distinct_maps": 28,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "5826ab74a1c2cc0cc78159c49741ae106af573c5c020e1e7bcd07ca08ec961f2"
+    },
+    {
+      "K": 29,
+      "distinct_maps": 29,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "e2311c5f384ab9e03d6b2a12ec767d20cbf7b7cf6ba4fd1a194da3fc150317b0"
+    },
+    {
+      "K": 30,
+      "distinct_maps": 30,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "e5c270672317389b380db4890745fa146e2b65bd956bc6486668d1a4e40ee02e"
+    },
+    {
+      "K": 31,
+      "distinct_maps": 31,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "dceb100e057af61be291cb5835a2d55bdc1e84daca0fa4141396c6aad726e788"
+    },
+    {
+      "K": 32,
+      "distinct_maps": 32,
+      "exact_bits_lower_bound": 5,
+      "first_query_answers_sha256": "5fe6d54b95610da3694dafcf95c7c8217e7ac309792681ede91e6b7cb70a13f4"
+    },
+    {
+      "K": 33,
+      "distinct_maps": 33,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "f007c20f579ce900cbcea23dcca1338987ce2b85af9ca0fd0f2532eb5edc37f7"
+    },
+    {
+      "K": 34,
+      "distinct_maps": 34,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "bf9a448a206dd320ad1955c413498d590104dd7008f9a33edaa5c8ed96f7eb24"
+    },
+    {
+      "K": 35,
+      "distinct_maps": 35,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "18e1e5fa604a892dbf4c3d1d6eea712d7f915c19fa9b42b177ea98d4664eda2d"
+    },
+    {
+      "K": 36,
+      "distinct_maps": 36,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "459a6a91044e2f5e080f2a23067fe6bbc90992a97262b5cfe804ab8582dd687f"
+    },
+    {
+      "K": 37,
+      "distinct_maps": 37,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "e5d47a81be2f7f64a2aa47194aaf194d617a176d1f82b9ceea1491818542f538"
+    },
+    {
+      "K": 38,
+      "distinct_maps": 38,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "89ffdace6f57bd5ffed982ddaa57b76d2e732248188d711608dbf38a9b51cb64"
+    },
+    {
+      "K": 39,
+      "distinct_maps": 39,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "0429cfa07d9d27b0c2249a8d1d9c8d41accd5dae53d40337760d10e4048c3d06"
+    },
+    {
+      "K": 40,
+      "distinct_maps": 40,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "491266cb925ecdee42374c285dca55a8b11522ab2457d36f3f2696dbca89a88c"
+    },
+    {
+      "K": 41,
+      "distinct_maps": 41,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "f01e3ee22922fe5de27ee76b2a0ed3d227891003de178bedb2a8872b9a9ad9c6"
+    },
+    {
+      "K": 42,
+      "distinct_maps": 42,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "01f8fc7c8c0d7b4cc6bdfcf254df47eeac2f6240b5391b1dec32a2b0583dcc26"
+    },
+    {
+      "K": 43,
+      "distinct_maps": 43,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "86b667668fe03a437a2452bc28fb8a044cfb8b19af94013c09516cf65a4cc9a6"
+    },
+    {
+      "K": 44,
+      "distinct_maps": 44,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "6aa0dd2ae14c2126da6382eaadee5ed4ca2bb415a15e0513caa0f29b6bcdb103"
+    },
+    {
+      "K": 45,
+      "distinct_maps": 45,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "00f44d680ff29e796ba1be11de9ddceab17d675049b7b21332e511e9149e7a60"
+    },
+    {
+      "K": 46,
+      "distinct_maps": 46,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "3a960eb077fa9bd3bfaa017f27fea25fd4223fa8990e561ac6d5aded939d10e4"
+    },
+    {
+      "K": 47,
+      "distinct_maps": 47,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "87b61d09777fb5ff7831ed3629c37adb5c9f069bf6e3769f97a8f4b1cb8eb88c"
+    },
+    {
+      "K": 48,
+      "distinct_maps": 48,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "c622b9bb3f166a5a56068dfa4bc4b30e8eee46c84865d6f3112172fa1cf8d9d0"
+    },
+    {
+      "K": 49,
+      "distinct_maps": 49,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "d9ee4eb911cc2728ac2b60235c3286e84993cf3e9999e9ec989f3e36963e52c6"
+    },
+    {
+      "K": 50,
+      "distinct_maps": 50,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "e44c482c405aafd1a76b047ab74370fd30b6a06355ff41b38789ed0f2b6f4af5"
+    },
+    {
+      "K": 51,
+      "distinct_maps": 51,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "b22bafb20f6706a49ae8972523f35bf05701e6b200384b9285bc65080d988b5f"
+    },
+    {
+      "K": 52,
+      "distinct_maps": 52,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "6763f3cbbcbbc1bfc6fcef58fb8f1eac50bba91352d61a5e8e6760df420922ef"
+    },
+    {
+      "K": 53,
+      "distinct_maps": 53,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "48f1bbb34985ed8f0013ad2c09f7bd13a6775f1f2ee684ab2fd8bf9ba575c34b"
+    },
+    {
+      "K": 54,
+      "distinct_maps": 54,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "17983d4a28b20e5f1feb2e9471ef9d8846d5348bf5fe8451baadf17956021e3f"
+    },
+    {
+      "K": 55,
+      "distinct_maps": 55,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "1c40f97e6165d7a0f521d6b152eb41278dd923b2a3a4fa77232ee0cb52f24496"
+    },
+    {
+      "K": 56,
+      "distinct_maps": 56,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "0f5ae0b542b36e2e230adca666565cd3aeab4aebe3b18ed8f72219c3d5c42bf1"
+    },
+    {
+      "K": 57,
+      "distinct_maps": 57,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "22393f5770ee1165631fadd8a8c5e2cafc4afc9fc8b8a4376832c6a801836ddd"
+    },
+    {
+      "K": 58,
+      "distinct_maps": 58,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "2c95772a31602bab8de2b142261271899a43530c21e3586428257c806e6c8772"
+    },
+    {
+      "K": 59,
+      "distinct_maps": 59,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "f9ae76d90ac78825aafdbdb4a64c4e9f75203a44f36827e9c09c01256cc93147"
+    },
+    {
+      "K": 60,
+      "distinct_maps": 60,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "2fd26e3eb1e8d6ed829d78761ad2504893b982e96f8b60f9b4c1babe2743c3e2"
+    },
+    {
+      "K": 61,
+      "distinct_maps": 61,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "9801572536a32a09fbb26ff64700de6697a8d103564b4a6f6000a08740b54d67"
+    },
+    {
+      "K": 62,
+      "distinct_maps": 62,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "a8ebd951abf0c940a0765e3be1c38e0258153f266e0b99548944f50b9f7ff009"
+    },
+    {
+      "K": 63,
+      "distinct_maps": 63,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "7a92766eaaa71e2f235f7f3c2f5562c5a8c4bd835ca2936d94c9be64c4f044f6"
+    },
+    {
+      "K": 64,
+      "distinct_maps": 64,
+      "exact_bits_lower_bound": 6,
+      "first_query_answers_sha256": "a257a9dbf3570e15be46981d69ef7f368ebade8aadaf63cd729f98314d2cc76f"
+    },
+    {
+      "K": 65,
+      "distinct_maps": 65,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "79e50a848f59c32f8a634d9ce5d0190cbd8e960317ca6b80c5485aafc1b33ad5"
+    },
+    {
+      "K": 66,
+      "distinct_maps": 66,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "af3ccb0b9ebeb4ec91140a12315f50692f9f3303deec6cff03f2c0d5794fef7d"
+    },
+    {
+      "K": 67,
+      "distinct_maps": 67,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "fb961229f2e61ea7bc4324dd021e3a1081c3dc6247c6c34da1d65cbcbc2ef8f3"
+    },
+    {
+      "K": 68,
+      "distinct_maps": 68,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "f1657819261de8706e7743b62048b3f30ef6e604896e0fac98009294be9b0431"
+    },
+    {
+      "K": 69,
+      "distinct_maps": 69,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "03210a88adf67a0d2fcd84626f84d487a58e8853c57f96d6c744b777633cf00e"
+    },
+    {
+      "K": 70,
+      "distinct_maps": 70,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "9d97e54609d34f2adb4e5c60d033a95fe88adb026b1870c02eb272c7939fd02d"
+    },
+    {
+      "K": 71,
+      "distinct_maps": 71,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "272641b4750f93e5d9a0b553446023c714e6013c7676c5dfd76c80193755b0d4"
+    },
+    {
+      "K": 72,
+      "distinct_maps": 72,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "d202a6b0ae33cf86b1ea6ac98b75122044a0e03e7232c6a4892dacb450d4054f"
+    },
+    {
+      "K": 73,
+      "distinct_maps": 73,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "0d196027349a3b04e1a2f0cc2e2617dcc41441d106d45b1a969b4a99090a659b"
+    },
+    {
+      "K": 74,
+      "distinct_maps": 74,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "9367e07ea3bf64efae1d7a951e8d51060107e0024178910908fd72b3229dc919"
+    },
+    {
+      "K": 75,
+      "distinct_maps": 75,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "dcc2ca35d19ef215df2a9a933952acad1882296b6b37d9c63163f2790e6259bd"
+    },
+    {
+      "K": 76,
+      "distinct_maps": 76,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "58ddd0cf73dd8061f401341d4adc79f0271ada731d7f02204c1c0ca34cbb3353"
+    },
+    {
+      "K": 77,
+      "distinct_maps": 77,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "3764101a51bdc96b53d30bf94682804a14529f3161b40b3ff47b18e111294b9e"
+    },
+    {
+      "K": 78,
+      "distinct_maps": 78,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a124efa06dcf386d0b024aa2639eb67db92905123b18d832a09caa8b247c4b02"
+    },
+    {
+      "K": 79,
+      "distinct_maps": 79,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a862735ad999db3ee44b9d3c3804725184b15c810b3c319c7e4a17c44b52b2ac"
+    },
+    {
+      "K": 80,
+      "distinct_maps": 80,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "30daf5a2e8a0246929a54fd17715a19ef1ba554063b5543416cd82ef20bdaf3d"
+    },
+    {
+      "K": 81,
+      "distinct_maps": 81,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "2e7acc08679f0a9270ba10f2c59730648c56db8423fab20b30d9597162ce1287"
+    },
+    {
+      "K": 82,
+      "distinct_maps": 82,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "daf579a4f392eac4c4677cde24c8099d7eac36b8b3ee40f0b803e006bd8a301e"
+    },
+    {
+      "K": 83,
+      "distinct_maps": 83,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a8884c03980a52191f68d69593434c9df5b406df763a03f4c712dc6584436a14"
+    },
+    {
+      "K": 84,
+      "distinct_maps": 84,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a2dc4bee79b3d1fdcd5a3af3e4310a6774bea6aa8fb1bdbcc6123526810b73c6"
+    },
+    {
+      "K": 85,
+      "distinct_maps": 85,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "71bc7eb8830095951fe29e98818d58f3d03f976778560e6ae204f16b751e40bf"
+    },
+    {
+      "K": 86,
+      "distinct_maps": 86,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "c4c3e043668f63f21d1ebef47580fe6fea8bb1597fae34d0a8e4862169d9f986"
+    },
+    {
+      "K": 87,
+      "distinct_maps": 87,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "c5ee1c3633ff59971f335891f732ad52a9adc35df4209417f967c659dfc5080e"
+    },
+    {
+      "K": 88,
+      "distinct_maps": 88,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a687492a53a4849a138c8bdc73882b85e4a1ecafaba09153782a210a023a56e3"
+    },
+    {
+      "K": 89,
+      "distinct_maps": 89,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "049fe2db3615da125d78136c4c39591168a40d85e1ef942d5f71266692334ece"
+    },
+    {
+      "K": 90,
+      "distinct_maps": 90,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "6e91b4bd26f300235a27e1d9c823d8e239089a0a898cb09e9bba4f2c0b69c19d"
+    },
+    {
+      "K": 91,
+      "distinct_maps": 91,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "54a8b56bdef2263870a3b3c787c02ec295f00d58963a955d5cf735da1750e503"
+    },
+    {
+      "K": 92,
+      "distinct_maps": 92,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "7e1488809d094629c72884d0228579edf802d4c281ebfb255e6a176659a656c3"
+    },
+    {
+      "K": 93,
+      "distinct_maps": 93,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "733f6e3346dc9990d650750745bed08bd61d26790c6dca11f075f3385d254b65"
+    },
+    {
+      "K": 94,
+      "distinct_maps": 94,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "823206fdb6b66f89a197dc79510376995abad61710c9c4396dd1377f8ff7f7e9"
+    },
+    {
+      "K": 95,
+      "distinct_maps": 95,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "a320171ade2b8c059565de866936b06c6c119b89a20a53c4638ab173b44f59cd"
+    },
+    {
+      "K": 96,
+      "distinct_maps": 96,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "17c7bf1dcc09544b9ceb9eaaf08eebb9ad4bfb7ed071bcdeb6c31a6409ee1abc"
+    },
+    {
+      "K": 97,
+      "distinct_maps": 97,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "5c1070d81616a75ded291929e5f9ac70c8bc631098f209f17b50cd954bbf2b19"
+    },
+    {
+      "K": 98,
+      "distinct_maps": 98,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "b2240c919708bddb047d9a98e3666eeca325f7ac4043086197fedf7a83969ccb"
+    },
+    {
+      "K": 99,
+      "distinct_maps": 99,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "fe1a4a0866f5085496f054fef7599dbaf18fae111589fa55adde75d3e4e721fe"
+    },
+    {
+      "K": 100,
+      "distinct_maps": 100,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "6a4d2b78686f6f517c1b430077440c96953bfac1bce6f3e750eeffacec28c169"
+    },
+    {
+      "K": 101,
+      "distinct_maps": 101,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "d9ce6055cced8375634a611250309ed810ed63f87b56ad00f395f3ec4d572052"
+    },
+    {
+      "K": 102,
+      "distinct_maps": 102,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "bd138e69f5e21eb7d06791fb5f0f08a927d2182e4d079ce9e7672447d87d42a0"
+    },
+    {
+      "K": 103,
+      "distinct_maps": 103,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "319cff30d7b11a3922e0bd4e980283f1e9cf76952338f82c5e1bb25442ae267a"
+    },
+    {
+      "K": 104,
+      "distinct_maps": 104,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "d192b2d7a14fc2a778b572d2c8da11102a6245d06b68624996853625f8b4bb1a"
+    },
+    {
+      "K": 105,
+      "distinct_maps": 105,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "4aa47e6c6b57119eb196a484b38045bd6fe0b2735c4a12419a65c49843aac89b"
+    },
+    {
+      "K": 106,
+      "distinct_maps": 106,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "2e5f15da132222e9f7d1918cce701bad40a1e15d1e8a693d4ce53aac428277df"
+    },
+    {
+      "K": 107,
+      "distinct_maps": 107,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "15f6d3f6113497d806fdbbbfa4cae07571bf6fabf13c8a1463c0ca3a52f2ebb0"
+    },
+    {
+      "K": 108,
+      "distinct_maps": 108,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "18e2221780cdecaf4c94a0674a221fbc415574334a996a288fa9cf63a2511047"
+    },
+    {
+      "K": 109,
+      "distinct_maps": 109,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "c4067314a4e869aded8de0bcc38edf273d53818bce29a8d9d129effd9d8def66"
+    },
+    {
+      "K": 110,
+      "distinct_maps": 110,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "e557933770268b7ed94288b110a4ee2776eab3259fde38c06b6781f5b700eb39"
+    },
+    {
+      "K": 111,
+      "distinct_maps": 111,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "08722efae08d5635b9e5a926629a50dd051969dfcd848c79ddcbcfbd8476fdd0"
+    },
+    {
+      "K": 112,
+      "distinct_maps": 112,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "091f5368e25a9be1ddea66327a47167b633eff9dcea46554e7086face06e727e"
+    },
+    {
+      "K": 113,
+      "distinct_maps": 113,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "14cc29e802df4b0faa49a2e129568c8043717a13c8bb0bb4e85a1c594451e8ee"
+    },
+    {
+      "K": 114,
+      "distinct_maps": 114,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "625047fd0a00590948b3e704a922e634996221d227beadb433b2c7732bb8b376"
+    },
+    {
+      "K": 115,
+      "distinct_maps": 115,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "fca7ab87197d7a310f833c7aaa54a35713a9fa54b37f8f70dc378b3853a1db49"
+    },
+    {
+      "K": 116,
+      "distinct_maps": 116,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "eccf8214a29a7a4ef604c9042e259b6bcdde11e73f72b49bb929394e7cf17103"
+    },
+    {
+      "K": 117,
+      "distinct_maps": 117,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "2f9acd3a1973e80fa0a43ece3f63ff836768e943fa0e0f17865ad0f04b1070bb"
+    },
+    {
+      "K": 118,
+      "distinct_maps": 118,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "e2b62f9a536b569497940f7833c5b4464b16711fadbe46454a2346fb2b13f5fa"
+    },
+    {
+      "K": 119,
+      "distinct_maps": 119,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "7646cad7dfbe0198342187a2eba4732379031d5a2cd0fcb049b69432a7fad378"
+    },
+    {
+      "K": 120,
+      "distinct_maps": 120,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "108c271c1a89bf09712fa7c47fb222607915c6b98020bd3a920cc3cc76956944"
+    },
+    {
+      "K": 121,
+      "distinct_maps": 121,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "25785e2455fef5799185293c7c9c14f9bf6d027a5c00fe8ec48907c9ad0b44e1"
+    },
+    {
+      "K": 122,
+      "distinct_maps": 122,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "c87cd04dd02787778aa98ba38e7b17a598d599ccfdaf821bede0e3be80c293df"
+    },
+    {
+      "K": 123,
+      "distinct_maps": 123,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "5df85ea77b56a9b4caeba3a84bf08caf85aa100fa161cb4ce8da25a1a1f34409"
+    },
+    {
+      "K": 124,
+      "distinct_maps": 124,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "571cfaa3c4ba2b9165732b3a67c669a3d1951b3a4ab15896158eece653381cc8"
+    },
+    {
+      "K": 125,
+      "distinct_maps": 125,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "286658f1f750cdaa7d6bacebbc75ad9483f4b759d8d417e9c9c4e6909efe0211"
+    },
+    {
+      "K": 126,
+      "distinct_maps": 126,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "1f656518dc937fbafea2dacd941fd687ba55dc0501c73686f8899e687d0f3dcd"
+    },
+    {
+      "K": 127,
+      "distinct_maps": 127,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "00432f6bf48d6ab41d944adcebe5ccad21ef29043e36406e7f361ac3155c4426"
+    },
+    {
+      "K": 128,
+      "distinct_maps": 128,
+      "exact_bits_lower_bound": 7,
+      "first_query_answers_sha256": "83dbb6490694eb1b9991d892c00f38f8edbcba7392cf285d132131480061e510"
+    },
+    {
+      "K": 129,
+      "distinct_maps": 129,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "14b9bf4650b9254e0a2880ff17241648fb286ab9b7cded59771481ca82165598"
+    },
+    {
+      "K": 130,
+      "distinct_maps": 130,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "4edd8cf5eddf1a2bdb45fb5edb916f373635f9a033cc56e64a08efcfe68c593c"
+    },
+    {
+      "K": 131,
+      "distinct_maps": 131,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "31c416145828617d95bcd01b736fce031e3fafeb5265d7daf5a2b89ca3eaeef6"
+    },
+    {
+      "K": 132,
+      "distinct_maps": 132,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ee8463b2ec2a125f8947ee90b5f2ca513118eac2c38d56084b2cf72f424afd57"
+    },
+    {
+      "K": 133,
+      "distinct_maps": 133,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "e1b9cfe483db861999777dc8d96f9b89dc350d36b2bfbbcb558822360f5e0bb6"
+    },
+    {
+      "K": 134,
+      "distinct_maps": 134,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "00ad572603949a5fd8a9f52882d7caf9c74e49f544fce87b33ba5970fa4c647a"
+    },
+    {
+      "K": 135,
+      "distinct_maps": 135,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "90890287f1d87420cbbb3a462d05a3e5bf0dfbd6b61988f249408fa2dc749a6c"
+    },
+    {
+      "K": 136,
+      "distinct_maps": 136,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9cbe168405c65fe4605c336370e48e86a14e69a51a55ecf8dc6285abfe06eeab"
+    },
+    {
+      "K": 137,
+      "distinct_maps": 137,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "130f6e3d4c552c078998f5f3db81c824e455de4d3526441b52c277257c37af96"
+    },
+    {
+      "K": 138,
+      "distinct_maps": 138,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8b3da38f4d997817bb12a4abbbdc1240117861f01118e0050e91bbf4247b2449"
+    },
+    {
+      "K": 139,
+      "distinct_maps": 139,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c8a15209c309abd296c3aea64a6b1f37c1fafc95761a069af7dc0ef8f9bffe9c"
+    },
+    {
+      "K": 140,
+      "distinct_maps": 140,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8cff4a458cffb0293249a85317fab7a94a8ea7a1a53773de04a4bfc2fa3f7256"
+    },
+    {
+      "K": 141,
+      "distinct_maps": 141,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "3775aa4bbeddc19aab11fe5ea5ac2dd681eeac030e0aa65b7fef0e6b26271505"
+    },
+    {
+      "K": 142,
+      "distinct_maps": 142,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "498ea980356bf5b1336a9eaf309afc5cb912907c874e31a6fc6a5c1327cf9079"
+    },
+    {
+      "K": 143,
+      "distinct_maps": 143,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "1d8bcf8dd61efc9f1dbfddb9196f72e12f5decc12106330ece7f88825423fae1"
+    },
+    {
+      "K": 144,
+      "distinct_maps": 144,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "68d485f518e9d3ab5065187d3a998b75451f461bc2be897743cbea5e9b17592b"
+    },
+    {
+      "K": 145,
+      "distinct_maps": 145,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "2756dc65d10bd202814ba8d23311acb270167dcea4041ab75776a7ef1913e9b5"
+    },
+    {
+      "K": 146,
+      "distinct_maps": 146,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "835cd1f4076f2f087c974ee543ea32c29dc58a1c558836657351dfd023cda19d"
+    },
+    {
+      "K": 147,
+      "distinct_maps": 147,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "a0b2860b98533b474029668a1eae7d047131b1b48bba9ef307a5bd646c60111b"
+    },
+    {
+      "K": 148,
+      "distinct_maps": 148,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "13d32f7b63445264f380fc96bcd5987a64cd3e963fa2fdbe3fd9c3df5a70e719"
+    },
+    {
+      "K": 149,
+      "distinct_maps": 149,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "762b8e3def28d0d475f35fc2b946a7c9b890cbcd06ed34019787469152985487"
+    },
+    {
+      "K": 150,
+      "distinct_maps": 150,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "951314f09316850dd959d979be2fbd91895bc4bb0bda9dfc47ab8b16d840662d"
+    },
+    {
+      "K": 151,
+      "distinct_maps": 151,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "83c0074fa90cb38f919e21cd71542bbb0104ec096c5177e41a335cb80985a81c"
+    },
+    {
+      "K": 152,
+      "distinct_maps": 152,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5b9b13d963e0e214d26668282d439ff2ed5478fdb471c849025b3d8989faec34"
+    },
+    {
+      "K": 153,
+      "distinct_maps": 153,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f17bd12de9cbfa9ae47ab23925aa5333a278f142f2323a94ff189215b900580e"
+    },
+    {
+      "K": 154,
+      "distinct_maps": 154,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "130b9854b31fdc9e459d0311f4adc353460bc80d9d0e9d9445a36333bdc003ff"
+    },
+    {
+      "K": 155,
+      "distinct_maps": 155,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "96e3aff988f0cb887dd837348837e49d8876c735db3297bcd462e18cd273d05f"
+    },
+    {
+      "K": 156,
+      "distinct_maps": 156,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "060fe8fe90381138e5070f7abbd7dc9c6832f0976be8932a893a8c3025ce2dfd"
+    },
+    {
+      "K": 157,
+      "distinct_maps": 157,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "911cf4ed1995c734538e8f445d3057f2e51c3c373d1874c0324bd4d7cd3f36a5"
+    },
+    {
+      "K": 158,
+      "distinct_maps": 158,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "308c8bb2b55735d5b0a28566bb48fee455f42ddc6e25151c9d3f0cbe41f81ee0"
+    },
+    {
+      "K": 159,
+      "distinct_maps": 159,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "4686c45bf589896750c19054a79e1fd7094129277ac74acaa995c6b1da8adcfb"
+    },
+    {
+      "K": 160,
+      "distinct_maps": 160,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "0e5be0150c89ff221651ddd96ebc8a9411f1fbbb6ef216f24c8d48874cd2224c"
+    },
+    {
+      "K": 161,
+      "distinct_maps": 161,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "1b7db97f6dfcd1286771713cf2532cee0d322106cf5b4e88d8bcc64affecd438"
+    },
+    {
+      "K": 162,
+      "distinct_maps": 162,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5c4d2eeef346c7d991bf82a8116b43aa9ede2c34686aa3c76b8ed315a2735c08"
+    },
+    {
+      "K": 163,
+      "distinct_maps": 163,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "fbb1def0606dee3912f172663f284d6b3a5463ae22c0dd650e93389d6cc5f9f9"
+    },
+    {
+      "K": 164,
+      "distinct_maps": 164,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "d746a57495b959bfe64ae6b6606054dfa183f945e2356d0335ca0b4d018c5a3a"
+    },
+    {
+      "K": 165,
+      "distinct_maps": 165,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5521ab0ed3aedc057109c4c8f39bc6007e117b37b0b602c72571a79e22b21620"
+    },
+    {
+      "K": 166,
+      "distinct_maps": 166,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "62b1da55b786b0b9b1ea13cbca9d933e03ec4b4fc030f60f606dbcd6dbdb6cad"
+    },
+    {
+      "K": 167,
+      "distinct_maps": 167,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ae2920d8ee559aa96eed76c503b60ad2061d50c47a6f5a64a97143a37ff31a34"
+    },
+    {
+      "K": 168,
+      "distinct_maps": 168,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9db9ac5726558b57c2237c587064f8e6adf336912f3d1706566ac30387f780e8"
+    },
+    {
+      "K": 169,
+      "distinct_maps": 169,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "d450689774568fefb7030fd7f13d977e9eff94f3e2a9055626881d8a1b331af2"
+    },
+    {
+      "K": 170,
+      "distinct_maps": 170,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9824a6d63c51aa88a7a243a03efc0fdc9b7126c39600a4a14c70ce2c4cd1eb49"
+    },
+    {
+      "K": 171,
+      "distinct_maps": 171,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "876a41efa7a97be1de10976e1e0c97d53c3ab0e365db9e0176b1fcaa70aa330d"
+    },
+    {
+      "K": 172,
+      "distinct_maps": 172,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "7031c11fd15c7781d9633a1fd6eb674518005cbd8f0bb54932c68248956f4fa9"
+    },
+    {
+      "K": 173,
+      "distinct_maps": 173,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "18a8ebc1f6dd078c636423ecae7e75c96666f42709405d1554ae0877ae56c829"
+    },
+    {
+      "K": 174,
+      "distinct_maps": 174,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "b75109673e453f6f5b5f1657af060bb2a91df15090b0e0d86cacfa3b746f7afb"
+    },
+    {
+      "K": 175,
+      "distinct_maps": 175,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "dbad939dc72fa4a976c1d5902dc01db4dcf2122d813702e6fcaf85b3b92a3e4e"
+    },
+    {
+      "K": 176,
+      "distinct_maps": 176,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "e07ee3bf9618c02bbdc4e021ad3ad80bff8fc299b86fca2d5f66e2e17e31dcfb"
+    },
+    {
+      "K": 177,
+      "distinct_maps": 177,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c7445cd4ef63cc968586f456aaa2bd03289bd925b1edf023922a80f713593c3e"
+    },
+    {
+      "K": 178,
+      "distinct_maps": 178,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5c3dbf73b81482221bfd2f6ead120bc64e3220ba95f6c8dce0a1186fbd905ec7"
+    },
+    {
+      "K": 179,
+      "distinct_maps": 179,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5ca3bae2bf351ef22cff5d0e97afc7cacf09e482befba69fadd8e3d05ab0dc04"
+    },
+    {
+      "K": 180,
+      "distinct_maps": 180,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "75490210be8f8fb203607868c42e275f479a3d648f2592ae41b9ce56ccb59cc3"
+    },
+    {
+      "K": 181,
+      "distinct_maps": 181,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c9e554b33ef130e87c19f0a786d942c170798bcf45c40c9638cedc1643cd8fc1"
+    },
+    {
+      "K": 182,
+      "distinct_maps": 182,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "1aa305ab3ec5df173f60512f0041b0c9bfc906a8925ea4e0ea0fb785b7c1e4dd"
+    },
+    {
+      "K": 183,
+      "distinct_maps": 183,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "af3be1ff5d587ec773457a994b59fe5658345781cd10b4e1c5c5e64852fca237"
+    },
+    {
+      "K": 184,
+      "distinct_maps": 184,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8827becd761d8a1bd77e223fa8568fcf3ba5b602d9e620e499ae83ef2acfa47b"
+    },
+    {
+      "K": 185,
+      "distinct_maps": 185,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "e7ef06d62c7016286facd470b6279ef4ac467ab41b04ee39708475218307dfba"
+    },
+    {
+      "K": 186,
+      "distinct_maps": 186,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "41827a27089ddac216ae7bf45642caebbb1e0a8374fdfa4aa81c8b5f020ae43f"
+    },
+    {
+      "K": 187,
+      "distinct_maps": 187,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "a579719171cefacecbdefe9b9fa49df307aaed73bef175734f2fbcb1f79bcedc"
+    },
+    {
+      "K": 188,
+      "distinct_maps": 188,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c5cf0e6fe037b0d4b331e2a86afa0deaaa0529ff98531e6370bd59cf4579b26b"
+    },
+    {
+      "K": 189,
+      "distinct_maps": 189,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "0b232ffb40ff86ce3327e1ec54d6b8036cae6ae803beb6fc208c87fcfdd25b59"
+    },
+    {
+      "K": 190,
+      "distinct_maps": 190,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9e5c84d3bac116f12fdcc4c93801eab28e0ef262331cb88f3490d1332e955e06"
+    },
+    {
+      "K": 191,
+      "distinct_maps": 191,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "218606c14a024efb316429bd3181d061a9d051b2ffc8dc0c4bbd3fb0aa6985ab"
+    },
+    {
+      "K": 192,
+      "distinct_maps": 192,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8cbfb977fb70ddec301ddd85292623ff40dc22722b819d1ac0c128bfb3e23bbe"
+    },
+    {
+      "K": 193,
+      "distinct_maps": 193,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "d50585c0bcc9b8a7ddf18fa50f7fc8af46a794da44158f90dbf4d942ce086e72"
+    },
+    {
+      "K": 194,
+      "distinct_maps": 194,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ea5217a532e938da37547decbe4666ca12c8b2de18ab08a24c3a5ecfce1cd742"
+    },
+    {
+      "K": 195,
+      "distinct_maps": 195,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "dae31a63ddcf6d25484c383d4ac2a03a90096bb9328f24886b0da7d8ddf69eb9"
+    },
+    {
+      "K": 196,
+      "distinct_maps": 196,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5c2923d218faf09070d7e6323e0627f2d8636fc46bdad506291708ba7c7f38ee"
+    },
+    {
+      "K": 197,
+      "distinct_maps": 197,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c7dc70e48b3c90237f4cd103d53b7094a746de19ac025955607bc73f2d065c3b"
+    },
+    {
+      "K": 198,
+      "distinct_maps": 198,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "41d89973f891e0faa0fdf871797c2ebef142e077a42619ebb4ab280d211be010"
+    },
+    {
+      "K": 199,
+      "distinct_maps": 199,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "6f4aa5eafa945d2ed5b8c68e73e2d492bc19928763c1e594af2304d2fb5f5208"
+    },
+    {
+      "K": 200,
+      "distinct_maps": 200,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f3a59752eecf8ef14f76c23c21d8928bf509b5c5fdf74d3a04e52858f6289b75"
+    },
+    {
+      "K": 201,
+      "distinct_maps": 201,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "62799c523142cde9c2e5e2023a69e01a8dc17330ead788e9c56b8eb67cfa9454"
+    },
+    {
+      "K": 202,
+      "distinct_maps": 202,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "a7241d821999f1750c86b4f56c1e57f8367274c67f47a00ebea6459e942fa336"
+    },
+    {
+      "K": 203,
+      "distinct_maps": 203,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "32822c228688fc97d31894cc7e302bb2fba4085317f9815bcc423190a8c55c3d"
+    },
+    {
+      "K": 204,
+      "distinct_maps": 204,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9b7c737498e49ea8338f83decc2c84d3c933485e1c94e9ff6fa9fa269ca06618"
+    },
+    {
+      "K": 205,
+      "distinct_maps": 205,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "19b6f43a6994ed95d3fb87d523eb93a3b6ece9dd7e5665f126520ce66b90d9ba"
+    },
+    {
+      "K": 206,
+      "distinct_maps": 206,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "576c938947e98008fc33494b172390e0a96b309bd3526f7d30a28d4fc233b66b"
+    },
+    {
+      "K": 207,
+      "distinct_maps": 207,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8d53c6100d4a3351bcedaffb1d369542ccb04757be31dcba533584eccd5e0362"
+    },
+    {
+      "K": 208,
+      "distinct_maps": 208,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "01a5cc32e840edd6c467e818116b8b2558ff5bebf51602b105bd5ff7c318c3cb"
+    },
+    {
+      "K": 209,
+      "distinct_maps": 209,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "1fc68beb75f911f933a0b8c391de696fb80c191732adec9ff20c1cf38768cf36"
+    },
+    {
+      "K": 210,
+      "distinct_maps": 210,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f6853eb5be18ce49e77489750cf5c65c7a5bafee9591424d43d6c467147cdfd2"
+    },
+    {
+      "K": 211,
+      "distinct_maps": 211,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c4aa026e096f27637879f39c3e452021b527b276fe348062ad8b644d5c5e2c8f"
+    },
+    {
+      "K": 212,
+      "distinct_maps": 212,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f4df0da1be7b71d53428761bc783eedc9e87a0f205b545c5c23cbd46f28772d4"
+    },
+    {
+      "K": 213,
+      "distinct_maps": 213,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "dd6db41e81d2e823d51f405fcf903df8756293960c1d495d15639cb0e989d295"
+    },
+    {
+      "K": 214,
+      "distinct_maps": 214,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "cb570c4e8560f4e83ff3081b1a233622931eea4808dfafbd53119ea59294f9a8"
+    },
+    {
+      "K": 215,
+      "distinct_maps": 215,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "3296076b1767db80190cacf71cb8d1df6a3ccaa9b35ae372927e5a28fadf9af4"
+    },
+    {
+      "K": 216,
+      "distinct_maps": 216,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "23f4ff7dc63c683fc626b3c2818fd290e609b5fc00edc8e8058c31ad9770843b"
+    },
+    {
+      "K": 217,
+      "distinct_maps": 217,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "b0d368457e12ae694f9ac1d4b6839da666c4c6389cf9532d1d7728c5d534e7f3"
+    },
+    {
+      "K": 218,
+      "distinct_maps": 218,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "463fc21b4a78c02185c15417c49c5f1dab345a5bfc11e5f32728fd2b9638c68a"
+    },
+    {
+      "K": 219,
+      "distinct_maps": 219,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c7b808891f718dd8ff48b35ee8cb1cb47565325a7b70d3878b540c4d663399d6"
+    },
+    {
+      "K": 220,
+      "distinct_maps": 220,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5cf645964737e7e2eff544b3c306aa5de3061fd67c6971a855c9cea20a34e758"
+    },
+    {
+      "K": 221,
+      "distinct_maps": 221,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ea32745684fdcb0ef04af68aa7500936a9abd659ce08ea04ba02dfc7d059cd80"
+    },
+    {
+      "K": 222,
+      "distinct_maps": 222,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "53ce1d90e74fd1c8d7d322ea308f0440574e4b61f067c90dfdeeea45ae353113"
+    },
+    {
+      "K": 223,
+      "distinct_maps": 223,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "313ff942eda7217c9852176c95058c99638f7eaeb93843c392a54a1cd7fc6930"
+    },
+    {
+      "K": 224,
+      "distinct_maps": 224,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "7223ad8d09d143b8db156b685558518c4e67f88d1fec67872a6339dab5dcd5b8"
+    },
+    {
+      "K": 225,
+      "distinct_maps": 225,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "d23d9e592f1afede5e921f7de5898fcbe582ecaafe2e4f66cb6e215be535893e"
+    },
+    {
+      "K": 226,
+      "distinct_maps": 226,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "1a484a6e1f5a52f66273520985b5f08f917e32de624be0871ee5196b9da7134a"
+    },
+    {
+      "K": 227,
+      "distinct_maps": 227,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "2d0dd441f3fa0e54fb90b7af17251acd1d0e7e04daa534335425ca5f91c1507d"
+    },
+    {
+      "K": 228,
+      "distinct_maps": 228,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5286b159b37fe7ff33956f9b7734a57f6084ea92c14ace278775dc0a9d95ff45"
+    },
+    {
+      "K": 229,
+      "distinct_maps": 229,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f1ca408777d05ce7389b1b5f201b46511b08889c8b0af6ad68d5701c4a6f5f14"
+    },
+    {
+      "K": 230,
+      "distinct_maps": 230,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "159313388f7b7102012018d05dce9c941e962bb3deeaf0c90d5595a44b790205"
+    },
+    {
+      "K": 231,
+      "distinct_maps": 231,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f4ace07280fbcf2b32f0657e7ec66b5d3cd13f7392c396bc81df74010df79996"
+    },
+    {
+      "K": 232,
+      "distinct_maps": 232,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "cae61db51117e8bba20e83ab2e74b7c2a4b08e35e192c96c75d6409126d2169d"
+    },
+    {
+      "K": 233,
+      "distinct_maps": 233,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ddc607f77e3b2a155fa575740da670e9c8dc6c820064e4089477c40467493e11"
+    },
+    {
+      "K": 234,
+      "distinct_maps": 234,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "5802b92f7306793329c816e4478dad893793e166b726007627643085df6391e6"
+    },
+    {
+      "K": 235,
+      "distinct_maps": 235,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "e0a98d843863b92d58a3f6419474e38155222ae3cd2c608dd0a523f4692124bf"
+    },
+    {
+      "K": 236,
+      "distinct_maps": 236,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "625a7f25fab5a851c210b30d02da8e6d76e303f694bb38deefdabfb936578d84"
+    },
+    {
+      "K": 237,
+      "distinct_maps": 237,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "06bad9204379b8a11fbe5fdf2d35bdb5498d00c3bfb521eb1bd714f5b034fcdc"
+    },
+    {
+      "K": 238,
+      "distinct_maps": 238,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "c4eb80ee257eca891559b953ebdc6b6740d8e4124c60c86d3ec09a7477ba1e5f"
+    },
+    {
+      "K": 239,
+      "distinct_maps": 239,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "60365e36fe7992a0e6753e49e92ab3b4471d999c6e5d5bef168e4ad887831e22"
+    },
+    {
+      "K": 240,
+      "distinct_maps": 240,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "84e8eb711bb665dfc433c30673e8158af4b486948937c3bc78349d08db9a413c"
+    },
+    {
+      "K": 241,
+      "distinct_maps": 241,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "4c94a49eb2a120ec88de65a5ecb20d7fd77f37836c082e7b1304b40c58d2f810"
+    },
+    {
+      "K": 242,
+      "distinct_maps": 242,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "f791f635f0baff6546d9831e6adfff517e1e5af3589a05e20341c11ea3b2e817"
+    },
+    {
+      "K": 243,
+      "distinct_maps": 243,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8d5f427aeb8b4c30c915db002b92d780c37b9014c94406b0603a2dd35e13205b"
+    },
+    {
+      "K": 244,
+      "distinct_maps": 244,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "24f29a300dca5ace73647dd862910545c30f8c1920de232b781c3eb615a78aa3"
+    },
+    {
+      "K": 245,
+      "distinct_maps": 245,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "0d01e3e37cbe2ed1d9bc404e67f8dcdc174efc81ed2c5f7be1326f7939d6c5cd"
+    },
+    {
+      "K": 246,
+      "distinct_maps": 246,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "d17f08bd76feed2b8a57c25bbc9279e4756ccd826442faf486baf91e81d1c4a9"
+    },
+    {
+      "K": 247,
+      "distinct_maps": 247,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "a855a11a5025115c9bdfc0207f1b5793c76218fb122387d024a956fa0e5e7219"
+    },
+    {
+      "K": 248,
+      "distinct_maps": 248,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8db96955fe4e9b8c1d0393006775802f47182029df43ac948a75a89b8fbf8b83"
+    },
+    {
+      "K": 249,
+      "distinct_maps": 249,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8642b013a99897055aa2329fe49419b0e68fef540c06d11297c56ae56730ee34"
+    },
+    {
+      "K": 250,
+      "distinct_maps": 250,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "e5a9516ef9b5e84225ace993f01a53ce6f1e35370b51f9a4208518033ca31be2"
+    },
+    {
+      "K": 251,
+      "distinct_maps": 251,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "9db1586f4fbef925e712105dbe535b29d3ad4a0ef77873d808189b12ad2533fc"
+    },
+    {
+      "K": 252,
+      "distinct_maps": 252,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "0e67ac5b0b55178412c3202053d19e176b8366e7c961f1ca44da78596437613e"
+    },
+    {
+      "K": 253,
+      "distinct_maps": 253,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "ac986918aacc8467b88ae3225d9657acfc75d3725ba51296667317196691a7ba"
+    },
+    {
+      "K": 254,
+      "distinct_maps": 254,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "6e9b866b73affa1d2430310f751900609da03db5997860c4834c7eb8b298fa58"
+    },
+    {
+      "K": 255,
+      "distinct_maps": 255,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "8f24fa2ee25b81fa545c99644d766c179837b834cc719249129d97f2abf8ffac"
+    },
+    {
+      "K": 256,
+      "distinct_maps": 256,
+      "exact_bits_lower_bound": 8,
+      "first_query_answers_sha256": "6a169b8f0f434594b883d81a2b27ee372e5a43ae2bc3f58abee7b8c266f057d1"
+    }
+  ]
+}

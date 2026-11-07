@@ -1,0 +1,317 @@
+{
+  "path_base": "research/ in the proposed artifact",
+  "table_rows": [
+    {
+      "table": "table_1",
+      "label": "Exact threshold enumeration",
+      "code": [
+        "independent/check_fp_markers.py"
+      ],
+      "records": [
+        "independent/results.json"
+      ],
+      "recorded_counts": {
+        "subsets": 16452,
+        "marker_folds": 229768
+      },
+      "qualification": "exhaustive array summed over p=4,5,6"
+    },
+    {
+      "table": "table_1",
+      "label": "Exact permutation enumeration",
+      "code": [
+        "independent/extension_permutations.py",
+        "independent/check_fp_markers.py"
+      ],
+      "records": [
+        "independent/extension_results.json"
+      ],
+      "recorded_counts": {
+        "permutations": 873,
+        "marker_folds": 29367
+      },
+      "qualification": "exhaustive array summed over k=1..6"
+    },
+    {
+      "table": "table_1",
+      "label": "Factoradic query reduction",
+      "code": [
+        "independent/extension_permutations.py",
+        "independent/check_fp_markers.py"
+      ],
+      "records": [
+        "independent/extension_results.json"
+      ],
+      "recorded_counts": {
+        "codewords": 1367,
+        "bit_queries": 12746
+      },
+      "qualification": "rank_decoder_exhaustive k=1..7"
+    },
+    {
+      "table": "table_1",
+      "label": "Corridor block enumeration",
+      "code": [
+        "lower_bound/proofcheck.py"
+      ],
+      "records": [
+        "lower_bound/proofcheck.json"
+      ],
+      "recorded_counts": {
+        "admissible_blocks": 11652,
+        "steps": 60036
+      },
+      "qualification": "corridor_upper_bound array; conservative original invariant"
+    },
+    {
+      "table": "table_1",
+      "label": "Original local symbolic checks",
+      "code": [
+        "experiments/prove_gadget.py",
+        "experiments/prove_gap.py"
+      ],
+      "records": [
+        "results/raw/gadget_proofs.json",
+        "results/raw/gap_proofs.json"
+      ],
+      "recorded_counts": {
+        "unsat": 196
+      },
+      "qualification": "4 gadget plus192 residue/phase gap obligations; z3-solver"
+    },
+    {
+      "table": "table_1",
+      "label": "Independent symbolic checks",
+      "code": [
+        "adversarial/math/independent_audit.py"
+      ],
+      "records": [
+        "adversarial/math/independent_results.json"
+      ],
+      "recorded_counts": {
+        "unsat": 7
+      },
+      "qualification": "smt object; z3-solver"
+    },
+    {
+      "table": "table_1",
+      "label": "Independent finite-format arithmetic",
+      "code": [
+        "adversarial/math/independent_audit.py"
+      ],
+      "records": [
+        "adversarial/math/independent_results.json"
+      ],
+      "recorded_counts": {
+        "additions": 59528
+      },
+      "qualification": "finite_formats addition_cases sum; import also requires z3-solver"
+    },
+    {
+      "table": "table_1",
+      "label": "Independent corridor exploration",
+      "code": [
+        "adversarial/math/independent_audit.py"
+      ],
+      "records": [
+        "adversarial/math/independent_results.json"
+      ],
+      "recorded_counts": {
+        "transitions": 142340
+      },
+      "qualification": "reachable_corridor layers transition sum"
+    },
+    {
+      "table": "table_1",
+      "label": "Native CPU arithmetic",
+      "code": [
+        "experiments/native_fold.cpp",
+        "experiments/native_factorial.cpp"
+      ],
+      "records": [
+        "results/raw/native_fold.jsonl",
+        "results/raw/native_factorial.jsonl",
+        "results/raw/native_fold.s"
+      ],
+      "recorded_counts": {
+        "queries": 120925
+      },
+      "qualification": "actual prior C++ CPU binary16,binary32,binary64 records; correctness not throughput"
+    },
+    {
+      "table": "table_1",
+      "label": "Actual Apple M5 Pro GPU arithmetic",
+      "code": [
+        "experiments/metal_fold.mm",
+        "experiments/metal_fold.metal",
+        "experiments/prepare_metal.py",
+        "experiments/prepare_factorial.py"
+      ],
+      "records": [
+        "results/raw/metal_fold.json",
+        "results/raw/metal_factorial.json",
+        "results/raw/metal_inputs.bin",
+        "results/raw/metal_outputs.bin",
+        "results/raw/factorial_inputs.bin",
+        "results/raw/factorial_outputs.bin"
+      ],
+      "recorded_counts": {
+        "queries": 27713,
+        "format": "binary32 only"
+      },
+      "qualification": "Retained Metal float kernels, input buffers and output bits support binary32 only; 27,713 correctness queries."
+    },
+    {
+      "table": "table_1",
+      "label": "Reference constructor",
+      "code": [
+        "experiments/check_corridor_summary.py",
+        "experiments/corridor_summary.py",
+        "experiments/subset_baseline.py"
+      ],
+      "records": [
+        "results/raw/corridor_summary.json"
+      ],
+      "recorded_counts": {
+        "blocks": 144,
+        "prefixes": 2280,
+        "full_table_comparisons": 107920
+      },
+      "qualification": "the script also compares saved GPU bits and writes serialized .bin outputs; this is not a new GPU launch"
+    },
+    {
+      "table": "table_1",
+      "label": "Independent reference cross-check",
+      "code": [
+        "adversarial/math/reference_crosscheck.py",
+        "adversarial/math/independent_audit.py",
+        "experiments/corridor_summary.py"
+      ],
+      "records": [
+        "adversarial/math/reference_results.json"
+      ],
+      "recorded_counts": {
+        "blocks": 84,
+        "query_checks": 18240,
+        "serialization_round_trips": 3444
+      },
+      "qualification": "Requires z3-solver through the independent_audit import."
+    },
+    {
+      "table": "table_2",
+      "label": "Whole-format eight-operand records",
+      "code": [
+        "extensions/strengthening_2026_11_07/check_full_native.py",
+        "extensions/strengthening_2026_11_07/independent_math/full_format_reference.py"
+      ],
+      "records": [
+        "extensions/strengthening_2026_11_07/full_native_results.json",
+        "extensions/strengthening_2026_11_07/native_binary32_samples.npz",
+        "extensions/strengthening_2026_11_07/native_binary64_samples.npz"
+      ],
+      "recorded_counts": {
+        "records_binary32": 1256,
+        "records_binary64": 7992,
+        "sampled_queries_binary32": 6165,
+        "sampled_queries_binary64": 16891,
+        "numpy_additions": 184448,
+        "mismatches": 0
+      },
+      "qualification": "actual prior NumPy CPU additions; NPZ retains operand/input/output bits; no GPU or timings"
+    },
+    {
+      "table": "table_3",
+      "label": "Serialized corridor examples",
+      "code": [
+        "experiments/check_corridor_summary.py",
+        "experiments/corridor_summary.py",
+        "experiments/subset_baseline.py"
+      ],
+      "records": [
+        "results/raw/corridor_summary.json",
+        "results/raw/corridor_fp24_summary.bin",
+        "results/raw/corridor_fp53_summary.bin"
+      ],
+      "recorded_counts": {
+        "domain_states": [
+          1048574,
+          562949953421310
+        ],
+        "payload_bits": [
+          2602,
+          6343
+        ],
+        "fixed_budget_bits": [
+          4645,
+          12099
+        ],
+        "serialized_bytes": [
+          581,
+          1513
+        ],
+        "rounding_evaluations": [
+          33536,
+          33536
+        ]
+      },
+      "qualification": "large_domains objects; conservative5m serializer distinct from4m theorem;642 sampled queries perprecision"
+    }
+  ],
+  "sections": [
+    {
+      "section": "6 / fixed K",
+      "code": [
+        "extensions/multibinade_2026_11_07/check_multibinade.py",
+        "extensions/multibinade_2026_11_07/check_sparse.py",
+        "extensions/multibinade_2026_11_07/independent_review/check_independent.py",
+        "extensions/multibinade_2026_11_07/independent_review/check_K_dependence.py"
+      ],
+      "records": [
+        "extensions/multibinade_2026_11_07/results.json",
+        "extensions/multibinade_2026_11_07/sparse_results.json",
+        "extensions/multibinade_2026_11_07/independent_review/results.json",
+        "extensions/multibinade_2026_11_07/independent_review/K_dependence_results.json"
+      ]
+    },
+    {
+      "section": "7 / rounded-state and two-threshold indices",
+      "code": [
+        "extensions/strengthening_2026_11_07/check_staircase.py",
+        "extensions/strengthening_2026_11_07/independent_math/check_rounded_corridor.py",
+        "extensions/strengthening_2026_11_07/independent_math/check_uniform_pieces.py",
+        "extensions/strengthening_2026_11_07/independent_math/crosscheck_parent.py"
+      ],
+      "records": [
+        "extensions/strengthening_2026_11_07/staircase_results.json",
+        "extensions/strengthening_2026_11_07/independent_math/results.json",
+        "extensions/strengthening_2026_11_07/independent_math/uniform_piece_results.json",
+        "extensions/strengthening_2026_11_07/independent_math/parent_crosscheck_results.json"
+      ]
+    },
+    {
+      "section": "8 / whole finite format",
+      "code": [
+        "extensions/strengthening_2026_11_07/independent_math/check_full_format.py",
+        "extensions/strengthening_2026_11_07/independent_math/full_format_reference.py",
+        "extensions/strengthening_2026_11_07/prior_art/independent_full_format_checks.py"
+      ],
+      "records": [
+        "extensions/strengthening_2026_11_07/independent_math/full_format_results.json",
+        "extensions/strengthening_2026_11_07/prior_art/independent_full_format_checks.json"
+      ]
+    },
+    {
+      "section": "12 / limits and counterexamples",
+      "code": [
+        "adversarial/root/boundary_attacks.py",
+        "adversarial/math/manuscript_scope_check.py"
+      ],
+      "records": [
+        "adversarial/root/boundary_attacks.json",
+        "adversarial/math/manuscript_scope_results.json"
+      ]
+    }
+  ],
+  "article_title": "Information bounds and exact indices for ordered floating-point addition",
+  "scope": "Code and retained records supporting the article tables and sections. Counts below describe the retained runs."
+}

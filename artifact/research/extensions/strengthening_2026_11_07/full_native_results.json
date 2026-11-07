@@ -1,0 +1,43 @@
+{
+  "scope": "Actual CPU NumPy arithmetic on sampled inputs; no GPU runs or performance measurements",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "reference_sha256": "7f098bbfa4f02ca93a614ded6a174c0121c05a5e8f36ac848b4cf56d884958f0",
+  "formats": [
+    {
+      "format": "binary32",
+      "p": 24,
+      "E": 254,
+      "all_finite_inputs": 4278190079,
+      "operands": 8,
+      "records": 1256,
+      "sampled_queries": 6165,
+      "output_mismatches": 0,
+      "numpy_additions": 49320,
+      "subnormal_preservation_checked": true,
+      "full_input_grid_enumerated": false,
+      "positive_infinity_outputs": 281,
+      "negative_infinity_outputs": 0,
+      "sample_file": "native_binary32_samples.npz"
+    },
+    {
+      "format": "binary64",
+      "p": 53,
+      "E": 2046,
+      "all_finite_inputs": 18437736874454810623,
+      "operands": 8,
+      "records": 7992,
+      "sampled_queries": 16891,
+      "output_mismatches": 0,
+      "numpy_additions": 135128,
+      "subnormal_preservation_checked": true,
+      "full_input_grid_enumerated": false,
+      "positive_infinity_outputs": 214,
+      "negative_infinity_outputs": 0,
+      "sample_file": "native_binary64_samples.npz"
+    }
+  ],
+  "status": "PASS"
+}

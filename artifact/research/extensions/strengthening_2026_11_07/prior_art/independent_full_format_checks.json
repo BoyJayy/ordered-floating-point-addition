@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "seed": 20261108,
+  "counts": {
+    "blocks": 3442,
+    "updates": 9484,
+    "rounded_additions": 564520,
+    "record_value_checks": 510842,
+    "positive_overflow_ties": 1669,
+    "negative_overflow_ties": 1723,
+    "interior_boundary_equalities": 20824,
+    "infinite_output_values": 182064
+  },
+  "maxima": {
+    "pieces": 108,
+    "initial_pieces": 17,
+    "inputs": 575
+  },
+  "section_sha256": "9f882731fced9aa277234042fef32ed388b7f089f3a14c7bf8c9e1ff81eae1af",
+  "script_sha256": "9c8ba822ca501b049c173be2d77b493f299ecc031920c1cffd0b3b35c22d6ce4",
+  "kind": "independent exact integer finite-format model; no GPU/CPU floating-point benchmark",
+  "limits": "Exhaustive only for the listed small-format lengths, plus seeded random blocks. Does not establish formal proof or validate sparse implementation complexity."
+}

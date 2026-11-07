@@ -1,0 +1,31 @@
+{
+  "p": 11,
+  "k": 5,
+  "precision_condition": true,
+  "unrestricted_permutation": [
+    128,
+    132,
+    136,
+    140,
+    144,
+    365,
+    348,
+    325,
+    308,
+    285,
+    -128,
+    -132,
+    -136,
+    -140,
+    -144,
+    -365,
+    -348,
+    -325,
+    -308,
+    -285
+  ],
+  "unrestricted_exact_oracle_result": 1,
+  "unrestricted_native_binary16_result": 1,
+  "constructed_witnesses_checked": 120,
+  "all_constructed_witnesses_return_zero": true
+}

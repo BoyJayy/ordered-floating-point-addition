@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "seed": 2026110722,
+  "small_blocks": 240,
+  "small_prefixes": 8208,
+  "full_table_queries": 103968,
+  "promise_rejections": 3,
+  "arbitrary_rational_oracle_comparisons": 1152,
+  "large_domains": [
+    {
+      "p": 24,
+      "k": 3,
+      "domain_states": 1048574,
+      "additions": 1,
+      "groups": 2,
+      "stored_deviations": 0,
+      "checked_queries": 518,
+      "rounding_evaluations": 4
+    },
+    {
+      "p": 53,
+      "k": 3,
+      "domain_states": 562949953421310,
+      "additions": 1,
+      "groups": 2,
+      "stored_deviations": 0,
+      "checked_queries": 518,
+      "rounding_evaluations": 4
+    }
+  ],
+  "scope": "exact reference evaluator; no new CPU/GPU performance measurements"
+}
