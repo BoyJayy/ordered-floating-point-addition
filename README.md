@@ -4,8 +4,8 @@
 
 Artem D. Popkov · [ORCID](https://orcid.org/0009-0005-8977-0400)
 
-[![Preprint DOI](https://img.shields.io/badge/preprint-10.5281%2Fzenodo.24045377-blue)](https://doi.org/10.5281/zenodo.24045377)
-[![Artifact DOI](https://img.shields.io/badge/artifact-10.5281%2Fzenodo.24044237-blue)](https://doi.org/10.5281/zenodo.24044237)
+[![Preprint DOI](https://img.shields.io/badge/preprint-10.5281%2Fzenodo.24231880-blue)](https://doi.org/10.5281/zenodo.24231880)
+[![Artifact DOI](https://img.shields.io/badge/artifact-10.5281%2Fzenodo.24231263-blue)](https://doi.org/10.5281/zenodo.24231263)
 
 A fixed block of floating-point additions defines a function of its incoming
 accumulator. When each addition is rounded separately, blocks with the same
@@ -14,7 +14,7 @@ is needed to describe that function before the incoming value is known, and
 how to evaluate it exactly without first building a table of every input.
 
 **[Read the paper](paper/article.pdf)** ·
-[Published preprint](https://zenodo.org/records/24045377) ·
+[Preprint version 1.1](https://doi.org/10.5281/zenodo.24231880) ·
 [Reproduction instructions](artifact/REPRODUCE.txt) ·
 [Code and evidence map](artifact/EVIDENCE_MAP.json)
 
@@ -29,10 +29,23 @@ holding the numerical multiset fixed.
 The whole-format index covers finite numerical inputs, subnormals, and
 absorbing overflow. It identifies signed zeros numerically and excludes NaNs,
 nonfinite operands, and exception flags. Tight information bounds require the
-corridor and parameter assumptions stated in the paper. Efficient composition
-of indices and practical speedups remain open.
+corridor and parameter assumptions stated in the paper.
 
-**Status:** preprint, version 1.0, published on 8 November 2026. It has not
+Whole-format indices can now be merged without their original operands in
+`O(q_A + q_B)` abstract operations, with at most `q_A + q_B - 1` pieces.
+This gives a balanced constructor and direct inverse queries. The index
+construction also extends to integer radices through a tagged one- or
+two-threshold representation. The binary information lower bounds retain
+their binary assumptions.
+
+These operation counts assume the paper's valid-index conditions and a
+prepared public format. Integer widths and format preparation are accounted
+for separately. The radix extension uses known rounding, floor-function and
+generalized-inverse ideas; it is not presented as an independent major
+discovery. A bounded Python pilot includes setup and memory costs. Practical
+speedups over native floating-point summation have not been established.
+
+**Status:** preprint, version 1.1, dated 15 November 2026. It has not
 undergone external peer review. The results concern standalone descriptions; they do not
 establish a lower bound on unrestricted parallel running time.
 
@@ -52,13 +65,24 @@ nonzero status on failure.
 - `verify_release.py` checks the archived file hashes, license mapping, and
   retained release status.
 - `run_quick_checks.py` checks retained records and reruns bounded exact
-  arithmetic cases, including counterexamples and small whole-format cases.
+  arithmetic cases, including counterexamples, small whole-format cases,
+  and the corrected all-radix constructor and its operation counts.
   It works in a temporary copy and leaves the archived files unchanged.
 
 The GitHub Actions workflow runs these portable checks. It does not execute
 GPU kernels, native floating-point experiments, or a proof assistant.
 Full enumerations, solver checks, and native CPU/Metal runs have separate
 requirements in [REPRODUCE.txt](artifact/REPRODUCE.txt).
+
+For the additional composition, radix and cache checks:
+
+```sh
+python3 -B artifact/run_extension_checks.py
+```
+
+Use `--full` for the full initial merge/radix suites and `--native-cpu` for
+sampled binary32/binary64 comparisons. These options also run in temporary
+copies and are not part of the portable CI job.
 
 ## Evidence
 
@@ -68,11 +92,14 @@ requirements in [REPRODUCE.txt](artifact/REPRODUCE.txt).
 | Local solver checks | Selected arithmetic lemmas; not a formalization of the full paper |
 | Original native CPU runs | 120,925 binary16/binary32/binary64 correctness queries |
 | Later whole-format CPU runs | 23,056 sampled queries and 184,448 NumPy additions |
+| Whole-format merge CPU checks | 296,480 binary32/binary64 comparisons |
+| Corrected all-radix exact checks | 274,241 forward comparisons, 4,536 inverse queries, 165 refined merges |
+| Python implementation pilot | Ten synthetic workloads, raw timing samples, setup costs and separate allocation measurements |
 | Native Metal GPU runs | 27,713 binary32 correctness queries |
 
 These counts describe retained runs. Running the portable checks does not
 repeat the hardware experiments. Finite tests support the constructions but
-do not replace proofs. No throughput improvement is claimed. Separately
+do not replace proofs. No native FP or GPU throughput improvement is claimed. Separately
 written implementations in the artifact are project checks, not external
 peer review.
 
@@ -80,8 +107,11 @@ peer review.
 
 ```text
 paper/
-  article.pdf         Published English preprint, 32 pages
-  main.tex            Self-contained LaTeX source
+  article.pdf         English preprint, version 1.1, 46 pages
+  main.tex            Main LaTeX source with bibliography
+  merge_section.tex   Whole-format composition
+  performance_section.tex  Bounded implementation pilot
+  radix_section.tex   Extension to integer radices
 artifact/
   research/           Implementations, checks, fixtures, and retained results
   REPRODUCE.txt       Extended reproduction commands and requirements
@@ -91,13 +121,22 @@ CITATION.cff          Citation metadata, with the paper as preferred citation
 LICENSE.md           License scope for the paper, code, and data
 ```
 
-The `artifact/` directory is a byte-for-byte copy of the published Zenodo
-artifact v1.0.0. Preserve it when reproducing the archived results; run checks
+The `artifact/` directory is a byte-for-byte copy of the Zenodo
+artifact v1.1.0. Preserve it when reproducing the archived results; run checks
 that write output in a separate working copy, as described in its instructions.
-The PDF matches the published preprint. Paper and artifact have distinct DOIs.
+Paper and artifact have distinct DOIs. Earlier versions remain in the
+repository history and the Zenodo version history.
+
+The initial radix implementation is retained with its old numerical results.
+Its singleton constructor repeated a region search; the corrected linear
+constructor is identified in [CHANGES.txt](artifact/CHANGES.txt). The complete
+article states the valid-index and finite-height requirements. Full-text
+comparison with two close inverse-addition papers remains open; no exhaustive
+worldwide-priority guarantee is claimed.
 
 To rebuild the paper, use a TeX installation with `pdflatex`, `amsart`, and the
-packages listed in `paper/main.tex`. The bibliography is included in the source.
+packages listed in `paper/main.tex`. Keep all four `.tex` files together.
+The bibliography is included in the main source.
 
 ```sh
 cd paper
@@ -113,11 +152,11 @@ The rebuilt PDF is `paper/build/main.pdf`; the published PDF remains unchanged.
 For the mathematical results:
 
 > Popkov, A. D. (2026). *Information bounds and exact indices for ordered
-> floating-point addition* (Version 1.0) [Preprint]. Zenodo.
-> https://doi.org/10.5281/zenodo.24045377
+> floating-point addition* (Version 1.1) [Preprint]. Zenodo.
+> https://doi.org/10.5281/zenodo.24231880
 
 For the code and retained experimental records, also cite the
-[reproducibility artifact, version 1.0.0](https://doi.org/10.5281/zenodo.24044237).
+[reproducibility artifact, version 1.1.0](https://doi.org/10.5281/zenodo.24231263).
 GitHub's **Cite this repository** menu uses [CITATION.cff](CITATION.cff).
 
 ## Feedback

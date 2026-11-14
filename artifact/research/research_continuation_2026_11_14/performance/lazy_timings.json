@@ -1,0 +1,515 @@
+{
+  "status": "COMPLETE",
+  "results": [
+    {
+      "id": "p8_E8_m1_small_steps",
+      "p": 8,
+      "E": 8,
+      "m": 1,
+      "kind": "small_steps",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            53166,
+            49958,
+            49750,
+            49167,
+            48708
+          ],
+          "min_ns": 48708,
+          "median_ns": 49750,
+          "max_ns": 53166,
+          "relative_range": 0.08960804020100503
+        },
+        "lazy": {
+          "samples_ns": [
+            58959,
+            50417,
+            50167,
+            49875,
+            48875
+          ],
+          "min_ns": 48875,
+          "median_ns": 50167,
+          "max_ns": 58959,
+          "relative_range": 0.2010086311718859
+        }
+      },
+      "pieces": 29,
+      "retained_python_bytes": 12197,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p8_E8_m32_cancellation",
+      "p": 8,
+      "E": 8,
+      "m": 32,
+      "kind": "cancellation",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            5643542,
+            5695542,
+            5694958,
+            5710292,
+            5608500
+          ],
+          "min_ns": 5608500,
+          "median_ns": 5694958,
+          "max_ns": 5710292,
+          "relative_range": 0.017874056314374925
+        },
+        "lazy": {
+          "samples_ns": [
+            5843917,
+            5720333,
+            5897167,
+            5822250,
+            5765875
+          ],
+          "min_ns": 5720333,
+          "median_ns": 5822250,
+          "max_ns": 5897167,
+          "relative_range": 0.03037210700330628
+        }
+      },
+      "pieces": 76,
+      "retained_python_bytes": 23878,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p8_E8_m128_random_exponents",
+      "p": 8,
+      "E": 8,
+      "m": 128,
+      "kind": "random_exponents",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            26873958,
+            26506750,
+            26740667,
+            26898500,
+            27177958
+          ],
+          "min_ns": 26506750,
+          "median_ns": 26873958,
+          "max_ns": 27177958,
+          "relative_range": 0.024976149772951196
+        },
+        "lazy": {
+          "samples_ns": [
+            26861375,
+            26934375,
+            27298166,
+            27691750,
+            27023375
+          ],
+          "min_ns": 26861375,
+          "median_ns": 27023375,
+          "max_ns": 27691750,
+          "relative_range": 0.03072802712466522
+        }
+      },
+      "pieces": 107,
+      "retained_python_bytes": 28659,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m1_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 1,
+      "kind": "small_steps",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            2004125,
+            2046250,
+            1959917,
+            1986417,
+            2059792
+          ],
+          "min_ns": 1959917,
+          "median_ns": 2004125,
+          "max_ns": 2059792,
+          "relative_range": 0.04983471589845943
+        },
+        "lazy": {
+          "samples_ns": [
+            1998917,
+            2058625,
+            1968041,
+            2017542,
+            1982625
+          ],
+          "min_ns": 1968041,
+          "median_ns": 1998917,
+          "max_ns": 2058625,
+          "relative_range": 0.0453165389058175
+        }
+      },
+      "pieces": 730,
+      "retained_python_bytes": 373321,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m8_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 8,
+      "kind": "cancellation",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            38954916,
+            38897500,
+            38792459,
+            38905667,
+            38738208
+          ],
+          "min_ns": 38738208,
+          "median_ns": 38897500,
+          "max_ns": 38954916,
+          "relative_range": 0.005571257792917283
+        },
+        "lazy": {
+          "samples_ns": [
+            38993584,
+            38971916,
+            38889333,
+            38991875,
+            38958250
+          ],
+          "min_ns": 38889333,
+          "median_ns": 38971916,
+          "max_ns": 38993584,
+          "relative_range": 0.0026750288592431535
+        }
+      },
+      "pieces": 1058,
+      "retained_python_bytes": 467721,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m32_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "small_steps",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            174168042,
+            172766667,
+            172998250,
+            172932792,
+            172790000
+          ],
+          "min_ns": 172766667,
+          "median_ns": 172932792,
+          "max_ns": 174168042,
+          "relative_range": 0.008103581650378952
+        },
+        "lazy": {
+          "samples_ns": [
+            173120042,
+            172837541,
+            173573333,
+            174366000,
+            173030416
+          ],
+          "min_ns": 172837541,
+          "median_ns": 173120042,
+          "max_ns": 174366000,
+          "relative_range": 0.00882889688762899
+        }
+      },
+      "pieces": 1185,
+      "retained_python_bytes": 493805,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m128_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 128,
+      "kind": "cancellation",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            684098416,
+            688677166,
+            684494459,
+            694119125,
+            684986417
+          ],
+          "min_ns": 684098416,
+          "median_ns": 684986417,
+          "max_ns": 694119125,
+          "relative_range": 0.014629062345334069
+        },
+        "lazy": {
+          "samples_ns": [
+            699469542,
+            682999833,
+            679851333,
+            682166666,
+            691944792
+          ],
+          "min_ns": 679851333,
+          "median_ns": 682999833,
+          "max_ns": 699469542,
+          "relative_range": 0.0287235926747291
+        }
+      },
+      "pieces": 1058,
+      "retained_python_bytes": 467721,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m32_random_exponents",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "random_exponents",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            176367875,
+            177054083,
+            176987125,
+            179569584,
+            177272167
+          ],
+          "min_ns": 176367875,
+          "median_ns": 177054083,
+          "max_ns": 179569584,
+          "relative_range": 0.018083226016312768
+        },
+        "lazy": {
+          "samples_ns": [
+            176754417,
+            176458209,
+            179552709,
+            178525709,
+            178542083
+          ],
+          "min_ns": 176458209,
+          "median_ns": 178525709,
+          "max_ns": 179552709,
+          "relative_range": 0.017333637924384325
+        }
+      },
+      "pieces": 1708,
+      "retained_python_bytes": 670430,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p53_E2046_m1_small_steps",
+      "p": 53,
+      "E": 2046,
+      "m": 1,
+      "kind": "small_steps",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            27968417,
+            28066500,
+            28025417,
+            27952125,
+            27860791
+          ],
+          "min_ns": 27860791,
+          "median_ns": 27968417,
+          "max_ns": 28066500,
+          "relative_range": 0.0073550462294666155
+        },
+        "lazy": {
+          "samples_ns": [
+            28163541,
+            27931542,
+            27887875,
+            28077208,
+            27995750
+          ],
+          "min_ns": 27887875,
+          "median_ns": 27995750,
+          "max_ns": 28163541,
+          "relative_range": 0.00984670887545431
+        }
+      },
+      "pieces": 5326,
+      "retained_python_bytes": 5843001,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    },
+    {
+      "id": "p53_E2046_m8_cancellation",
+      "p": 53,
+      "E": 2046,
+      "m": 8,
+      "kind": "cancellation",
+      "construction": {
+        "materialized": {
+          "samples_ns": [
+            511261167,
+            514699584,
+            512154792,
+            534585917,
+            521066875
+          ],
+          "min_ns": 511261167,
+          "median_ns": 514699584,
+          "max_ns": 534585917,
+          "relative_range": 0.04531721168051304
+        },
+        "lazy": {
+          "samples_ns": [
+            510290667,
+            512280833,
+            512588625,
+            525613042,
+            514219000
+          ],
+          "min_ns": 510290667,
+          "median_ns": 512588625,
+          "max_ns": 525613042,
+          "relative_range": 0.02989214791881111
+        }
+      },
+      "pieces": 6811,
+      "retained_python_bytes": 6475997,
+      "descriptor_matches_materialized": true,
+      "correctness": "PASS"
+    }
+  ],
+  "environment_before": {
+    "timestamp_moscow": "2026-11-14T23:24:27.774548+03:00",
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 18,
+    "loadavg": [
+      2.533203125,
+      2.65673828125,
+      2.88232421875
+    ],
+    "cpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "memory": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "power": {
+      "command": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "returncode": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23068771)\t80%; AC attached; not charging present: true",
+      "stderr": ""
+    },
+    "thermal": {
+      "command": [
+        "pmset",
+        "-g",
+        "therm"
+      ],
+      "returncode": 0,
+      "stdout": "Error:Failed to get thermal warning level with error code 0xe00002bc\nError: Failed to get performance warning level with error code 0xe00002bc\nError: No CPU power status with error code 0xe00002bc",
+      "stderr": ""
+    },
+    "caveats": [
+      "No CPU affinity or frequency locking.",
+      "Other desktop processes remain active.",
+      "Single interpreter thread; arbitrary precision exact integers.",
+      "The timed queries all use finite representable values.",
+      "Not an IEEE hardware, C++, GPU, production, or application benchmark."
+    ]
+  },
+  "environment_after": {
+    "timestamp_moscow": "2026-11-14T23:24:47.824413+03:00",
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 18,
+    "loadavg": [
+      2.3251953125,
+      2.59716796875,
+      2.85498046875
+    ],
+    "cpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "memory": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "power": {
+      "command": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "returncode": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23068771)\t80%; AC attached; not charging present: true",
+      "stderr": ""
+    },
+    "thermal": {
+      "command": [
+        "pmset",
+        "-g",
+        "therm"
+      ],
+      "returncode": 0,
+      "stdout": "Error:Failed to get thermal warning level with error code 0xe00002bc\nError: Failed to get performance warning level with error code 0xe00002bc\nError: No CPU power status with error code 0xe00002bc",
+      "stderr": ""
+    },
+    "caveats": [
+      "No CPU affinity or frequency locking.",
+      "Other desktop processes remain active.",
+      "Single interpreter thread; arbitrary precision exact integers.",
+      "The timed queries all use finite representable values.",
+      "Not an IEEE hardware, C++, GPU, production, or application benchmark."
+    ]
+  }
+}

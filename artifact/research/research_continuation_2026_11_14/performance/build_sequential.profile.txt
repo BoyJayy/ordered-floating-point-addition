@@ -1,0 +1,32 @@
+         5802898 function calls in 0.949 seconds
+
+   Ordered by: cumulative time
+   List reduced from 28 to 24 due to restriction <24>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.949    0.949 benchmark.py:183(<lambda>)
+        1    0.000    0.000    0.949    0.949 benchmark.py:34(sequential)
+       32    0.215    0.007    0.948    0.030 full_format_reference.py:108(append)
+   520143    0.121    0.000    0.351    0.000 full_format_reference.py:100(evaluate_index)
+   965498    0.258    0.000    0.295    0.000 full_format_reference.py:83(at)
+   411691    0.081    0.000    0.277    0.000 full_format_reference.py:143(new)
+   445355    0.060    0.000    0.088    0.000 full_format_reference.py:15(uniform_round)
+  1410853    0.065    0.000    0.065    0.000 {built-in method builtins.divmod}
+   587471    0.053    0.000    0.053    0.000 {built-in method _bisect.bisect_right}
+    33664    0.006    0.000    0.035    0.000 full_format_reference.py:54(add)
+    33664    0.015    0.000    0.029    0.000 full_format_reference.py:48(round)
+   518127    0.019    0.000    0.019    0.000 full_format_reference.py:114(<lambda>)
+   520177    0.018    0.000    0.018    0.000 {built-in method builtins.isinstance}
+    34173    0.016    0.000    0.016    0.000 <string>:2(__init__)
+   101501    0.007    0.000    0.007    0.000 {method 'append' of 'list' objects}
+    67360    0.004    0.000    0.004    0.000 {built-in method builtins.max}
+    67392    0.003    0.000    0.003    0.000 {built-in method builtins.abs}
+       32    0.003    0.000    0.003    0.000 {built-in method builtins.sorted}
+    33696    0.002    0.000    0.002    0.000 {built-in method builtins.min}
+    33696    0.002    0.000    0.002    0.000 {method 'bit_length' of 'int' objects}
+    16288    0.002    0.000    0.002    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.001    0.001 full_format_reference.py:94(__init__)
+        1    0.000    0.000    0.000    0.000 full_format_reference.py:21(__init__)
+     1024    0.000    0.000    0.000    0.000 full_format_reference.py:113(<lambda>)
+
+

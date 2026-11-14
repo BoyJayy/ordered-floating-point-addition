@@ -1,0 +1,82 @@
+\subsection{A bounded implementation pilot}\label{sec:pilot}
+
+We measured construction and repeated-query costs in a single-threaded
+CPython 3.15.1 implementation on an Apple M5 Pro with 48 GiB of memory,
+running macOS 26.6.2 on AC power. Every method uses exact integers in
+subnormal-ulp units. Thus a case with $(p,E)=(24,254)$ models the
+numerical values of binary32 but does not execute native binary32
+addition. The baseline replays the operand list and exits early on
+absorbing overflow. Its input is already known to be representable.
+The indices retain their representability check. We compare the original
+sequential index constructor with balanced construction, and compare
+replay queries with a query cache storing numerical piece origins.
+The cache uses one binary search, shifts, and masks; it stores no operands.
+Its preparation time and retained memory are charged separately.
+
+The pilot has ten synthetic cases: small signed steps, paired cancellation,
+and random exponents. Each uses 256 queries, half broadly distributed by
+format rank and half near the operand scale. We retain five construction
+samples and seven query samples after warmup, with randomized method order.
+Each timed query batch repeats the fixed query set; batch calibration
+targets at least 20 ms subject to a repetition cap. Profiling and allocation
+tracing run separately. CPU frequency and affinity are not fixed, and
+desktop background processes remain active. The saved results include
+every timing sample, input, seed, and observed range.
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+$(p,E,m)$ & Case & $T_s$ & $T_b$ & $t_r$ & $t_c$ & $Q_\ast$\\
+\midrule
+$(8,8,128)$ & Random & 10.85 & 27.21 & 1.681 & 0.215 & 18,563\\
+$(24,254,1)$ & Steps & 12.33 & 2.06 & 0.409 & 0.412 & ---\\
+$(24,254,32)$ & Steps & 436.69 & 177.55 & 9.530 & 0.412 & 19,516\\
+$(24,254,128)$ & Cancel & 1844.52 & 696.70 & 36.883 & 0.424 & 19,119\\
+$(53,2046,8)$ & Cancel & 3352.72 & 521.27 & 4.306 & 0.651 & 143,883\\
+\bottomrule
+\end{tabular}
+\caption{Selected pilot medians. Sequential and balanced construction
+times $T_s,T_b$ are in milliseconds; replay and cached-query times
+$t_r,t_c$ are in microseconds. $Q_\ast$ includes cache preparation and is
+an estimated crossover, not a measured end-to-end run. All queries in
+the small random case overflow, and replay retains its early exit.}
+\label{tab:pilot}
+\end{table}
+
+For a positive measured per-query saving, the linear cost model gives
+\[
+ Q_\ast=\left\lceil\frac{T_b+T_{\rm cache}}{t_r-t_c}\right\rceil,
+\]
+with times converted to the same units. No finite crossover exists in
+this model when $t_r\leq t_c$. Table~\ref{tab:pilot} shows why a faster
+query alone is insufficient: setup requires tens or hundreds of thousands
+of queries to amortize in several broad-format cases. The one-addition
+binary32-parameter case does not amortize. The corresponding binary64
+case has only a roughly two-percent median saving, with overlapping
+sample ranges; we do not infer a reliable advantage from it. The small
+random case also shows that balanced construction can be slower than
+the sequential constructor. These synthetic workloads do not establish
+an application-level benefit or a speedup over native floating-point code.
+
+Allocation measurements exposed a separate implementation cost: the
+initial balanced constructor materializes all leaves. A lazy stack
+instead merges adjacent equal-length blocks as they arrive and folds
+the remaining blocks from right to left. It produces the same ordered
+merge tree and final descriptors. In a separate paired run, traced peak
+Python allocations for the $(24,254,128)$ cancellation case fell from
+57.72 MB to 3.53 MB, and for $(53,2046,8)$ from 55.18 MB to 26.96 MB.
+Construction times changed only within the observed variation. These
+are reductions in temporary Python allocations, not process RSS or the
+bit-encoding bound. The sequential constructor still used less peak
+memory: about 0.69 MB and 9.66 MB in the respective cases. The query cache
+also increases retained memory for the broad formats.
+
+Before timing, all saved queries were checked against exact replay.
+A separate enumerated-neighbour oracle checked 28,260 comparisons on
+100 small-format blocks. Lazy construction passed another 7,092 oracle
+comparisons on 108 blocks, including empty blocks, non-power-of-two
+lengths, and one-pass operand iterators. These checks and identical
+descriptors support the implementation changes; the scheduling and
+caching optimizations are not additional mathematical novelty.

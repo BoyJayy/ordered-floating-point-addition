@@ -1,0 +1,2185 @@
+{
+  "status": "COMPLETE",
+  "results": [
+    {
+      "id": "p8_E8_m1_small_steps",
+      "p": 8,
+      "E": 8,
+      "m": 1,
+      "kind": "small_steps",
+      "seed": 2026111400,
+      "pieces": {
+        "sequential": 29,
+        "balanced": 29
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            125209,
+            118041,
+            116334,
+            115209,
+            114208
+          ],
+          "min_ns": 114208,
+          "median_ns": 116334,
+          "max_ns": 125209,
+          "relative_range": 0.0945639280004126
+        },
+        "balanced": {
+          "samples_ns": [
+            57458,
+            52708,
+            53584,
+            54166,
+            53792
+          ],
+          "min_ns": 52708,
+          "median_ns": 53792,
+          "max_ns": 57458,
+          "relative_range": 0.08830309339678763
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            7250,
+            6083,
+            5792,
+            5917,
+            5250
+          ],
+          "min_ns": 5250,
+          "median_ns": 5917,
+          "max_ns": 7250,
+          "relative_range": 0.33800912624640866
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            249.6621953616352,
+            255.64799528301887,
+            251.1275427476415,
+            247.82372739779873,
+            246.08248575078616,
+            249.4907380110063,
+            248.61705237814465
+          ],
+          "min_ns": 246.08248575078616,
+          "median_ns": 249.4907380110063,
+          "max_ns": 255.64799528301887,
+          "relative_range": 0.03834013883036703,
+          "batch_elapsed_ns": [
+            20324500,
+            20811792,
+            20443791,
+            20174834,
+            20033083,
+            20310542,
+            20239417
+          ],
+          "repeats_per_sample": 318,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 62917
+        },
+        "sequential_index": {
+          "samples_ns": [
+            426.20782537774727,
+            432.0493003090659,
+            429.7402558379121,
+            427.6762534340659,
+            429.4764337225275,
+            431.31063272664835,
+            428.09475875686815
+          ],
+          "min_ns": 426.20782537774727,
+          "median_ns": 429.4764337225275,
+          "max_ns": 432.0493003090659,
+          "relative_range": 0.013601386415285055,
+          "batch_elapsed_ns": [
+            19857875,
+            20130041,
+            20022458,
+            19926292,
+            20010166,
+            20095625,
+            19945791
+          ],
+          "repeats_per_sample": 182,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 110209
+        },
+        "balanced_index": {
+          "samples_ns": [
+            439.0501336898396,
+            424.3790733622995,
+            427.85970922459893,
+            435.6304311497326,
+            426.5158338903743,
+            430.8886196524064,
+            427.041569184492
+          ],
+          "min_ns": 424.3790733622995,
+          "median_ns": 427.85970922459893,
+          "max_ns": 439.0501336898396,
+          "relative_range": 0.0342894177956792,
+          "batch_elapsed_ns": [
+            21018208,
+            20315875,
+            20482500,
+            20854500,
+            20418166,
+            20627500,
+            20443334
+          ],
+          "repeats_per_sample": 187,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 107000
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            273.050168771777,
+            274.79231543989545,
+            276.07228604094075,
+            273.36717388937285,
+            275.3543254573171,
+            274.1679279181185,
+            272.108762521777
+          ],
+          "min_ns": 272.108762521777,
+          "median_ns": 274.1679279181185,
+          "max_ns": 276.07228604094075,
+          "relative_range": 0.014456554233971042,
+          "batch_elapsed_ns": [
+            20061542,
+            20189541,
+            20283583,
+            20084833,
+            20230833,
+            20143666,
+            19992375
+          ],
+          "repeats_per_sample": 287,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 69750
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 116334,
+          "saving_ns_per_query": -179.98569571152117,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 53792,
+          "saving_ns_per_query": -178.36897121359263,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 59709,
+          "saving_ns_per_query": -24.677189907112194,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 249.4907380110063,
+          "sequential_index_ns": 116763.47643372252,
+          "balanced_index_ns": 54219.8597092246,
+          "numeric_cache_ns": 59983.16792791812
+        },
+        "64": {
+          "replay_ns": 15967.407232704403,
+          "sequential_index_ns": 143820.49175824175,
+          "balanced_index_ns": 81175.02139037433,
+          "numeric_cache_ns": 77255.74738675958
+        },
+        "1024": {
+          "replay_ns": 255478.51572327045,
+          "sequential_index_ns": 556117.8681318681,
+          "balanced_index_ns": 491920.3422459893,
+          "numeric_cache_ns": 340456.95818815334
+        },
+        "65536": {
+          "replay_ns": 16350625.006289309,
+          "sequential_index_ns": 28262501.56043956,
+          "balanced_index_ns": 28094005.903743315,
+          "numeric_cache_ns": 18027578.324041814
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 116,
+        "sequential": 12197,
+        "balanced": 12197,
+        "numeric_cache_alone": 10628
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p8_E8_m32_cancellation",
+      "p": 8,
+      "E": 8,
+      "m": 32,
+      "kind": "cancellation",
+      "seed": 2026111401,
+      "pieces": {
+        "sequential": 59,
+        "balanced": 76
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.00390625,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            5730583,
+            5903375,
+            5675500,
+            5668000,
+            5824917
+          ],
+          "min_ns": 5668000,
+          "median_ns": 5730583,
+          "max_ns": 5903375,
+          "relative_range": 0.04107348240135428
+        },
+        "balanced": {
+          "samples_ns": [
+            6033250,
+            6052833,
+            5927917,
+            5930209,
+            5938375
+          ],
+          "min_ns": 5927917,
+          "median_ns": 5938375,
+          "max_ns": 6052833,
+          "relative_range": 0.021035384259161807
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            18958,
+            16208,
+            14875,
+            15375,
+            14458
+          ],
+          "min_ns": 14458,
+          "median_ns": 15375,
+          "max_ns": 18958,
+          "relative_range": 0.2926829268292683
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            5309.440104166667,
+            5469.694010416667,
+            5354.470572916666,
+            5374.0125,
+            5475.282291666666,
+            5299.989322916666,
+            5365.787760416667
+          ],
+          "min_ns": 5299.989322916666,
+          "median_ns": 5365.787760416667,
+          "max_ns": 5475.282291666666,
+          "relative_range": 0.032668636289182644,
+          "batch_elapsed_ns": [
+            20388250,
+            21003625,
+            20561167,
+            20636208,
+            21025084,
+            20351959,
+            20604625
+          ],
+          "repeats_per_sample": 15,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 1376125
+        },
+        "sequential_index": {
+          "samples_ns": [
+            439.31403882575756,
+            445.47329545454545,
+            441.87578125,
+            440.1593986742424,
+            436.2699337121212,
+            438.45288825757575,
+            441.07874053030304
+          ],
+          "min_ns": 436.2699337121212,
+          "median_ns": 440.1593986742424,
+          "max_ns": 445.47329545454545,
+          "relative_range": 0.02090915647864097,
+          "batch_elapsed_ns": [
+            18556625,
+            18816792,
+            18664833,
+            18592333,
+            18428042,
+            18520250,
+            18631166
+          ],
+          "repeats_per_sample": 165,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 121875
+        },
+        "balanced_index": {
+          "samples_ns": [
+            439.61129502118644,
+            436.6209171963277,
+            441.5570709745763,
+            435.2848031426554,
+            437.70506709039546,
+            439.59105755649716,
+            448.6192178672316
+          ],
+          "min_ns": 435.2848031426554,
+          "median_ns": 439.59105755649716,
+          "max_ns": 448.6192178672316,
+          "relative_range": 0.03033368057734535,
+          "batch_elapsed_ns": [
+            19919667,
+            19784167,
+            20007834,
+            19723625,
+            19833292,
+            19918750,
+            20327834
+          ],
+          "repeats_per_sample": 177,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 113458
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            284.34119591346155,
+            280.6609375,
+            277.7024489182692,
+            286.11527944711537,
+            292.4554387019231,
+            281.31385216346155,
+            277.9922926682692
+          ],
+          "min_ns": 277.7024489182692,
+          "median_ns": 281.31385216346155,
+          "max_ns": 292.4554387019231,
+          "relative_range": 0.052443168618235704,
+          "batch_elapsed_ns": [
+            18925750,
+            18680792,
+            18483875,
+            19043833,
+            19465834,
+            18724250,
+            18503167
+          ],
+          "repeats_per_sample": 260,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 77084
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 5730583,
+          "saving_ns_per_query": 4925.628361742424,
+          "queries": 1164,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 5938375,
+          "saving_ns_per_query": 4926.19670286017,
+          "queries": 1206,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 5953750,
+          "saving_ns_per_query": 5084.473908253205,
+          "queries": 1171,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 5365.787760416667,
+          "sequential_index_ns": 5731023.159398674,
+          "balanced_index_ns": 5938814.591057557,
+          "numeric_cache_ns": 5954031.313852163
+        },
+        "64": {
+          "replay_ns": 343410.4166666667,
+          "sequential_index_ns": 5758753.201515151,
+          "balanced_index_ns": 5966508.8276836155,
+          "numeric_cache_ns": 5971754.086538462
+        },
+        "1024": {
+          "replay_ns": 5494566.666666667,
+          "sequential_index_ns": 6181306.224242425,
+          "balanced_index_ns": 6388516.242937854,
+          "numeric_cache_ns": 6241815.384615385
+        },
+        "65536": {
+          "replay_ns": 351652266.6666667,
+          "sequential_index_ns": 34576869.35151515,
+          "balanced_index_ns": 34747414.5480226,
+          "numeric_cache_ns": 24389934.615384616
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 816,
+        "sequential": 19798,
+        "balanced": 23878,
+        "numeric_cache_alone": 19705
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p8_E8_m128_random_exponents",
+      "p": 8,
+      "E": 8,
+      "m": 128,
+      "kind": "random_exponents",
+      "seed": 2026111402,
+      "pieces": {
+        "sequential": 86,
+        "balanced": 107
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 1.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            11111333,
+            10912416,
+            10847250,
+            10783250,
+            10789875
+          ],
+          "min_ns": 10783250,
+          "median_ns": 10847250,
+          "max_ns": 11111333,
+          "relative_range": 0.030245730484685058
+        },
+        "balanced": {
+          "samples_ns": [
+            26920500,
+            27273959,
+            26838792,
+            27235125,
+            27208250
+          ],
+          "min_ns": 26838792,
+          "median_ns": 27208250,
+          "max_ns": 27273959,
+          "relative_range": 0.015993935662896364
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            13708,
+            14417,
+            12875,
+            13625,
+            13958
+          ],
+          "min_ns": 12875,
+          "median_ns": 13708,
+          "max_ns": 14417,
+          "relative_range": 0.11248905748468048
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            1667.1738735465117,
+            1688.9686591569769,
+            1674.9295966569769,
+            1706.9290515988373,
+            1698.6812318313953,
+            1681.2242914244187,
+            1675.8456577034883
+          ],
+          "min_ns": 1667.1738735465117,
+          "median_ns": 1681.2242914244187,
+          "max_ns": 1706.9290515988373,
+          "relative_range": 0.023646564146799838,
+          "batch_elapsed_ns": [
+            18352250,
+            18592167,
+            18437625,
+            18789875,
+            18699083,
+            18506917,
+            18447709
+          ],
+          "repeats_per_sample": 43,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 470792
+        },
+        "sequential_index": {
+          "samples_ns": [
+            355.0820907360406,
+            357.56396732233503,
+            356.45935120558374,
+            355.1060437817259,
+            353.8535453680203,
+            355.217580107868,
+            358.6471288071066
+          ],
+          "min_ns": 353.8535453680203,
+          "median_ns": 355.217580107868,
+          "max_ns": 358.6471288071066,
+          "relative_range": 0.013494780966726386,
+          "batch_elapsed_ns": [
+            17907500,
+            18032666,
+            17976958,
+            17908708,
+            17845542,
+            17914333,
+            18087292
+          ],
+          "repeats_per_sample": 197,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 101750
+        },
+        "balanced_index": {
+          "samples_ns": [
+            363.04528633373207,
+            354.1635578648325,
+            361.94647129186603,
+            361.6793323863636,
+            358.50123355263156,
+            361.32657371411483,
+            367.6165894138756
+          ],
+          "min_ns": 354.1635578648325,
+          "median_ns": 361.6793323863636,
+          "max_ns": 367.6165894138756,
+          "relative_range": 0.037196019635072484,
+          "batch_elapsed_ns": [
+            19424375,
+            18949167,
+            19365584,
+            19351291,
+            19181250,
+            19332417,
+            19668958
+          ],
+          "repeats_per_sample": 209,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 95750
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            214.7167911473607,
+            215.4967008797654,
+            212.5827643878299,
+            213.1283220307918,
+            215.45039864369502,
+            212.94886363636363,
+            216.60738178152494
+          ],
+          "min_ns": 212.5827643878299,
+          "median_ns": 214.7167911473607,
+          "max_ns": 216.60738178152494,
+          "relative_range": 0.018743841001856807,
+          "batch_elapsed_ns": [
+            18743917,
+            18812000,
+            18557625,
+            18605250,
+            18807958,
+            18589584,
+            18908958
+          ],
+          "repeats_per_sample": 341,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 58667
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 10847250,
+          "saving_ns_per_query": 1326.0067113165505,
+          "queries": 8181,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 27208250,
+          "saving_ns_per_query": 1319.544959038055,
+          "queries": 20620,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 27221958,
+          "saving_ns_per_query": 1466.507500277058,
+          "queries": 18563,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 1681.2242914244187,
+          "sequential_index_ns": 10847605.217580108,
+          "balanced_index_ns": 27208611.679332387,
+          "numeric_cache_ns": 27222172.716791146
+        },
+        "64": {
+          "replay_ns": 107598.3546511628,
+          "sequential_index_ns": 10869983.925126903,
+          "balanced_index_ns": 27231397.477272727,
+          "numeric_cache_ns": 27235699.87463343
+        },
+        "1024": {
+          "replay_ns": 1721573.6744186047,
+          "sequential_index_ns": 11210992.802030457,
+          "balanced_index_ns": 27578609.636363637,
+          "numeric_cache_ns": 27441827.994134896
+        },
+        "65536": {
+          "replay_ns": 110180715.1627907,
+          "sequential_index_ns": 34126789.32994924,
+          "balanced_index_ns": 50911266.72727273,
+          "numeric_cache_ns": 41293637.62463343
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 4664,
+        "sequential": 24119,
+        "balanced": 28659,
+        "numeric_cache_alone": 22638
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m1_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 1,
+      "kind": "small_steps",
+      "seed": 2026111403,
+      "pieces": {
+        "sequential": 730,
+        "balanced": 730
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            12847167,
+            12327791,
+            12612750,
+            12202250,
+            12160792
+          ],
+          "min_ns": 12160792,
+          "median_ns": 12327791,
+          "max_ns": 12847167,
+          "relative_range": 0.0556770470881604
+        },
+        "balanced": {
+          "samples_ns": [
+            2007625,
+            2058959,
+            2091250,
+            2011500,
+            2057000
+          ],
+          "min_ns": 2007625,
+          "median_ns": 2057000,
+          "max_ns": 2091250,
+          "relative_range": 0.04065386485172581
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            241125,
+            216875,
+            215167,
+            216166,
+            246375
+          ],
+          "min_ns": 215167,
+          "median_ns": 216875,
+          "max_ns": 246375,
+          "relative_range": 0.1438985590778098
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            407.52482820680626,
+            410.4749468259162,
+            411.296425065445,
+            409.3833442408377,
+            407.7992064790576,
+            408.8311722840314,
+            403.93555710078533
+          ],
+          "min_ns": 403.93555710078533,
+          "median_ns": 408.8311722840314,
+          "max_ns": 411.296425065445,
+          "relative_range": 0.01800466418335097,
+          "batch_elapsed_ns": [
+            19926334,
+            20070583,
+            20110750,
+            20017208,
+            19939750,
+            19990209,
+            19750833
+          ],
+          "repeats_per_sample": 191,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 104958
+        },
+        "sequential_index": {
+          "samples_ns": [
+            710.8699717420212,
+            718.3863863031914,
+            708.2329205452128,
+            708.3368101728723,
+            706.1187666223404,
+            709.0674867021277,
+            712.4300199468086
+          ],
+          "min_ns": 706.1187666223404,
+          "median_ns": 709.0674867021277,
+          "max_ns": 718.3863863031914,
+          "relative_range": 0.01730106077477574,
+          "batch_elapsed_ns": [
+            17106375,
+            17287250,
+            17042917,
+            17045417,
+            16992042,
+            17063000,
+            17143916
+          ],
+          "repeats_per_sample": 94,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 213875
+        },
+        "balanced_index": {
+          "samples_ns": [
+            705.1091974431819,
+            707.0371803977273,
+            703.9713423295455,
+            709.7641335227273,
+            704.8236505681818,
+            706.0517045454545,
+            704.9819602272727
+          ],
+          "min_ns": 703.9713423295455,
+          "median_ns": 705.1091974431819,
+          "max_ns": 709.7641335227273,
+          "relative_range": 0.008215452605337284,
+          "batch_elapsed_ns": [
+            19855875,
+            19910167,
+            19823833,
+            19986958,
+            19847834,
+            19882416,
+            19852292
+          ],
+          "repeats_per_sample": 110,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 183375
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            415.6741276840491,
+            414.7225364263804,
+            412.9481403374233,
+            411.9536042944785,
+            412.05444785276075,
+            410.4977473159509,
+            410.07635161042947
+          ],
+          "min_ns": 410.07635161042947,
+          "median_ns": 412.05444785276075,
+          "max_ns": 415.6741276840491,
+          "relative_range": 0.013585039799448733,
+          "batch_elapsed_ns": [
+            17345250,
+            17305542,
+            17231500,
+            17190000,
+            17194208,
+            17129250,
+            17111666
+          ],
+          "repeats_per_sample": 163,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 123417
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 12327791,
+          "saving_ns_per_query": -300.23631441809624,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 2057000,
+          "saving_ns_per_query": -296.27802515915045,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 2273875,
+          "saving_ns_per_query": -3.2232755687293206,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 408.8311722840314,
+          "sequential_index_ns": 12328500.067486702,
+          "balanced_index_ns": 2057705.1091974431,
+          "numeric_cache_ns": 2274287.0544478525
+        },
+        "64": {
+          "replay_ns": 26165.19502617801,
+          "sequential_index_ns": 12373171.319148935,
+          "balanced_index_ns": 2102126.9886363638,
+          "numeric_cache_ns": 2300246.4846625766
+        },
+        "1024": {
+          "replay_ns": 418643.1204188482,
+          "sequential_index_ns": 13053876.10638298,
+          "balanced_index_ns": 2779031.8181818184,
+          "numeric_cache_ns": 2695818.754601227
+        },
+        "65536": {
+          "replay_ns": 26793159.706806283,
+          "sequential_index_ns": 58797237.80851064,
+          "balanced_index_ns": 48267036.36363637,
+          "numeric_cache_ns": 29278275.29447853
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 132,
+        "sequential": 377829,
+        "balanced": 373321,
+        "numeric_cache_alone": 406444
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m8_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 8,
+      "kind": "cancellation",
+      "seed": 2026111404,
+      "pieces": {
+        "sequential": 972,
+        "balanced": 1058
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            112054959,
+            111958084,
+            111479209,
+            115319416,
+            112996750
+          ],
+          "min_ns": 111479209,
+          "median_ns": 112054959,
+          "max_ns": 115319416,
+          "relative_range": 0.034270745661510615
+        },
+        "balanced": {
+          "samples_ns": [
+            40536709,
+            39945375,
+            39919084,
+            41698292,
+            39615500
+          ],
+          "min_ns": 39615500,
+          "median_ns": 39945375,
+          "max_ns": 41698292,
+          "relative_range": 0.05214100506003511
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            323875,
+            327042,
+            313250,
+            338625,
+            311583
+          ],
+          "min_ns": 311583,
+          "median_ns": 323875,
+          "max_ns": 338625,
+          "relative_range": 0.08349517560787341
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            2451.4820556640625,
+            2450.9227294921875,
+            2502.665283203125,
+            2494.867919921875,
+            3044.647216796875,
+            2420.9188232421875,
+            2416.07666015625
+          ],
+          "min_ns": 2416.07666015625,
+          "median_ns": 2451.4820556640625,
+          "max_ns": 3044.647216796875,
+          "relative_range": 0.25640430660642,
+          "batch_elapsed_ns": [
+            20082541,
+            20077959,
+            20501834,
+            20437958,
+            24941750,
+            19832167,
+            19792500
+          ],
+          "repeats_per_sample": 32,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 633166
+        },
+        "sequential_index": {
+          "samples_ns": [
+            704.4236203457447,
+            701.7069065824468,
+            694.1541306515958,
+            745.5535239361702,
+            839.1546293218086,
+            718.7984541223404,
+            708.9428191489362
+          ],
+          "min_ns": 694.1541306515958,
+          "median_ns": 708.9428191489362,
+          "max_ns": 839.1546293218086,
+          "relative_range": 0.2045305978898007,
+          "batch_elapsed_ns": [
+            16951250,
+            16885875,
+            16704125,
+            17941000,
+            20193417,
+            17297166,
+            17060000
+          ],
+          "repeats_per_sample": 94,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 214833
+        },
+        "balanced_index": {
+          "samples_ns": [
+            704.8223453443877,
+            707.4115911989796,
+            704.1580038265306,
+            720.248046875,
+            709.1404655612245,
+            712.9155373086735,
+            704.3639987244898
+          ],
+          "min_ns": 704.1580038265306,
+          "median_ns": 707.4115911989796,
+          "max_ns": 720.248046875,
+          "relative_range": 0.022744952512297207,
+          "batch_elapsed_ns": [
+            17682583,
+            17747542,
+            17665916,
+            18069583,
+            17790916,
+            17885625,
+            17671084
+          ],
+          "repeats_per_sample": 98,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 204583
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            410.7222830414013,
+            408.92050656847135,
+            414.49066978503186,
+            411.9828821656051,
+            415.46305234872614,
+            415.89953224522293,
+            422.54471039012736
+          ],
+          "min_ns": 408.92050656847135,
+          "median_ns": 414.49066978503186,
+          "max_ns": 422.54471039012736,
+          "relative_range": 0.03286974789739407,
+          "batch_elapsed_ns": [
+            16507750,
+            16435333,
+            16659209,
+            16558416,
+            16698291,
+            16715834,
+            16982917
+          ],
+          "repeats_per_sample": 157,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 127417
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 112054959,
+          "saving_ns_per_query": 1742.5392365151263,
+          "queries": 64306,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 39945375,
+          "saving_ns_per_query": 1744.0704644650828,
+          "queries": 22904,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 40269250,
+          "saving_ns_per_query": 2036.9913858790305,
+          "queries": 19769,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 2451.4820556640625,
+          "sequential_index_ns": 112055667.94281915,
+          "balanced_index_ns": 39946082.4115912,
+          "numeric_cache_ns": 40269664.49066979
+        },
+        "64": {
+          "replay_ns": 156894.8515625,
+          "sequential_index_ns": 112100331.34042554,
+          "balanced_index_ns": 39990649.341836736,
+          "numeric_cache_ns": 40295777.402866244
+        },
+        "1024": {
+          "replay_ns": 2510317.625,
+          "sequential_index_ns": 112780916.44680852,
+          "balanced_index_ns": 40669764.469387755,
+          "numeric_cache_ns": 40693688.44585987
+        },
+        "65536": {
+          "replay_ns": 160660328.0,
+          "sequential_index_ns": 158516235.59574467,
+          "balanced_index_ns": 86306301.04081634,
+          "numeric_cache_ns": 67433310.53503186
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 396,
+        "sequential": 450013,
+        "balanced": 467721,
+        "numeric_cache_alone": 509476
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m32_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "small_steps",
+      "seed": 2026111405,
+      "pieces": {
+        "sequential": 1079,
+        "balanced": 1185
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            439122541,
+            434233166,
+            438722208,
+            436685500,
+            435445167
+          ],
+          "min_ns": 434233166,
+          "median_ns": 436685500,
+          "max_ns": 439122541,
+          "relative_range": 0.011196559079703815
+        },
+        "balanced": {
+          "samples_ns": [
+            178266958,
+            177549458,
+            175709916,
+            182292333,
+            176464833
+          ],
+          "min_ns": 175709916,
+          "median_ns": 177549458,
+          "max_ns": 182292333,
+          "relative_range": 0.03707370934356781
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            386792,
+            365209,
+            392292,
+            359167,
+            404042
+          ],
+          "min_ns": 359167,
+          "median_ns": 386792,
+          "max_ns": 404042,
+          "relative_range": 0.11601842850937971
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            9501.26123046875,
+            9564.61572265625,
+            9451.98583984375,
+            9507.080078125,
+            9529.5205078125,
+            9576.35498046875,
+            9568.15625
+          ],
+          "min_ns": 9451.98583984375,
+          "median_ns": 9529.5205078125,
+          "max_ns": 9576.35498046875,
+          "relative_range": 0.013050933729880698,
+          "batch_elapsed_ns": [
+            19458583,
+            19588333,
+            19357667,
+            19470500,
+            19516458,
+            19612375,
+            19595584
+          ],
+          "repeats_per_sample": 8,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 2503417
+        },
+        "sequential_index": {
+          "samples_ns": [
+            720.3214798850574,
+            717.4273078304598,
+            713.8634159482758,
+            727.6625359195402,
+            714.9971713362069,
+            727.6531968390805,
+            719.0268947557471
+          ],
+          "min_ns": 713.8634159482758,
+          "median_ns": 719.0268947557471,
+          "max_ns": 727.6625359195402,
+          "relative_range": 0.019191382230496355,
+          "batch_elapsed_ns": [
+            16043000,
+            15978541,
+            15899166,
+            16206500,
+            15924417,
+            16206292,
+            16014167
+          ],
+          "repeats_per_sample": 87,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 230500
+        },
+        "balanced_index": {
+          "samples_ns": [
+            712.5073504704301,
+            725.4494287634409,
+            712.6596102150538,
+            716.5728746639785,
+            707.3795362903226,
+            725.2411374327957,
+            713.7306787634409
+          ],
+          "min_ns": 707.3795362903226,
+          "median_ns": 713.7306787634409,
+          "max_ns": 725.4494287634409,
+          "relative_range": 0.025317522436369054,
+          "batch_elapsed_ns": [
+            16963375,
+            17271500,
+            16967000,
+            17060167,
+            16841292,
+            17266541,
+            16992500
+          ],
+          "repeats_per_sample": 93,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 216833
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            415.4723659206081,
+            409.9868823902027,
+            409.5623944256757,
+            419.68982263513516,
+            414.6211465371622,
+            411.9609111064189,
+            406.1972128378378
+          ],
+          "min_ns": 406.1972128378378,
+          "median_ns": 411.9609111064189,
+          "max_ns": 419.68982263513516,
+          "relative_range": 0.03275216029855779,
+          "batch_elapsed_ns": [
+            15741417,
+            15533583,
+            15517500,
+            15901208,
+            15709166,
+            15608375,
+            15390000
+          ],
+          "repeats_per_sample": 148,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 136000
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 436685500,
+          "saving_ns_per_query": 8810.493613056753,
+          "queries": 49565,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 177549458,
+          "saving_ns_per_query": 8815.78982904906,
+          "queries": 20140,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 177936250,
+          "saving_ns_per_query": 9117.559596706082,
+          "queries": 19516,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 9529.5205078125,
+          "sequential_index_ns": 436686219.02689475,
+          "balanced_index_ns": 177550171.73067877,
+          "numeric_cache_ns": 177936661.9609111
+        },
+        "64": {
+          "replay_ns": 609889.3125,
+          "sequential_index_ns": 436731517.72126436,
+          "balanced_index_ns": 177595136.76344085,
+          "numeric_cache_ns": 177962615.4983108
+        },
+        "1024": {
+          "replay_ns": 9758229.0,
+          "sequential_index_ns": 437421783.54022986,
+          "balanced_index_ns": 178280318.21505377,
+          "numeric_cache_ns": 178358097.97297296
+        },
+        "65536": {
+          "replay_ns": 624526656.0,
+          "sequential_index_ns": 483807646.57471263,
+          "balanced_index_ns": 224324511.76344085,
+          "numeric_cache_ns": 204934520.27027026
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 1720,
+        "sequential": 479217,
+        "balanced": 493805,
+        "numeric_cache_alone": 529192
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m128_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 128,
+      "kind": "cancellation",
+      "seed": 2026111406,
+      "pieces": {
+        "sequential": 972,
+        "balanced": 1058
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            1816265208,
+            1804002125,
+            1852486625,
+            1877732708,
+            1844521708
+          ],
+          "min_ns": 1804002125,
+          "median_ns": 1844521708,
+          "max_ns": 1877732708,
+          "relative_range": 0.03997273801669999
+        },
+        "balanced": {
+          "samples_ns": [
+            700402375,
+            690306542,
+            696701250,
+            689841500,
+            704640833
+          ],
+          "min_ns": 689841500,
+          "median_ns": 696701250,
+          "max_ns": 704640833,
+          "relative_range": 0.021242007244855667
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            427792,
+            331709,
+            333208,
+            348416,
+            354208
+          ],
+          "min_ns": 331709,
+          "median_ns": 348416,
+          "max_ns": 427792,
+          "relative_range": 0.2757709175238795
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            36792.317708333336,
+            36883.084635416664,
+            36837.998697916664,
+            37197.75390625,
+            36995.009114583336,
+            37142.252604166664,
+            36835.8828125
+          ],
+          "min_ns": 36792.317708333336,
+          "median_ns": 36883.084635416664,
+          "max_ns": 37197.75390625,
+          "relative_range": 0.010992469906580092,
+          "batch_elapsed_ns": [
+            28256500,
+            28326209,
+            28291583,
+            28567875,
+            28412167,
+            28525250,
+            28289958
+          ],
+          "repeats_per_sample": 3,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 9409583
+        },
+        "sequential_index": {
+          "samples_ns": [
+            720.935393258427,
+            717.1534849016854,
+            722.1149490870787,
+            727.7749736657304,
+            729.4921875,
+            731.3081548455057,
+            720.5440221207865
+          ],
+          "min_ns": 717.1534849016854,
+          "median_ns": 722.1149490870787,
+          "max_ns": 731.3081548455057,
+          "relative_range": 0.019601685246531858,
+          "batch_elapsed_ns": [
+            16425792,
+            16339625,
+            16452667,
+            16581625,
+            16620750,
+            16662125,
+            16416875
+          ],
+          "repeats_per_sample": 89,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 226958
+        },
+        "balanced_index": {
+          "samples_ns": [
+            736.4726163903061,
+            730.2030054209183,
+            725.9895169005102,
+            726.888034119898,
+            728.1136798469388,
+            720.2895806760204,
+            725.7088647959183
+          ],
+          "min_ns": 720.2895806760204,
+          "median_ns": 726.888034119898,
+          "max_ns": 736.4726163903061,
+          "relative_range": 0.02226345042793267,
+          "batch_elapsed_ns": [
+            18476625,
+            18319333,
+            18213625,
+            18236167,
+            18266916,
+            18070625,
+            18206584
+          ],
+          "repeats_per_sample": 98,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 204500
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            423.4157252956081,
+            425.0235430743243,
+            428.6757548564189,
+            427.4517261402027,
+            423.37175358952703,
+            423.58179370777026,
+            420.3419552364865
+          ],
+          "min_ns": 420.3419552364865,
+          "median_ns": 423.58179370777026,
+          "max_ns": 428.6757548564189,
+          "relative_range": 0.01967459353477759,
+          "batch_elapsed_ns": [
+            16042375,
+            16103292,
+            16241667,
+            16195291,
+            16040709,
+            16048667,
+            15925916
+          ],
+          "repeats_per_sample": 148,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 135333
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 1844521708,
+          "saving_ns_per_query": 36160.96968632958,
+          "queries": 51009,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 696701250,
+          "saving_ns_per_query": 36156.19660129677,
+          "queries": 19270,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 697049666,
+          "saving_ns_per_query": 36459.50284170889,
+          "queries": 19119,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 36883.084635416664,
+          "sequential_index_ns": 1844522430.114949,
+          "balanced_index_ns": 696701976.8880341,
+          "numeric_cache_ns": 697050089.5817937
+        },
+        "64": {
+          "replay_ns": 2360517.4166666665,
+          "sequential_index_ns": 1844567923.3567417,
+          "balanced_index_ns": 696747770.8341837,
+          "numeric_cache_ns": 697076775.2347972
+        },
+        "1024": {
+          "replay_ns": 37768278.666666664,
+          "sequential_index_ns": 1845261153.7078652,
+          "balanced_index_ns": 697445583.3469387,
+          "numeric_cache_ns": 697483413.7567568
+        },
+        "65536": {
+          "replay_ns": 2417169834.6666665,
+          "sequential_index_ns": 1891846233.3033707,
+          "balanced_index_ns": 744338584.2040817,
+          "numeric_cache_ns": 724809522.4324324
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 4116,
+        "sequential": 450013,
+        "balanced": 467721,
+        "numeric_cache_alone": 509476
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p24_E254_m32_random_exponents",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "random_exponents",
+      "seed": 2026111407,
+      "pieces": {
+        "sequential": 1581,
+        "balanced": 1708
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.00390625,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            780134458,
+            775163125,
+            779939375,
+            772598125,
+            759661000
+          ],
+          "min_ns": 759661000,
+          "median_ns": 775163125,
+          "max_ns": 780134458,
+          "relative_range": 0.02641180590214479
+        },
+        "balanced": {
+          "samples_ns": [
+            180096917,
+            186325125,
+            187235333,
+            180675875,
+            179988666
+          ],
+          "min_ns": 179988666,
+          "median_ns": 180675875,
+          "max_ns": 187235333,
+          "relative_range": 0.040108658668458086
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            659166,
+            684791,
+            692250,
+            663000,
+            588750
+          ],
+          "min_ns": 588750,
+          "median_ns": 663000,
+          "max_ns": 692250,
+          "relative_range": 0.15610859728506787
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            11412.92299107143,
+            11344.493861607143,
+            11246.41908482143,
+            11284.15625,
+            11287.481026785714,
+            11214.425223214286,
+            11205.124441964286
+          ],
+          "min_ns": 11205.124441964286,
+          "median_ns": 11284.15625,
+          "max_ns": 11412.92299107143,
+          "relative_range": 0.01841507193833328,
+          "batch_elapsed_ns": [
+            20451958,
+            20329333,
+            20153583,
+            20221208,
+            20227166,
+            20096250,
+            20079583
+          ],
+          "repeats_per_sample": 7,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 2962083
+        },
+        "sequential_index": {
+          "samples_ns": [
+            729.9900620404412,
+            732.7258157169117,
+            734.5760569852941,
+            737.3836741727941,
+            735.1625114889706,
+            731.0766888786765,
+            728.5252182904412
+          ],
+          "min_ns": 728.5252182904412,
+          "median_ns": 732.7258157169117,
+          "max_ns": 737.3836741727941,
+          "relative_range": 0.012089728097932049,
+          "batch_elapsed_ns": [
+            12707667,
+            12755291,
+            12787500,
+            12836375,
+            12797709,
+            12726583,
+            12682167
+          ],
+          "repeats_per_sample": 68,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 297625
+        },
+        "balanced_index": {
+          "samples_ns": [
+            735.9370434253246,
+            729.98046875,
+            729.3611505681819,
+            733.1151582792207,
+            737.1503652597403,
+            736.5267857142857,
+            725.4274046266233
+          ],
+          "min_ns": 725.4274046266233,
+          "median_ns": 733.1151582792207,
+          "max_ns": 737.1503652597403,
+          "relative_range": 0.015990612798994983,
+          "batch_elapsed_ns": [
+            14506791,
+            14389375,
+            14377167,
+            14451166,
+            14530708,
+            14518416,
+            14299625
+          ],
+          "repeats_per_sample": 77,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 260708
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            407.16010123239437,
+            409.76309419014086,
+            408.9607724471831,
+            414.5805732834507,
+            407.91772117077466,
+            412.0818661971831,
+            412.1449163732394
+          ],
+          "min_ns": 407.16010123239437,
+          "median_ns": 409.76309419014086,
+          "max_ns": 414.5805732834507,
+          "relative_range": 0.01810917614657856,
+          "batch_elapsed_ns": [
+            14801084,
+            14895708,
+            14866542,
+            15070833,
+            14828625,
+            14980000,
+            14982292
+          ],
+          "repeats_per_sample": 142,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 141000
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 775163125,
+          "saving_ns_per_query": 10551.430434283087,
+          "queries": 73466,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 180675875,
+          "saving_ns_per_query": 10551.04109172078,
+          "queries": 17124,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 181338875,
+          "saving_ns_per_query": 10874.39315580986,
+          "queries": 16676,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 11284.15625,
+          "sequential_index_ns": 775163857.7258158,
+          "balanced_index_ns": 180676608.1151583,
+          "numeric_cache_ns": 181339284.7630942
+        },
+        "64": {
+          "replay_ns": 722186.0,
+          "sequential_index_ns": 775210019.4522059,
+          "balanced_index_ns": 180722794.37012988,
+          "numeric_cache_ns": 181365099.83802816
+        },
+        "1024": {
+          "replay_ns": 11554976.0,
+          "sequential_index_ns": 775913436.2352941,
+          "balanced_index_ns": 181426584.92207792,
+          "numeric_cache_ns": 181758472.4084507
+        },
+        "65536": {
+          "replay_ns": 739518464.0,
+          "sequential_index_ns": 823183044.0588236,
+          "balanced_index_ns": 228721310.01298702,
+          "numeric_cache_ns": 208193109.14084506
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 1736,
+        "sequential": 709270,
+        "balanced": 670430,
+        "numeric_cache_alone": 785173
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p53_E2046_m1_small_steps",
+      "p": 53,
+      "E": 2046,
+      "m": 1,
+      "kind": "small_steps",
+      "seed": 2026111408,
+      "pieces": {
+        "sequential": 5326,
+        "balanced": 5326
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            365640709,
+            363432209,
+            373858583,
+            366788875,
+            361608083
+          ],
+          "min_ns": 361608083,
+          "median_ns": 365640709,
+          "max_ns": 373858583,
+          "relative_range": 0.03350420152478153
+        },
+        "balanced": {
+          "samples_ns": [
+            28464042,
+            29602333,
+            28611542,
+            28817833,
+            28914709
+          ],
+          "min_ns": 28464042,
+          "median_ns": 28817833,
+          "max_ns": 29602333,
+          "relative_range": 0.03949953488869201
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            3537209,
+            3572000,
+            3795375,
+            3684542,
+            3712625
+          ],
+          "min_ns": 3537209,
+          "median_ns": 3684542,
+          "max_ns": 3795375,
+          "relative_range": 0.07006732451414585
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            688.6830512152778,
+            687.8978587962963,
+            678.391456886574,
+            689.3204933449074,
+            674.6660517939815,
+            680.6369357638889,
+            677.886574074074
+          ],
+          "min_ns": 674.6660517939815,
+          "median_ns": 680.6369357638889,
+          "max_ns": 689.3204933449074,
+          "relative_range": 0.02153048237747922,
+          "batch_elapsed_ns": [
+            19040709,
+            19019000,
+            18756167,
+            19058333,
+            18653167,
+            18818250,
+            18742208
+          ],
+          "repeats_per_sample": 108,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 185333
+        },
+        "sequential_index": {
+          "samples_ns": [
+            1361.0819310897436,
+            1337.3105969551282,
+            1349.2755408653845,
+            1352.5390625,
+            1344.5596955128206,
+            1331.3426482371794,
+            1345.3358373397436
+          ],
+          "min_ns": 1331.3426482371794,
+          "median_ns": 1345.3358373397436,
+          "max_ns": 1361.0819310897436,
+          "relative_range": 0.02210547138279645,
+          "batch_elapsed_ns": [
+            13589042,
+            13351709,
+            13471167,
+            13503750,
+            13424084,
+            13292125,
+            13431833
+          ],
+          "repeats_per_sample": 39,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 526041
+        },
+        "balanced_index": {
+          "samples_ns": [
+            1351.436328125,
+            1340.791796875,
+            1356.60810546875,
+            1371.26064453125,
+            1348.7060546875,
+            1334.366796875,
+            1332.20615234375
+          ],
+          "min_ns": 1332.20615234375,
+          "median_ns": 1348.7060546875,
+          "max_ns": 1371.26064453125,
+          "relative_range": 0.028957008127726454,
+          "batch_elapsed_ns": [
+            13838708,
+            13729708,
+            13891667,
+            14041709,
+            13810750,
+            13663916,
+            13641791
+          ],
+          "repeats_per_sample": 40,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 501459
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            663.5258657094595,
+            664.2494721283783,
+            682.4060388513514,
+            676.2299408783783,
+            661.2515836148649,
+            661.0536317567568,
+            668.7715899493244
+          ],
+          "min_ns": 661.0536317567568,
+          "median_ns": 664.2494721283783,
+          "max_ns": 682.4060388513514,
+          "relative_range": 0.03214516230803694,
+          "batch_elapsed_ns": [
+            12569834,
+            12583542,
+            12927500,
+            12810500,
+            12526750,
+            12523000,
+            12669209
+          ],
+          "repeats_per_sample": 74,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 270292
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 365640709,
+          "saving_ns_per_query": -664.6989015758547,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 28817833,
+          "saving_ns_per_query": -668.0691189236111,
+          "queries": null,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 32502375,
+          "saving_ns_per_query": 16.387463635510585,
+          "queries": 1983369,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 680.6369357638889,
+          "sequential_index_ns": 365642054.33583736,
+          "balanced_index_ns": 28819181.706054688,
+          "numeric_cache_ns": 32503039.24947213
+        },
+        "64": {
+          "replay_ns": 43560.76388888889,
+          "sequential_index_ns": 365726810.49358976,
+          "balanced_index_ns": 28904150.1875,
+          "numeric_cache_ns": 32544886.966216218
+        },
+        "1024": {
+          "replay_ns": 696972.2222222222,
+          "sequential_index_ns": 367018332.8974359,
+          "balanced_index_ns": 30198908.0,
+          "numeric_cache_ns": 33182566.45945946
+        },
+        "65536": {
+          "replay_ns": 44606222.222222224,
+          "sequential_index_ns": 453808638.43589747,
+          "balanced_index_ns": 117206633.0,
+          "numeric_cache_ns": 76034628.4054054
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 252,
+        "sequential": 5901785,
+        "balanced": 5843001,
+        "numeric_cache_alone": 7821220
+      },
+      "correctness": "PASS"
+    },
+    {
+      "id": "p53_E2046_m8_cancellation",
+      "p": 53,
+      "E": 2046,
+      "m": 8,
+      "kind": "cancellation",
+      "seed": 2026111409,
+      "pieces": {
+        "sequential": 6609,
+        "balanced": 6811
+      },
+      "queries_checked": 256,
+      "overflow_fraction": 0.0,
+      "construction": {
+        "sequential": {
+          "samples_ns": [
+            3329365875,
+            3336855292,
+            3352722958,
+            3394009250,
+            3417223458
+          ],
+          "min_ns": 3329365875,
+          "median_ns": 3352722958,
+          "max_ns": 3417223458,
+          "relative_range": 0.02620484427153793
+        },
+        "balanced": {
+          "samples_ns": [
+            516254875,
+            523584250,
+            526499833,
+            521273208,
+            520200792
+          ],
+          "min_ns": 516254875,
+          "median_ns": 521273208,
+          "max_ns": 526499833,
+          "relative_range": 0.019653720626286245
+        },
+        "cache_preparation": {
+          "samples_ns": [
+            4586875,
+            4528417,
+            4599417,
+            4559083,
+            4604041
+          ],
+          "min_ns": 4528417,
+          "median_ns": 4586875,
+          "max_ns": 4604041,
+          "relative_range": 0.01648704183131217
+        }
+      },
+      "query": {
+        "replay": {
+          "samples_ns": [
+            4292.598090277777,
+            4371.808159722223,
+            4289.812934027777,
+            4382.658637152777,
+            4290.771484375,
+            4308.430989583333,
+            4306.034722222223
+          ],
+          "min_ns": 4289.812934027777,
+          "median_ns": 4306.034722222223,
+          "max_ns": 4382.658637152777,
+          "relative_range": 0.021561763690815052,
+          "batch_elapsed_ns": [
+            19780292,
+            20145292,
+            19767458,
+            20195291,
+            19771875,
+            19853250,
+            19842208
+          ],
+          "repeats_per_sample": 18,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 1120416
+        },
+        "sequential_index": {
+          "samples_ns": [
+            1343.661221590909,
+            1332.3123224431818,
+            1340.228426846591,
+            1361.4650213068182,
+            1330.233487215909,
+            1324.0337357954545,
+            1343.3393998579545
+          ],
+          "min_ns": 1324.0337357954545,
+          "median_ns": 1340.228426846591,
+          "max_ns": 1361.4650213068182,
+          "relative_range": 0.02792903415683803,
+          "batch_elapsed_ns": [
+            15135000,
+            15007166,
+            15096333,
+            15335542,
+            14983750,
+            14913916,
+            15131375
+          ],
+          "repeats_per_sample": 44,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 455750
+        },
+        "balanced_index": {
+          "samples_ns": [
+            1346.0251358695652,
+            1340.8025645380435,
+            1362.5240319293478,
+            1354.8354279891305,
+            1381.4786005434783,
+            1342.2603600543478,
+            1347.5925611413043
+          ],
+          "min_ns": 1340.8025645380435,
+          "median_ns": 1347.5925611413043,
+          "max_ns": 1381.4786005434783,
+          "relative_range": 0.030184224207193137,
+          "batch_elapsed_ns": [
+            15850792,
+            15789291,
+            16045083,
+            15954542,
+            16268292,
+            15806458,
+            15869250
+          ],
+          "repeats_per_sample": 46,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 441709
+        },
+        "numeric_cache": {
+          "samples_ns": [
+            661.73388671875,
+            649.1162997159091,
+            651.2488458806819,
+            645.2507102272727,
+            648.5725319602273,
+            662.14453125,
+            656.4423828125
+          ],
+          "min_ns": 645.2507102272727,
+          "median_ns": 651.2488458806819,
+          "max_ns": 662.14453125,
+          "relative_range": 0.025940654067312455,
+          "batch_elapsed_ns": [
+            14907541,
+            14623292,
+            14671334,
+            14536208,
+            14611042,
+            14916792,
+            14788334
+          ],
+          "repeats_per_sample": 88,
+          "query_count_per_batch": 256,
+          "calibration_batch_ns": 228959
+        }
+      },
+      "crossover": {
+        "sequential_index": {
+          "build_cost_ns": 3352722958,
+          "saving_ns_per_query": 2965.8062953756316,
+          "queries": 1130460,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "balanced_index": {
+          "build_cost_ns": 521273208,
+          "saving_ns_per_query": 2958.4421610809186,
+          "queries": 176199,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        },
+        "numeric_cache": {
+          "build_cost_ns": 525860083,
+          "saving_ns_per_query": 3654.7858763415406,
+          "queries": 143883,
+          "meaning": "model estimate from medians; no finite crossover if saving<=0"
+        }
+      },
+      "estimated_total_cost": {
+        "1": {
+          "replay_ns": 4306.034722222223,
+          "sequential_index_ns": 3352724298.228427,
+          "balanced_index_ns": 521274555.5925611,
+          "numeric_cache_ns": 525860734.2488459
+        },
+        "64": {
+          "replay_ns": 275586.22222222225,
+          "sequential_index_ns": 3352808732.619318,
+          "balanced_index_ns": 521359453.92391306,
+          "numeric_cache_ns": 525901762.9261364
+        },
+        "1024": {
+          "replay_ns": 4409379.555555556,
+          "sequential_index_ns": 3354095351.909091,
+          "balanced_index_ns": 522653142.7826087,
+          "numeric_cache_ns": 526526961.8181818
+        },
+        "65536": {
+          "replay_ns": 282200291.5555556,
+          "sequential_index_ns": 3440556168.181818,
+          "balanced_index_ns": 609589034.0869565,
+          "numeric_cache_ns": 568540327.3636364
+        }
+      },
+      "retained_python_bytes": {
+        "operands": 1116,
+        "sequential": 6442653,
+        "balanced": 6475997,
+        "numeric_cache_alone": 9027476
+      },
+      "correctness": "PASS"
+    }
+  ]
+}

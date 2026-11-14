@@ -1,0 +1,158 @@
+{
+  "scope": "Exact numerical binary format; finite operands; RN-even; gradual underflow; absorbing infinity; signed zeros identified; no NaN/flags",
+  "new_result": "Operand-free whole-format composition and balanced construction; no world-novelty claim",
+  "tests": {
+    "inverse": {
+      "status": "PASS",
+      "synthetic_records": 1941,
+      "inverse_probes": 104127,
+      "covers": "negative anchors; half-integer targets; coincident/clipped thresholds; period-one; nonzero start",
+      "elapsed_seconds": 0.1132272910035681
+    },
+    "exhaustive": {
+      "status": "PASS",
+      "formats": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "exhaustive_length_three_blocks": 17216,
+      "singleton_checks": 56,
+      "compositions": 35468,
+      "full_input_query_comparisons": 732220,
+      "different_serializations_same_function": [],
+      "elapsed_seconds": 1.2172365000005811
+    },
+    "randomized": {
+      "status": "PASS",
+      "seed": 2026111401,
+      "blocks": 140,
+      "full_input_query_comparisons": 308908,
+      "maximum_piece_count": 239,
+      "coverage": "empty blocks; very unequal lengths; random and adversarial operands; absorbing overflow; zeros; gradual underflow",
+      "elapsed_seconds": 1.1949499160109553
+    },
+    "large_domains": {
+      "status": "PASS",
+      "seed": 2026111402,
+      "cases": [
+        {
+          "p": 24,
+          "E": 254,
+          "block_length": 32,
+          "finite_input_count": 4278190079,
+          "pieces": 1104,
+          "sampled_queries": 205,
+          "construction_seconds": 0.1752531249949243,
+          "oracle": "exact scalar integer rounder; not native hardware measurement"
+        },
+        {
+          "p": 53,
+          "E": 2046,
+          "block_length": 8,
+          "finite_input_count": 18437736874454810623,
+          "pieces": 6962,
+          "sampled_queries": 205,
+          "construction_seconds": 0.6939227500115521,
+          "oracle": "exact scalar integer rounder; not native hardware measurement"
+        }
+      ],
+      "elapsed_seconds": 0.8756522919866256
+    },
+    "corridor_counterexample": {
+      "status": "PASS",
+      "kind": "counterexample to closure of restricted-transfer maps",
+      "A": [
+        "1"
+      ],
+      "B": [
+        "3/2",
+        "-3/2"
+      ],
+      "C": [
+        "0",
+        "0"
+      ],
+      "checked_grid_inputs": 494,
+      "cases": [
+        {
+          "p": 6,
+          "grid_length": 2,
+          "first_input": 40,
+          "B_after_A": 40,
+          "C_after_A": 41
+        },
+        {
+          "p": 7,
+          "grid_length": 6,
+          "first_input": 72,
+          "B_after_A": 72,
+          "C_after_A": 73
+        },
+        {
+          "p": 8,
+          "grid_length": 14,
+          "first_input": 136,
+          "B_after_A": 136,
+          "C_after_A": 137
+        },
+        {
+          "p": 9,
+          "grid_length": 30,
+          "first_input": 264,
+          "B_after_A": 264,
+          "C_after_A": 265
+        },
+        {
+          "p": 10,
+          "grid_length": 62,
+          "first_input": 520,
+          "B_after_A": 520,
+          "C_after_A": 521
+        },
+        {
+          "p": 11,
+          "grid_length": 126,
+          "first_input": 1032,
+          "B_after_A": 1032,
+          "C_after_A": 1033
+        },
+        {
+          "p": 12,
+          "grid_length": 254,
+          "first_input": 2056,
+          "B_after_A": 2056,
+          "C_after_A": 2057
+        }
+      ],
+      "meaning": "B and C induce identical maps on X*, but B after A and C after A differ on every X* input",
+      "elapsed_seconds": 0.01680070799193345
+    },
+    "inverse_queries": {
+      "status": "PASS",
+      "seed": 2026111403,
+      "lower_upper_bound_comparisons": 127740,
+      "exact_interval_preimages": 3600,
+      "scope": "finite half-integer targets; absorbing infinities excluded from finite output intervals",
+      "elapsed_seconds": 0.6442551660002209
+    }
+  },
+  "status": "PASS",
+  "source_sha256": {
+    "check_merge.py": "ccc95cd959ca8664a496286025f7cf5f74a7539d122137265d9f6b9a51d84134",
+    "merge_indices.py": "5ef331c5f5c6729bea2419d11116ef4091abd5eb4cf45d5ada6c2dec9f5d959c"
+  }
+}

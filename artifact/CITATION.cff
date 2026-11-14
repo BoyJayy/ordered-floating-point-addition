@@ -3,7 +3,7 @@
   "message": "Please cite this version of the artifact and the associated article separately.",
   "type": "software",
   "title": "Reproducibility artifact for Information bounds and exact indices for ordered floating-point addition",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "family-names": "Popkov",
@@ -11,7 +11,7 @@
       "orcid": "https://orcid.org/0009-0005-8977-0400"
     }
   ],
-  "abstract": "Code, exact-model checks, counterexamples and retained native CPU/GPU records for ordered floating-point addition. GPU records cover binary32 only.",
+  "abstract": "Code, exact-model checks, counterexamples and retained CPU/GPU records for ordered floating-point addition, including operand-free whole-format merge and its extension to integer radices. GPU records cover binary32 correctness only.",
   "keywords": [
     "floating-point arithmetic",
     "ordered summation",
@@ -19,5 +19,8 @@
     "communication complexity",
     "exact indexing"
   ],
-  "doi": "10.5281/zenodo.24044237"
+  "repository-code": "https://github.com/BoyJayy/ordered-floating-point-addition",
+  "doi": "10.5281/zenodo.24231263",
+  "date-released": "2026-11-15",
+  "url": "https://doi.org/10.5281/zenodo.24231263"
 }

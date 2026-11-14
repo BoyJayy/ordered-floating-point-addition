@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "seed": 2026111451,
+  "blocks": 100,
+  "comparisons": 28260,
+  "formats": [
+    {
+      "p": 2,
+      "E": 1,
+      "number_of_values": 7
+    },
+    {
+      "p": 2,
+      "E": 4,
+      "number_of_values": 19
+    },
+    {
+      "p": 3,
+      "E": 3,
+      "number_of_values": 31
+    },
+    {
+      "p": 4,
+      "E": 5,
+      "number_of_values": 95
+    },
+    {
+      "p": 6,
+      "E": 4,
+      "number_of_values": 319
+    }
+  ],
+  "oracle": "enumerated neighboring representable values; independent of round/add/piece formula",
+  "limits": "bounded toy-format exhaustive input domains and random blocks; not a proof or exhaustive operand-space verification"
+}

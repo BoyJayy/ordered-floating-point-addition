@@ -1,0 +1,112 @@
+[
+  {
+    "id": "p8_E8_m1_small_steps",
+    "materialized": {
+      "current_traced_bytes": 5440,
+      "peak_traced_bytes": 8712
+    },
+    "lazy": {
+      "current_traced_bytes": 5312,
+      "peak_traced_bytes": 8584
+    }
+  },
+  {
+    "id": "p8_E8_m32_cancellation",
+    "materialized": {
+      "current_traced_bytes": 22320,
+      "peak_traced_bytes": 398360
+    },
+    "lazy": {
+      "current_traced_bytes": 17952,
+      "peak_traced_bytes": 85096
+    }
+  },
+  {
+    "id": "p8_E8_m128_random_exponents",
+    "materialized": {
+      "current_traced_bytes": 40304,
+      "peak_traced_bytes": 1695080
+    },
+    "lazy": {
+      "current_traced_bytes": 21760,
+      "peak_traced_bytes": 186024
+    }
+  },
+  {
+    "id": "p24_E254_m1_small_steps",
+    "materialized": {
+      "current_traced_bytes": 312052,
+      "peak_traced_bytes": 451060
+    },
+    "lazy": {
+      "current_traced_bytes": 312052,
+      "peak_traced_bytes": 451060
+    }
+  },
+  {
+    "id": "p24_E254_m8_cancellation",
+    "materialized": {
+      "current_traced_bytes": 482428,
+      "peak_traced_bytes": 3508728
+    },
+    "lazy": {
+      "current_traced_bytes": 400988,
+      "peak_traced_bytes": 1651300
+    }
+  },
+  {
+    "id": "p24_E254_m32_small_steps",
+    "materialized": {
+      "current_traced_bytes": 579844,
+      "peak_traced_bytes": 14272860
+    },
+    "lazy": {
+      "current_traced_bytes": 502256,
+      "peak_traced_bytes": 2538452
+    }
+  },
+  {
+    "id": "p24_E254_m128_cancellation",
+    "materialized": {
+      "current_traced_bytes": 563056,
+      "peak_traced_bytes": 57719404
+    },
+    "lazy": {
+      "current_traced_bytes": 558628,
+      "peak_traced_bytes": 3526444
+    }
+  },
+  {
+    "id": "p24_E254_m32_random_exponents",
+    "materialized": {
+      "current_traced_bytes": 750296,
+      "peak_traced_bytes": 14266292
+    },
+    "lazy": {
+      "current_traced_bytes": 673912,
+      "peak_traced_bytes": 2736844
+    }
+  },
+  {
+    "id": "p53_E2046_m1_small_steps",
+    "materialized": {
+      "current_traced_bytes": 5524164,
+      "peak_traced_bytes": 7759848
+    },
+    "lazy": {
+      "current_traced_bytes": 5524164,
+      "peak_traced_bytes": 7759848
+    }
+  },
+  {
+    "id": "p53_E2046_m8_cancellation",
+    "materialized": {
+      "current_traced_bytes": 6270168,
+      "peak_traced_bytes": 55183168
+    },
+    "lazy": {
+      "current_traced_bytes": 6280728,
+      "peak_traced_bytes": 26958100
+    }
+  }
+]

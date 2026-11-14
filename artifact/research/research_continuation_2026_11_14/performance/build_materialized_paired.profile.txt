@@ -1,0 +1,32 @@
+         9043834 function calls in 1.597 seconds
+
+   Ordered by: cumulative time
+   List reduced from 27 to 24 due to restriction <24>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.010    0.010    1.597    1.597 merge_indices.py:219(balanced)
+      127    0.276    0.002    0.967    0.008 merge_indices.py:120(merge)
+      128    0.202    0.002    0.620    0.005 merge_indices.py:174(singleton)
+      255    0.114    0.000    0.322    0.001 merge_indices.py:58(preimages)
+   544826    0.181    0.000    0.260    0.000 merge_indices.py:28(inverse2)
+   604442    0.167    0.000    0.190    0.000 full_format_reference.py:83(at)
+   284990    0.117    0.000    0.117    0.000 <string>:2(__init__)
+      255    0.067    0.000    0.106    0.000 merge_indices.py:96(sorted_union)
+    91904    0.036    0.000    0.073    0.000 full_format_reference.py:48(round)
+   715931    0.065    0.000    0.065    0.000 merge_indices.py:16(ceil_div)
+  1967288    0.063    0.000    0.063    0.000 {built-in method builtins.len}
+  1295604    0.060    0.000    0.060    0.000 {method 'append' of 'list' objects}
+  1258547    0.055    0.000    0.055    0.000 {built-in method builtins.divmod}
+      128    0.011    0.000    0.049    0.000 full_format_reference.py:94(__init__)
+   951959    0.047    0.000    0.047    0.000 {built-in method builtins.min}
+      255    0.026    0.000    0.032    0.000 merge_indices.py:45(piece_input_origins)
+   609469    0.031    0.000    0.031    0.000 {built-in method builtins.max}
+   348574    0.027    0.000    0.027    0.000 merge_indices.py:20(at_least2)
+    91904    0.016    0.000    0.024    0.000 full_format_reference.py:15(uniform_round)
+      128    0.011    0.000    0.013    0.000 full_format_reference.py:21(__init__)
+   184064    0.008    0.000    0.008    0.000 {built-in method builtins.abs}
+    92032    0.005    0.000    0.005    0.000 {method 'bit_length' of 'int' objects}
+      255    0.002    0.000    0.002    0.000 merge_indices.py:111(from_pieces)
+      128    0.000    0.000    0.000    0.000 full_format_reference.py:43(finite)
+
+

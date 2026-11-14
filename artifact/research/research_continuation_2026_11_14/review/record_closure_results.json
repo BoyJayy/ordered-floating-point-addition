@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "counts": {
+    "base_records": 1098,
+    "compositions": 62570,
+    "comparisons": 646200,
+    "constant_restrictions": 8631,
+    "half_height": 8836,
+    "rebased": 30147
+  },
+  "seed": 2026111421,
+  "figure_outputs": [
+    0,
+    0,
+    2,
+    4,
+    4,
+    4,
+    6,
+    8
+  ],
+  "coverage": "synthetic records; clipped/coincident thresholds; affine half-heights; shifted domains; constant restrictions",
+  "limitations": "bounded exact enumeration; not a formal proof or a hardware benchmark",
+  "code_sha256": "4eb78a77e68409f3a3d1659839e41f3c17fa1105042e7fa0fddb63d1ef609746"
+}

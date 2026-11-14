@@ -1,0 +1,531 @@
+{
+  "status": "completed bounded CPU pilot",
+  "date_moscow": "2026-11-14T23:18:55.514073+03:00",
+  "environment": {
+    "timestamp_moscow": "2026-11-14T23:18:55.514073+03:00",
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 18,
+    "loadavg": [
+      2.05517578125,
+      2.578125,
+      2.9541015625
+    ],
+    "cpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "memory": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "power": {
+      "command": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "returncode": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23068771)\t80%; AC attached; not charging present: true",
+      "stderr": ""
+    },
+    "thermal": {
+      "command": [
+        "pmset",
+        "-g",
+        "therm"
+      ],
+      "returncode": 0,
+      "stdout": "Error:Failed to get thermal warning level with error code 0xe00002bc\nError: Failed to get performance warning level with error code 0xe00002bc\nError: No CPU power status with error code 0xe00002bc",
+      "stderr": ""
+    },
+    "caveats": [
+      "No CPU affinity or frequency locking.",
+      "Other desktop processes remain active.",
+      "Single interpreter thread; arbitrary precision exact integers.",
+      "The timed queries all use finite representable values.",
+      "Not an IEEE hardware, C++, GPU, production, or application benchmark."
+    ]
+  },
+  "hardware": {
+    "command": "sysctl machdep.cpu.brand_string hw.memsize hw.physicalcpu hw.logicalcpu",
+    "read_after_successful_readonly_sandbox_escalation": true,
+    "cpu": "Apple M5 Pro",
+    "memory_bytes": 51539607552,
+    "physical_cores": 18,
+    "logical_cores": 18,
+    "benchmark_threads": 1
+  },
+  "independent_correctness": {
+    "status": "PASS",
+    "seed": 2026111451,
+    "blocks": 100,
+    "comparisons": 28260,
+    "formats": [
+      {
+        "p": 2,
+        "E": 1,
+        "number_of_values": 7
+      },
+      {
+        "p": 2,
+        "E": 4,
+        "number_of_values": 19
+      },
+      {
+        "p": 3,
+        "E": 3,
+        "number_of_values": 31
+      },
+      {
+        "p": 4,
+        "E": 5,
+        "number_of_values": 95
+      },
+      {
+        "p": 6,
+        "E": 4,
+        "number_of_values": 319
+      }
+    ],
+    "oracle": "enumerated neighboring representable values; independent of round/add/piece formula",
+    "limits": "bounded toy-format exhaustive input domains and random blocks; not a proof or exhaustive operand-space verification"
+  },
+  "results": [
+    {
+      "id": "p8_E8_m1_small_steps",
+      "p": 8,
+      "E": 8,
+      "m": 1,
+      "kind": "small_steps",
+      "sequential_build_ms": 0.116334,
+      "balanced_build_ms": 0.053792,
+      "cache_prepare_ms": 0.005917,
+      "replay_query_us": 0.2494907380110063,
+      "original_index_query_us": 0.4278597092245989,
+      "cached_index_query_us": 0.2741679279181185,
+      "query_speed_ratio": 0.9099924265595276,
+      "cache_vs_original_ratio": 1.5605753469179706,
+      "median_crossover": null,
+      "saving_range_ns": [
+        -29.98980029015459,
+        -16.460767238758137
+      ],
+      "saving_positive_across_observed_ranges": false,
+      "sequential_peak_traced_bytes": 11448,
+      "balanced_peak_traced_bytes": 9000,
+      "cached_retained_python_bytes": 10628,
+      "operands_retained_python_bytes": 116,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 29,
+        "balanced": 29
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 0.04975,
+        "lazy_build_ms": 0.050167,
+        "materialized_peak_traced_bytes": 8712,
+        "lazy_peak_traced_bytes": 8584,
+        "peak_reduction_ratio": 1.0149114631873253,
+        "estimated_setup_with_cache_ms": 0.056084,
+        "estimated_crossover_with_cache": null,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p8_E8_m32_cancellation",
+      "p": 8,
+      "E": 8,
+      "m": 32,
+      "kind": "cancellation",
+      "sequential_build_ms": 5.730583,
+      "balanced_build_ms": 5.938375,
+      "cache_prepare_ms": 0.015375,
+      "replay_query_us": 5.365787760416667,
+      "original_index_query_us": 0.4395910575564972,
+      "cached_index_query_us": 0.28131385216346155,
+      "query_speed_ratio": 19.074026106964677,
+      "cache_vs_original_ratio": 1.5626356618267996,
+      "median_crossover": 1171,
+      "saving_range_ns": [
+        5007.533884214743,
+        5197.579842748397
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 24200,
+      "balanced_peak_traced_bytes": 397856,
+      "cached_retained_python_bytes": 19705,
+      "operands_retained_python_bytes": 816,
+      "overflow_fraction": 0.00390625,
+      "pieces": {
+        "sequential": 59,
+        "balanced": 76
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 5.694958,
+        "lazy_build_ms": 5.82225,
+        "materialized_peak_traced_bytes": 398360,
+        "lazy_peak_traced_bytes": 85096,
+        "peak_reduction_ratio": 4.681301118736486,
+        "estimated_setup_with_cache_ms": 5.837625,
+        "estimated_crossover_with_cache": 1149,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p8_E8_m128_random_exponents",
+      "p": 8,
+      "E": 8,
+      "m": 128,
+      "kind": "random_exponents",
+      "sequential_build_ms": 10.84725,
+      "balanced_build_ms": 27.20825,
+      "cache_prepare_ms": 0.013708,
+      "replay_query_us": 1.6812242914244186,
+      "original_index_query_us": 0.36167933238636363,
+      "cached_index_query_us": 0.2147167911473607,
+      "query_speed_ratio": 7.829961888125414,
+      "cache_vs_original_ratio": 1.6844482932782938,
+      "median_crossover": 18563,
+      "saving_range_ns": [
+        1450.5664917649867,
+        1494.3462872110074
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 34296,
+      "balanced_peak_traced_bytes": 1695080,
+      "cached_retained_python_bytes": 22638,
+      "operands_retained_python_bytes": 4664,
+      "overflow_fraction": 1.0,
+      "pieces": {
+        "sequential": 86,
+        "balanced": 107
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 26.873958,
+        "lazy_build_ms": 27.023375,
+        "materialized_peak_traced_bytes": 1695080,
+        "lazy_peak_traced_bytes": 186024,
+        "peak_reduction_ratio": 9.1121575710661,
+        "estimated_setup_with_cache_ms": 27.037083,
+        "estimated_crossover_with_cache": 18437,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p24_E254_m1_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 1,
+      "kind": "small_steps",
+      "sequential_build_ms": 12.327791,
+      "balanced_build_ms": 2.057,
+      "cache_prepare_ms": 0.216875,
+      "replay_query_us": 0.40883117228403143,
+      "original_index_query_us": 0.7051091974431819,
+      "cached_index_query_us": 0.41205444785276074,
+      "query_speed_ratio": 0.9921775493857038,
+      "cache_vs_original_ratio": 1.7112039467539937,
+      "median_crossover": null,
+      "saving_range_ns": [
+        -11.738570583263765,
+        1.2200734550155516
+      ],
+      "saving_positive_across_observed_ranges": false,
+      "sequential_peak_traced_bytes": 486868,
+      "balanced_peak_traced_bytes": 451060,
+      "cached_retained_python_bytes": 406444,
+      "operands_retained_python_bytes": 132,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 730,
+        "balanced": 730
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 2.004125,
+        "lazy_build_ms": 1.998917,
+        "materialized_peak_traced_bytes": 451060,
+        "lazy_peak_traced_bytes": 451060,
+        "peak_reduction_ratio": 1.0,
+        "estimated_setup_with_cache_ms": 2.215792,
+        "estimated_crossover_with_cache": null,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p24_E254_m8_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 8,
+      "kind": "cancellation",
+      "sequential_build_ms": 112.054959,
+      "balanced_build_ms": 39.945375,
+      "cache_prepare_ms": 0.323875,
+      "replay_query_us": 2.4514820556640626,
+      "original_index_query_us": 0.7074115911989797,
+      "cached_index_query_us": 0.41449066978503185,
+      "query_speed_ratio": 5.9144444842039015,
+      "cache_vs_original_ratio": 1.7067008807842792,
+      "median_crossover": 19769,
+      "saving_range_ns": [
+        1993.5319497661226,
+        2635.7267102284036
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 693720,
+      "balanced_peak_traced_bytes": 3508728,
+      "cached_retained_python_bytes": 509476,
+      "operands_retained_python_bytes": 396,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 972,
+        "balanced": 1058
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 38.8975,
+        "lazy_build_ms": 38.971916,
+        "materialized_peak_traced_bytes": 3508728,
+        "lazy_peak_traced_bytes": 1651300,
+        "peak_reduction_ratio": 2.1248277115000302,
+        "estimated_setup_with_cache_ms": 39.295791,
+        "estimated_crossover_with_cache": 19292,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p24_E254_m32_small_steps",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "small_steps",
+      "sequential_build_ms": 436.6855,
+      "balanced_build_ms": 177.549458,
+      "cache_prepare_ms": 0.386792,
+      "replay_query_us": 9.5295205078125,
+      "original_index_query_us": 0.7137306787634409,
+      "cached_index_query_us": 0.4119609111064189,
+      "query_speed_ratio": 23.13209882514996,
+      "cache_vs_original_ratio": 1.7325203909432756,
+      "median_crossover": 19516,
+      "saving_range_ns": [
+        9032.296017208615,
+        9170.157767630912
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 738168,
+      "balanced_peak_traced_bytes": 14272236,
+      "cached_retained_python_bytes": 529192,
+      "operands_retained_python_bytes": 1720,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 1079,
+        "balanced": 1185
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 172.932792,
+        "lazy_build_ms": 173.120042,
+        "materialized_peak_traced_bytes": 14272860,
+        "lazy_peak_traced_bytes": 2538452,
+        "peak_reduction_ratio": 5.622662945763796,
+        "estimated_setup_with_cache_ms": 173.506834,
+        "estimated_crossover_with_cache": 19030,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p24_E254_m128_cancellation",
+      "p": 24,
+      "E": 254,
+      "m": 128,
+      "kind": "cancellation",
+      "sequential_build_ms": 1844.521708,
+      "balanced_build_ms": 696.70125,
+      "cache_prepare_ms": 0.348416,
+      "replay_query_us": 36.883084635416665,
+      "original_index_query_us": 0.726888034119898,
+      "cached_index_query_us": 0.42358179370777027,
+      "query_speed_ratio": 87.07429163223753,
+      "cache_vs_original_ratio": 1.7160511733924502,
+      "median_crossover": 19119,
+      "saving_range_ns": [
+        36363.641953476916,
+        36777.41195101351
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 693724,
+      "balanced_peak_traced_bytes": 57718280,
+      "cached_retained_python_bytes": 509476,
+      "operands_retained_python_bytes": 4116,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 972,
+        "balanced": 1058
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 684.986417,
+        "lazy_build_ms": 682.999833,
+        "materialized_peak_traced_bytes": 57719404,
+        "lazy_peak_traced_bytes": 3526444,
+        "peak_reduction_ratio": 16.367594097623556,
+        "estimated_setup_with_cache_ms": 683.348249,
+        "estimated_crossover_with_cache": 18743,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p24_E254_m32_random_exponents",
+      "p": 24,
+      "E": 254,
+      "m": 32,
+      "kind": "random_exponents",
+      "sequential_build_ms": 775.163125,
+      "balanced_build_ms": 180.675875,
+      "cache_prepare_ms": 0.663,
+      "replay_query_us": 11.28415625,
+      "original_index_query_us": 0.7331151582792207,
+      "cached_index_query_us": 0.40976309419014084,
+      "query_speed_ratio": 27.538244439270695,
+      "cache_vs_original_ratio": 1.789119539250248,
+      "median_crossover": 16676,
+      "saving_range_ns": [
+        10790.543868680836,
+        11005.762889839036
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 1148836,
+      "balanced_peak_traced_bytes": 14269548,
+      "cached_retained_python_bytes": 785173,
+      "operands_retained_python_bytes": 1736,
+      "overflow_fraction": 0.00390625,
+      "pieces": {
+        "sequential": 1581,
+        "balanced": 1708
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 177.054083,
+        "lazy_build_ms": 178.525709,
+        "materialized_peak_traced_bytes": 14266292,
+        "lazy_peak_traced_bytes": 2736844,
+        "peak_reduction_ratio": 5.212680006606149,
+        "estimated_setup_with_cache_ms": 179.188709,
+        "estimated_crossover_with_cache": 16479,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p53_E2046_m1_small_steps",
+      "p": 53,
+      "E": 2046,
+      "m": 1,
+      "kind": "small_steps",
+      "sequential_build_ms": 365.640709,
+      "balanced_build_ms": 28.817833,
+      "cache_prepare_ms": 3.684542,
+      "replay_query_us": 0.680636935763889,
+      "original_index_query_us": 1.3487060546875,
+      "cached_index_query_us": 0.6642494721283784,
+      "query_speed_ratio": 1.0246706460797057,
+      "cache_vs_original_ratio": 2.030420965734449,
+      "median_crossover": 1983369,
+      "saving_range_ns": [
+        -7.739987057369831,
+        28.26686158815062
+      ],
+      "saving_positive_across_observed_ranges": false,
+      "sequential_peak_traced_bytes": 7173788,
+      "balanced_peak_traced_bytes": 7759848,
+      "cached_retained_python_bytes": 7821220,
+      "operands_retained_python_bytes": 252,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 5326,
+        "balanced": 5326
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 27.968417,
+        "lazy_build_ms": 27.99575,
+        "materialized_peak_traced_bytes": 7759848,
+        "lazy_peak_traced_bytes": 7759848,
+        "peak_reduction_ratio": 1.0,
+        "estimated_setup_with_cache_ms": 31.680292,
+        "estimated_crossover_with_cache": 1933203,
+        "descriptor_identity": true
+      }
+    },
+    {
+      "id": "p53_E2046_m8_cancellation",
+      "p": 53,
+      "E": 2046,
+      "m": 8,
+      "kind": "cancellation",
+      "sequential_build_ms": 3352.722958,
+      "balanced_build_ms": 521.273208,
+      "cache_prepare_ms": 4.586875,
+      "replay_query_us": 4.306034722222223,
+      "original_index_query_us": 1.3475925611413042,
+      "cached_index_query_us": 0.6512488458806819,
+      "query_speed_ratio": 6.611965225672201,
+      "cache_vs_original_ratio": 2.0692436841388315,
+      "median_crossover": 143883,
+      "saving_range_ns": [
+        3627.6684027777774,
+        3737.4079269255044
+      ],
+      "saving_positive_across_observed_ranges": true,
+      "sequential_peak_traced_bytes": 9659144,
+      "balanced_peak_traced_bytes": 55188724,
+      "cached_retained_python_bytes": 9027476,
+      "operands_retained_python_bytes": 1116,
+      "overflow_fraction": 0.0,
+      "pieces": {
+        "sequential": 6609,
+        "balanced": 6811
+      },
+      "lazy_schedule": {
+        "materialized_build_ms": 514.699584,
+        "lazy_build_ms": 512.588625,
+        "materialized_peak_traced_bytes": 55183168,
+        "lazy_peak_traced_bytes": 26958100,
+        "peak_reduction_ratio": 2.046997674168432,
+        "estimated_setup_with_cache_ms": 517.1755,
+        "estimated_crossover_with_cache": 141507,
+        "descriptor_identity": true
+      }
+    }
+  ],
+  "setup_included_in_crossover": true,
+  "hardware_fp": false,
+  "gpu": false,
+  "findings": [
+    "Balanced builds reduce time for the broad-format cases, but can lose for small formats.",
+    "Caching numerical piece origins reduces measured query latency but increases wide-format object memory.",
+    "Construction amortizes only at thousands to hundreds of thousands of repeated queries in favorable cases.",
+    "Single-operation cases do not show a robust practical benefit.",
+    "Balanced constructor materializes leaves; peak Python allocation can greatly exceed sequential construction.",
+    "Own-path lazy scheduling preserves the exact tree descriptors and reduces peak allocation up to 16.37x in tested workloads, without a robust build-time change."
+  ],
+  "limits": [
+    "10 synthetic deterministic workloads, not a representative application distribution.",
+    "Python arbitrary-precision arithmetic measured, not native binary32/binary64 throughput.",
+    "No independent process repetitions, affinity, frequency locking, or thermal control.",
+    "5 construction samples and 7 query samples; raw ranges are not confidence intervals.",
+    "Crossover estimates use median fixed cost plus linear measured query cost; not direct end-to-end validation.",
+    "Scalar replay skips per-query validity checking on already-validated inputs and stops at overflow.",
+    "Retained Python object sizes and tracemalloc allocation peaks are not encoded description lengths or process RSS.",
+    "Independent oracle checked bounded toy formats; this does not replace a proof."
+  ]
+}

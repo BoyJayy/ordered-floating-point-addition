@@ -4,10 +4,19 @@ REPRODUCING THE CHECKS
 From the archive root, using Python 3.10 or newer:
     python3 -B verify_release.py
     python3 -B run_quick_checks.py
+    python3 -B run_extension_checks.py
 
 Only Python's standard library is required. The quick checks cover saved-record
 consistency, boundary counterexamples, thresholds at p=4,5,6, K=2..256, and small
 finite-format rounding/index cases. They run in a temporary copy.
+The extension command covers the corrected radix implementation, synthetic
+binary records and a separately written query-cache oracle, also in a
+temporary copy. To add the full original merge and radix numerical suites:
+    python3 -B run_extension_checks.py --full
+To add sampled actual CPU arithmetic (standard library, no GPU):
+    python3 -B run_extension_checks.py --native-cpu
+Both options can be used together. These checks are finite tests, not a
+formal proof or external review.
 
 2. Additional exact checks
 Make a working copy before the commands below: several scripts write results
@@ -32,6 +41,29 @@ Run these commands from the working copy's research/ directory:
 
 Some full enumerations take longer than the bounded quick checks. The corridor
 checker compares saved GPU bits; this comparison is not a new GPU run.
+
+The continuation is research/research_continuation_2026_11_14/. From a working
+copy of that directory, the individual new commands are:
+    python3 -B math/check_merge.py
+    python3 -B review/check_record_closure.py
+    python3 -B review/check_native_cpu.py
+    python3 -B next_theorem/check_radix.py
+    python3 -B radix_hard_audit/math/check_adversarial.py
+    python3 -B performance/verify_independent.py
+The initial radix code is retained for numerical and operation-count
+comparisons. Use radix_hard_audit/math/radix_indices_checked.py for the
+linear singleton constructor. See CHANGES.txt for validity conditions.
+
+To rerun the Python implementation pilot, use a separate working copy of
+the continuation. These commands overwrite local pilot result files:
+    python3 -B performance/benchmark.py --phase profile
+    python3 -B performance/benchmark.py --phase measure
+    python3 -B performance/benchmark_lazy.py
+    python3 -B performance/trace_schedules.py
+Timing and allocation passes are separate. The retained REPORT.json records
+the sampling procedure and limitations. Python timings, tracemalloc peaks
+and projected crossover points are not native FP/GPU speed measurements,
+process RSS, or directly measured end-to-end crossover experiments.
 
 3. Solver checks
 These commands require z3-solver (including the two scripts that import it

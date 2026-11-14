@@ -40,7 +40,7 @@
 
 \title[Ordered floating-point addition]{Information bounds and exact indices\protect\\ for ordered floating-point addition}
 \author{Artem D. Popkov}
-\date{November 7, 2026}
+\date{Version 1.1, November 15, 2026}
 \subjclass[2020]{Primary 65G50, 68Q11; Secondary 68P30}
 \keywords{Floating-point arithmetic, ordered accumulation, transfer function,
   communication complexity, succinct representation}
@@ -69,7 +69,12 @@ finite input of a binary format with $E$ normal binades, including gradual
 underflow and absorbing overflow, using at most $2E+1+2Em$ pieces and
 $O(\log(E(m+1)+2))$ abstract operations per query. It identifies signed
 zeros numerically and excludes NaNs and nonfinite operands. Its construction
-does not require an initial full-state table. A second family
+does not require an initial full-state table. Two whole-format indices with
+$q_A$ and $q_B$ records can be merged without their operands in
+$O(q_A+q_B)$ abstract operations. A balanced constructor uses
+$O(E(1+m\log(m+1)))$ abstract operations and at most $4Em+1$ records
+for $m\geq1$. A counterexample rules out such a merge from the restricted
+transfer maps on $X_\ast$ alone. A second family
 uses permutations of one public multiset of $4k$ distinct operands to realize
 $k!$ functions when $2^p\ge64k^2$. The asymptotic lower bounds persist under any fixed
 pointwise error probability below one half. Exact arithmetic and native
@@ -138,8 +143,13 @@ states must remain in the specified positive corridor for every allowed
 query. We first prove the bounds under a stronger exact-sum promise and
 then remove that extra condition. The whole-format evaluator needs no
 corridor promise, but has a different, generally larger size bound.
-Construction from operands and query evaluation are established; an
-efficient merge algorithm on two constructed indices is not claimed.
+Section~\ref{merge:section} gives an operand-free merge for whole-format
+indices and a faster abstract preprocessing bound. It also shows why maps
+restricted to $X_\ast$ alone do not determine arbitrary block composition.
+Appendix~\ref{radix:section} extends the constructive representation and
+its merge to every integer radix, with one threshold in odd radix and
+two in even radix. The information lower bounds retain their binary
+hypotheses.
 
 \section{Related work}\label{sec:related}
 
@@ -217,6 +227,19 @@ argument~\cite[pp.~244 and~616]{ref20}. Neither version counts the transfer
 maps attainable by varying blocks of additions or bounds their description
 size.
 
+Hwang et al. explicitly use sequential rounded additions as one-variable
+functions~\cite[Definition~4.3]{hwang2025}. Their Lemma~4.6 realizes a
+prescribed two-valued threshold under the paper's format and activation
+assumptions. Counting those thresholds gives an $\Omega(p)$ description
+bound when chain length is unrestricted. Their precision parameter counts
+fraction bits, whereas ours includes the leading significand bit. Thus
+single-threshold attainability is an established fact. The quantitative
+claims below concern $k$ independently chosen locations realized with
+$2k$ additions, a common query domain, and both zero-real-sum and zero-start
+promises. These length and trajectory statements do not follow from the
+single-threshold statement alone; the variation and fixed-multiset results
+are separate claims.
+
 Casacuberta et al. establish order sensitivity and repeated-rounding effects
 in differential-privacy implementations~\cite[Sections~5.3, 5.5, and~5.6]{ref10}.
 FPRev infers an unknown accumulation tree by changing the placement of large
@@ -269,6 +292,19 @@ commuting dilated floor functions~\cite{ref25}. Our normal form instead
 allows arbitrarily long translated nearest-even chains with varying dyadic
 spacings. Its proof combines translation equivariance with a common output
 coset to leave at most two thresholds in one period.
+Monotone periodic integer maps and their generalized inverses are
+classical objects~\cite[Definition~2.2 and Proposition~4.1]{connesconsani2013}.
+Their inverse-composition law is a general tool used by our construction;
+the rounding-specific step is preservation of the small record class.
+
+Optimal inverse bounds for a single floating-point addition are studied
+by Andrlon et al.~\cite{andrlon2019} and Gallois-Wong et
+al.~\cite{galloiswong2020}. The former explicitly considers arbitrary
+radices and rounding modes. Single-operation inversion is therefore an
+established ingredient. Our access contract requires a reusable description
+of an entire fixed chain, with the original operand list absent during
+query evaluation and merging. Backward propagation through the retained
+list would have a different access contract.
 
 Monotone piecewise-constant lists and their operations are established
 data structures. Henzinger et al. control their size through
@@ -1051,8 +1087,9 @@ effective operands can use fewer bits. Its purpose is exact evaluation
 from a constructed index, with a record bound polynomial in $K$. The
 previous residue-class constructor can initialize up to $2^{K-2}$ classes.
 Neither abstract operation count measures integer bit costs or GPU time.
-The theorem constructs from the original operands and does not provide
-an algorithm for merging two descriptions without them.
+The theorem constructs from the original operands. The whole-format
+representation below also permits operand-free merging, as proved in
+Section~\ref{merge:section}; the restriction to $X_\ast$ requires separate care.
 
 \section{An evaluator on the entire finite format}
 \label{sec:full-format}
@@ -1168,10 +1205,13 @@ requiring enumeration of all significands. The lower bounds on the
 corridor families remain consistent with this larger index. Transmitting
 the operands is still a smaller general description in many regimes.
 The index trades preprocessing and space for queries that do not
-replay the block. An efficient merge of two already constructed indices,
-and any benefit on a concrete parallel workload, remain separate questions.
+replay the block. Section~\ref{merge:section} proves an efficient merge of
+two already constructed whole-format indices. A benefit on a concrete
+parallel workload remains a separate question.
 
 
+
+\input{merge_section}
 
 \section{Order information with a public numerical multiset}
 \label{sec:order}
@@ -1612,6 +1652,32 @@ direct exact folds. Full-table tests on small domains, rather than those
 samples alone, check the general implementation path. The table reports sizes
 and operation counts, not running time or peak memory.
 
+
+\subsection{Checks for operand-free composition}
+The implementation accompanying Section~\ref{merge:section} is checked in
+\texttt{merge\_indices.py} and \texttt{check\_merge.py}. Exhaustive tests
+cover every length-three block in four small formats and every finite input:
+17,216 blocks and 35,468 merges, with 732,220 query comparisons including
+shorter-block checks. Another 140 random and adversarial blocks give
+308,908 comparisons. The record inverse passes 104,127 probes; global
+inverse queries pass 127,740 comparisons and 3,600 interval-preimage tests.
+A separate CPU oracle gives 296,480 comparisons for binary32 and binary64,
+using native binary64 addition and binary32 storage rounding after each
+addition. The contracts identify zero signs numerically and exclude NaNs.
+The exact-integer large-format probes and the CPU tests are finite checks,
+not exhaustive verification of standard formats or GPU measurements.
+An independent rational-arithmetic check tests local closure without
+assuming that records came from operand histories. It constructs 62,570
+compositions from synthetic records and checks 646,200 output values,
+including coincident and clipped thresholds, fictitious half-spacings,
+constant restrictions, and rebasing inside a parent record. This test does
+not import the merge implementation or its inverse. It also verifies the
+eight plotted values in Figure~\ref{merge:fig:record}.
+These records accompany version~1.1.0 of the research artifact; the
+archived version~1.0.0 retains the earlier results unchanged.
+
+\input{performance_section}
+
 \section{Limitations and open questions}\label{sec:limitations}
 
 \subsection{The corridor and rounding hypotheses}
@@ -1675,9 +1741,11 @@ lie outside the unknown-entry one-way contract. The lower bounds also permit
 algorithms that revisit the original operands, use distributed storage charged
 elsewhere, or perform iterative speculative correction.
 
-The corridor sparse representation is an evaluator on its specified grid. That grid
-need not contain the outputs of another block, so an exact associative scan
-format would require an additional closure argument. The implementation also
+The corridor sparse representation is an evaluator on its specified grid.
+Theorem~\ref{merge:prop:obstruction} shows that restricted functions on this
+grid alone cannot determine arbitrary compositions. Richer summaries can
+retain the missing behavior; Theorem~\ref{merge:thm:merge} supplies an exact
+merge for whole-format indices. The implementation of the earlier sparse evaluator also
 checks a narrower starting domain than the abstract spacing-four lemma; the
 grid $X_\ast$ satisfies both. Its construction bound counts abstract arithmetic
 operations and does not establish a bit-complexity or GPU-work bound.
@@ -1690,11 +1758,14 @@ The new staircase index has polynomial record dependence, but is generally
 larger than the operand list and does not close that information gap.
 The whole-format theorem removes positivity for evaluation; it identifies
 signed zeros numerically and omits NaNs, nonfinite operands, and exception
-flags. An efficient algorithm for merging two constructed indices remains
-open. A separate systems question is whether constructing
+flags. The linear merge resolves composition for this whole-format index,
+but its abstract-operation bound does not give a uniform machine-word cost
+or sublinear parallel depth. A separate systems question is whether constructing
 and applying summaries pays for its cost on a concrete workload. Answering it
 requires optimized implementations, a specified memory-access contract, and
-comparable timing measurements. Our results do not settle either question.
+comparable timing measurements. Section~\ref{sec:pilot} gives a bounded
+exact-integer Python pilot with explicit setup costs and negative cases;
+the benefit for native arithmetic or an application remains open.
 
 \section{Conclusion}\label{sec:conclusion}
 
@@ -1709,16 +1780,24 @@ fixed number of adjacent positive binades, and the same bounds hold under
 the weaker rounded-state promise. A different two-threshold normal form
 gives an exact index with $O(mK)$ corridor pieces and $O(E(m+1))$ pieces
 over the entire finite format, including negative values, subnormals,
-and absorbing infinities. These evaluation indices need not minimize
-description size. Standard entropy arguments extend the lower bounds to
-pointwise bounded error. None of these results is a running-time lower
-bound for unrestricted parallel algorithms or a measured speedup.
+and absorbing infinities. Whole-format indices can be merged in linear
+abstract work in their record counts; a balanced construction improves
+preprocessing to $O(E(1+m\log(m+1)))$ with a larger piece-count constant.
+An explicit example prevents arbitrary merging from $X_\ast$-restricted
+functions alone. These evaluation indices need not minimize description size. Standard entropy arguments extend the lower bounds to
+pointwise bounded error. Appendix~\ref{radix:section} extends the constructive
+index and its merge to every integer radix. None of the information bounds
+is a running-time lower bound for unrestricted parallel algorithms.
+The implementation pilot measures Python construction and query costs;
+it establishes neither native floating-point acceleration nor a GPU speedup.
 
 \appendix
+\input{radix_section}
+
 \section{Reproduction}\label{sec:artifact}
 
-The accompanying research artifact, version~1.0.0, is available at
-\url{https://doi.org/10.5281/zenodo.24044237}. Its \path{README.txt}
+The accompanying research artifact, version~1.1.0, is available at
+\url{https://doi.org/10.5281/zenodo.24231263}. Its \path{README.txt}
 describes the package, \path{REPRODUCE.txt} gives the dependencies and
 commands, and \path{EVIDENCE_MAP.json} maps the paper's validation results
 to code and data. The source code is in \path{research/experiments/},
@@ -1762,6 +1841,28 @@ python3 -B check\_full\_native.py
 The last command requires NumPy and executes new CPU arithmetic; it does
 not use a GPU.
 
+The continuation in \path{research/research_continuation_2026_11_14/} adds
+\path{math/merge_indices.py}, \path{next_theorem/radix_indices.py},
+the corrected all-radix implementation
+\path{radix_hard_audit/math/radix_indices_checked.py},
+and the implementation pilot in \path{performance/}. The initial all-radix
+implementation is retained with its original evidence; its repeated region
+search does not implement the linear singleton bound. The corrected version
+does. From the continuation directory,
+the new checks are
+\begin{quote}\small\ttfamily
+python3 -B math/check\_merge.py\\
+python3 -B review/check\_native\_cpu.py\\
+python3 -B review/check\_record\_closure.py\\
+python3 -B next\_theorem/check\_radix.py\\
+python3 -B radix\_hard\_audit/math/check\_adversarial.py\\
+python3 -B performance/verify\_independent.py
+\end{quote}
+The pilot's \path{README.txt} lists the separate profiling, timing,
+allocation, and lazy-construction commands. Reruns write new result files;
+retain a copy of the existing evidence before running them. These additions
+use the Python standard library and the preserved earlier reference modules.
+
 The historical comparison in Section~\ref{sec:related} used the complete
 Reiser-Knuth original, its corrections, the corrected 2010 chapter and
 addendum, and Diamond's article. Knuth's exercise~4.2.2--22 and its answer
@@ -1788,6 +1889,12 @@ manuscript; the author takes responsibility for its contents.
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{10}
 
+\bibitem{andrlon2019}
+Mak Andrlon, Peter Schachte, Harald S{\o}ndergaard, and Peter~J. Stuckey,
+  \emph{Optimal bounds for floating-point addition in constant time},
+  26th IEEE Symposium on Computer Arithmetic (ARITH 2019), IEEE, 2019,
+  159--166, \url{https://doi.org/10.1109/ARITH.2019.00038}.
+
 \bibitem{ref28}
 Roberto Bagnara, Abramo Bagnara, Fabio Biselli, Michele Chiari, and Roberta
   Gori, \emph{Correct approximation of {IEEE 754} floating-point arithmetic for
@@ -1813,6 +1920,11 @@ Amit Chakrabarti, Graham Cormode, Ranganath Kondapally, and Andrew McGregor,
   recognition}, arXiv:1004.3304v1, 2010,
   \url{https://doi.org/10.48550/arXiv.1004.3304}.
 
+\bibitem{connesconsani2013}
+Alain Connes and Caterina Consani, \emph{Projective geometry in
+  characteristic one and the epicyclic category}, arXiv:1309.0406v1
+  [math.AG], 2013, \url{https://arxiv.org/abs/1309.0406v1}.
+
 \bibitem{ref19}
 Harold~G. Diamond, \emph{Stability of rounded off inverses under iteration},
   Mathematics of Computation \textbf{32} (1978), no.~141, 227--232,
@@ -1834,6 +1946,13 @@ Luca Foschini, John Hershberger, and Subhash Suri, \emph{On the complexity of
   {ACM-SIAM} Symposium on Discrete Algorithms ({SODA} 2011), SIAM, 2011,
   \url{https://doi.org/10.1137/1.9781611973082.27}, pp.~327--341.
 
+\bibitem{galloiswong2020}
+Diane Gallois-Wong, Sylvie Boldo, and Pascal Cuoq,
+  \emph{Optimal inverse projection of floating-point addition},
+  Numerical Algorithms \textbf{83} (2020), no.~3, 957--986,
+  published online May 24, 2019,
+  \url{https://doi.org/10.1007/s11075-019-00711-z}.
+
 \bibitem{ref21}
 Robert~Joseph George, Will Adkisson, and Anima Anandkumar, \emph{{FloatLib}:
   Verified floating-point arithmetic in {Lean}}, 2026, arXiv:2609.19352v1
@@ -1852,6 +1971,13 @@ Monika Henzinger, Stefan Neumann, Harald R{\"a}cke, and Stefan Schmid,
   (STACS 2023), Leibniz International Proceedings in Informatics (LIPIcs), vol.
   254, Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik, 2023,
   \url{https://doi.org/10.4230/LIPIcs.STACS.2023.36}, pp.~36:1--36:16.
+
+\bibitem{hwang2025}
+Geonho Hwang, Yeachan Park, Wonyeol Lee, and Sejun Park,
+\emph{Floating-Point Neural Networks Can Represent Almost All Floating-Point
+Functions}, Proceedings of the 42nd International Conference on Machine
+Learning, Proceedings of Machine Learning Research \textbf{267} (2025),
+26412--26432, \url{https://proceedings.mlr.press/v267/hwang25b.html}.
 
 \bibitem{ref4}
 Nachiket Kapre and Andr{\'e} DeHon, \emph{Optimistic parallelization of
@@ -1928,6 +2054,11 @@ John~F. Reiser and Donald~E. Knuth, \emph{Evading the drift in floating-point
   of Language and Information, Stanford, CA, 2010, Corrected reprint with
   addendum on p.~348; \url{https://www-cs-faculty.stanford.edu/~knuth/da.html},
   pp.~341--348.
+
+\bibitem{roux2014}
+Pierre Roux, \emph{Innocuous double rounding of basic arithmetic operations},
+  Journal of Formalized Reasoning \textbf{7} (2014), no.~1, 131--142,
+  \url{https://doi.org/10.6092/issn.1972-5787/4359}.
 
 \bibitem{ref22}
 Brett Saiki, Bill Zorn, Cynthia Richey, and Zachary Tatlock, \emph{When double

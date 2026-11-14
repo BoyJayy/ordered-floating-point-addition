@@ -1,0 +1,238 @@
+\section{Transfer indices in other integer radices}\label{radix:section}
+
+The constructive upper bounds extend to every integer radix by the same
+divisible-lattice argument used in the binary case. A separate affine
+record makes its hypotheses explicit. Odd radices admit a one-threshold
+record because addition of representable numbers cannot produce a
+rounding midpoint. The latter fact is known~\cite[Lemma~19]{roux2014}.
+This appendix gives an extension of the whole-format index, rather than
+an independent novelty claim for odd-radix rounding or floor identities.
+The binary information lower bounds proved earlier are not extended here.
+
+Fix an integer radix $\beta\geq2$, precision $p\geq2$, and $E\geq1$
+normal magnitude intervals. In least-subnormal units, put $n=\beta^{p-1}$
+and define the finite numerical format
+\begin{equation}\label{radix:eq:format}
+ \mathcal F_{\beta,p,E}
+ =\{0\}\cup\{\pm k:1\leq k<n\}
+ \cup\{\pm k\beta^j:n\leq k<\beta n,\ 0\leq j<E\}.
+\end{equation}
+Its size is $N=2n((\beta-1)E+1)-1$. Every input and operand belongs to
+this format, and each addition is rounded separately to nearest with
+ties to an even significand. Gradual underflow is included, signed zeros
+are identified, and NaNs and exception flags are excluded. Both
+infinities are absorbing. Write
+\[
+ M=(\beta n-1)\beta^{E-1},\qquad
+ U=\beta n\beta^{E-1},\qquad \tau=\frac{M+U}{2}.
+\]
+For even $\beta$, exact sums of magnitude at least $\tau$ overflow.
+For odd $\beta$, $\tau$ is half-integral and reachable sums are integral;
+overflow occurs for magnitude greater than $\tau$. Its tie case is
+unreachable. Odd-radix formats here are mathematical models, not IEEE
+754 formats.
+
+The format is public. Operation counts below start from its constants
+$n,M,\tau$ and ordered region tables. If only $\beta,p,E$ are supplied,
+these tables can first be prepared using $O(E+\log p)$ integer
+multiplications: compute $n$ by exponentiation by squaring and successive
+radix powers by multiplication by $\beta$. This one-time preparation
+cost is separate from the stated block-construction bounds.
+
+For odd $\beta$, adjacent finite values differ by an odd integer
+$\beta^j$, so every midpoint is half-integral. This includes boundaries
+of magnitude intervals and the gradual-underflow region. Consequently,
+no reachable addition is a tie. If $R_h$ is uniform nearest rounding to
+$h\mathbb Z$, $h=\beta^j$, then on integer arguments
+\[
+ R_h(z+\lambda h)=R_h(z)+\lambda h,
+ \qquad
+ \lambda=\begin{cases}2,&\beta\text{ even},\\1,&\beta\text{ odd}.
+ \end{cases}
+\]
+For even radix the two-step translation preserves tie parity; for odd
+radix a one-step translation suffices because there are no ties.
+
+Split the finite input ranks into the $2E+1$ original arithmetic
+progressions: the negative normal intervals, the central interval
+containing subnormals and zero, and the positive normal intervals.
+Retain these boundaries in every index. On a finite-output piece with
+inputs $x_0+di$, $0\leq i<L$, use either an affine record
+$f(i)=c+di$, or a staircase record
+\begin{equation}\label{radix:eq:record}
+ f(i)=c+\lambda H\left\lfloor\frac{i}{P}\right\rfloor
+       +H\sum_{s=1}^{\lambda}\mergeind{i\bmod P\geq t_s},
+ \qquad P=\frac{\lambda H}{d},
+\end{equation}
+where $d,H$ are powers of $\beta$, $H\geq d$, and
+$1\leq t_1\leq\cdots\leq t_\lambda\leq\min(P,L)$.
+Thresholds may coincide or be clipped to $L<P$. Infinite-output pieces
+are constant. In binary, an affine record can also be written using the
+fictitious height $d/2$ of \eqref{merge:eq:record}; the explicit tag avoids
+using that height in radix-power divisibility arguments.
+
+For odd radix, \eqref{radix:eq:record} is simply the shifted-floor formula
+\begin{equation}\label{radix:eq:floor}
+ f(i)=c+H\left\lfloor\frac{i+P-t_1}{P}\right\rfloor.
+\end{equation}
+Indeed, writing $i=qP+r$, $0\leq r<P$, leaves the indicator $r\geq t_1$.
+Thus one threshold does not introduce a new class of elementary functions.
+The nested-floor and upper-level-set identities underlying composition
+are classical; compare~\cite[Lemma~1]{ref25}. More generally, normalized
+staircase extensions are nondecreasing integer maps $g$ satisfying
+$g(i+P)=g(i)+\lambda$. Such periodic maps and the reverse-order
+composition law for their generalized inverses occur in
+\cite[Definition~2.2 and Proposition~4.1]{connesconsani2013}.
+The local argument below checks the additional lattice and range-coset
+conditions required by the rounding representation.
+
+\begin{lemma}[Local tagged closure]\label{radix:lem:closure}
+Suppose an interval $I$ in an $A$-record has its finite image in one
+$B$-record. Then $B\circ A$ on $I$ has the same tagged form, with input
+spacing $d_A$. If $B$ is affine, retain the tag and height of $A$.
+If $A$ is affine and $B$ is a staircase, the composite is affine when
+$d_A>H_B$, and also when $d_A=H_B$ in odd radix; otherwise its height is
+$H_B$. If both are staircases, its height is $\max(H_A,H_B)$.
+\end{lemma}
+
+\begin{proof}
+An affine $B$ extends numerically as $b(y)=y+\text{constant}$, so it
+translates $A$. For a staircase $B$, extend \eqref{radix:eq:record} to all
+real numerical inputs using $u=(y-y_B)/d_B$, $q=\lfloor u/P_B\rfloor$,
+and $r=u-qP_B$. This extension is nondecreasing, has range in
+$c_B+H_B\mathbb Z$, and satisfies
+$b(y+\lambda H_B)=b(y)+\lambda H_B$. Coinciding and clipped thresholds
+preserve these properties.
+
+If $A$ is affine and $d_A>H_B$, the ratio $d_A/H_B$ is a positive power
+of $\beta$, hence divisible by $\lambda$. Each input step therefore
+advances $B$ by $d_A$. Equality works in odd radix as well. In the
+remaining affine case, the composite has index period $\lambda H_B/d_A$,
+increment $\lambda H_B$, and range in a coset of $H_B\mathbb Z$.
+
+If both records are staircases, extend $A$ to integer indices and put
+$H=\max(H_A,H_B)$. The number $\lambda H$ is a multiple of both
+numerical periods. Thus the composite $G$ satisfies
+\[
+ G(i+\lambda H/d_A)=G(i)+\lambda H.
+\]
+When $H_B\geq H_A$, its range belongs to $G(0)+H_B\mathbb Z$.
+When $H_A>H_B$, the ratio $H_A/H_B$ is a positive radix power and a
+multiple of $\lambda$. All differences of $A$-outputs are multiples of
+$H_A$, and $B$'s translation identity preserves these differences
+exactly. The range then belongs to $G(0)+H_A\mathbb Z$.
+
+In each nonaffine case, monotonicity, the range coset, and the period
+identity imply at most $\lambda$ successive level crossings per period.
+Their first indices give the thresholds. Rebase on $I$ and clip at its
+length. The extensions agree with the actual maps on $I$, which proves
+the assertion without an operand history.
+\end{proof}
+
+\begin{definition}[Valid whole-format tagged index]\label{radix:def:valid}
+The pieces partition every finite input rank into nonempty intervals and
+refine the $2E+1$ original input progressions. Their combined function is
+globally nondecreasing and takes values in
+$\mathcal F_{\beta,p,E}\cup\{-\infty,+\infty\}$. Finite anchors belong to
+$\mathcal F_{\beta,p,E}$, and each staircase height belongs to
+$\{1,\beta,\ldots,\beta^{E-1}\}$. At the two infinite inputs, the function
+is extended by absorption.
+\end{definition}
+
+These requirements hold for the indices constructed from operands below
+and are preserved by merging. The local closure lemma permits arbitrary
+radix-power heights; the whole-format encoding bound uses the finite
+height range in Definition~\ref{radix:def:valid}. Monotonicity within each
+piece alone does not imply the global monotonicity required by the sweep.
+The bound on the number of new pieces is a general consequence of
+monotonicity and interval partitions. The rounding-specific step is closure
+in constant-size records whose new parameters can be computed directly.
+
+\begin{corollary}[Whole-format merge and construction]\label{radix:cor:merge}
+For the format \eqref{radix:eq:format}, two valid tagged indices with $q_A$ and
+$q_B$ pieces can be composed without operands in $O(q_A+q_B)$ abstract
+operations, producing at most $\min(N,q_A+q_B-1)$ pieces. For $m\geq1$
+operands, balanced construction takes $O(E(1+m\log(m+1)))$ abstract
+operations and gives at most $\min(N,4Em+1)$ pieces. A query or inverse
+query takes $O(\log(q+1))$ operations. The encoding uses
+$O(q(p\log\beta+\log(E+1)))$ bits.
+\end{corollary}
+
+\begin{proof}
+For a finite affine record the first local index with $f(i)\geq z$ is
+$\min(L,\max(0,\lceil(z-c)/d\rceil))$. For a staircase, it is zero
+when $z\leq c$. Otherwise set
+\[
+ k=\left\lceil\frac{z-c}{H}\right\rceil,\qquad
+ q=\left\lfloor\frac{k-1}{\lambda}\right\rfloor,\qquad
+ s=k-\lambda q.
+\]
+The inverse is $\min(L,qP+t_s)$. Skipped levels and clipped thresholds
+obey the same formula. These constant-operation inverses permit exactly
+the sorted-boundary sweep of Theorem~\ref{merge:thm:merge}; replace its
+local closure by Lemma~\ref{radix:lem:closure}. At most two inverse
+compositions recover the thresholds of each new record.
+The composite is globally nondecreasing and format-valued; taking a
+maximum of parent heights preserves the finite height range. Thus its
+index is valid. A numerical query is located in its original input
+progression by binary search and converted to a rank there. This costs
+$O(\log(E+1))$, absorbed by $O(\log(q+1))$ since $q\geq2E+1$.
+
+For one addition, add preimages of the $2(E-1)$ interior rounding-region
+boundaries and the two overflow cuts to the original $2E+1$ progressions.
+This gives at most $4E+1$ pieces in $O(E)$ operations. On each finite
+piece rounding has fixed spacing $h$. If $d>h$, or $d=h$ in odd radix,
+the translation identity gives an affine record. Otherwise $H=h\geq d$;
+monotonicity, the period $\lambda h/d$, and the output lattice give
+\eqref{radix:eq:record}. Its thresholds are obtained by solving the
+rounding preimage inequalities at $h(k-1/2)$. Their endpoints are
+inclusive for even $k$ and strict for odd $k$; in odd radix the endpoints
+are unreachable. The exact sums at successive piece starts are increasing;
+a single sweep through the ordered rounding regions supplies their
+spacings. With that spacing known, quotient and remainder compute the
+anchor and each threshold in constant operations. This avoids a fresh
+scan of all $E$ regions for each piece. A balanced merge tree gives the stated construction
+and piece counts. The stored endpoints, significands, and thresholds
+have $O(p\log\beta+\log(E+1))$ bits, and spacing and height exponents
+have $O(E)$ possibilities.
+\end{proof}
+
+These are abstract-operation bounds. Integer intermediates in least-ulp
+units can require $O((p+E)\log\beta)$ bits. No hardware speedup follows.
+The records are not required to be unique or bytewise associative.
+
+Both the parity distinction and the operand restriction matter. In the
+binary format $p=3,E=2$, the one-operand block $(4)$ maps inputs
+$4,5,6,7$ to $8,8,10,12$. A one-threshold height-two record would require
+an output increment of two after two input steps, whereas the outputs
+at $5$ and $7$ differ by four. For odd radix, allowing arbitrary real
+operands also invalidates the one-threshold assertion: uniform
+nearest-even rounding to $3\mathbb Z$ gives
+\[
+ R_3(3i+3/2)=0,6,6,12,12,\ldots\quad(i=0,1,2,3,4,\ldots).
+\]
+Its increment after one step need not be three. The operand $3/2$ is
+not radix-three rational, so this example is excluded by
+\eqref{radix:eq:format}.
+
+The initial reference implementation was tested against an enumerated-neighbour
+rounding oracle on all operand pairs in seven small formats and all
+operand triples in four of them. These checks cover 29,407 pairs,
+30,976 triples with both merge associations, and 4,854,320 full-domain
+output comparisons. Another 500 blocks include decimal and hexadecimal
+formats. Synthetic-record tests check 35,751 compositions and 222,309
+outputs without assuming an underlying addition history. These bounded
+checks support the proof; they are neither exhaustive checks of standard
+formats nor hardware measurements.
+
+A subsequent audit found that the initial singleton implementation
+repeated a linear search for the rounding region on each piece. Its
+numerical results remain separate from the operation-count claim above.
+The corrected implementation uses the single sweep described in the
+proof. Independent tests cover 243 blocks in 15 formats, 274,241 forward
+comparisons, 4,536 inverse queries, and 165 merges after additional
+partition refinement. Another 6,600 synthetic local compositions check
+large radix powers and independently shifted record origins. Instrumented
+checks exclude the repeated region search from the corrected constructor.
+The implementation and the audit commands are listed in the reproducibility
+appendix. These tests do not replace the proof of the asymptotic bound.

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "formats": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      5,
+      4
+    ]
+  ],
+  "comparisons": 6090,
+  "seed": 57291,
+  "methods": [
+    "sequential",
+    "balanced"
+  ]
+}

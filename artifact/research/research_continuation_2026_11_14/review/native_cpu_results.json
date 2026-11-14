@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "seed": 2026111403,
+  "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "float_rounds": 1,
+  "cases": [
+    {
+      "width": 32,
+      "length": 0,
+      "queries": 2036,
+      "pieces": 509,
+      "split_pieces": 509
+    },
+    {
+      "width": 32,
+      "length": 1,
+      "queries": 2036,
+      "pieces": 762,
+      "split_pieces": 762
+    },
+    {
+      "width": 32,
+      "length": 1,
+      "queries": 2036,
+      "pieces": 533,
+      "split_pieces": 533
+    },
+    {
+      "width": 32,
+      "length": 2,
+      "queries": 2036,
+      "pieces": 557,
+      "split_pieces": 557
+    },
+    {
+      "width": 32,
+      "length": 2,
+      "queries": 2036,
+      "pieces": 578,
+      "split_pieces": 578
+    },
+    {
+      "width": 32,
+      "length": 4,
+      "queries": 2036,
+      "pieces": 1024,
+      "split_pieces": 1024
+    },
+    {
+      "width": 32,
+      "length": 3,
+      "queries": 2036,
+      "pieces": 924,
+      "split_pieces": 924
+    },
+    {
+      "width": 32,
+      "length": 2,
+      "queries": 2036,
+      "pieces": 946,
+      "split_pieces": 946
+    },
+    {
+      "width": 32,
+      "length": 17,
+      "queries": 2036,
+      "pieces": 1115,
+      "split_pieces": 1115
+    },
+    {
+      "width": 32,
+      "length": 33,
+      "queries": 2036,
+      "pieces": 972,
+      "split_pieces": 972
+    },
+    {
+      "width": 64,
+      "length": 0,
+      "queries": 12788,
+      "pieces": 4093,
+      "split_pieces": 4093
+    },
+    {
+      "width": 64,
+      "length": 1,
+      "queries": 12788,
+      "pieces": 6138,
+      "split_pieces": 6138
+    },
+    {
+      "width": 64,
+      "length": 1,
+      "queries": 12788,
+      "pieces": 4146,
+      "split_pieces": 4146
+    },
+    {
+      "width": 64,
+      "length": 2,
+      "queries": 12788,
+      "pieces": 4199,
+      "split_pieces": 4199
+    },
+    {
+      "width": 64,
+      "length": 2,
+      "queries": 12788,
+      "pieces": 4249,
+      "split_pieces": 4249
+    },
+    {
+      "width": 64,
+      "length": 4,
+      "queries": 12788,
+      "pieces": 8192,
+      "split_pieces": 8192
+    },
+    {
+      "width": 64,
+      "length": 3,
+      "queries": 12788,
+      "pieces": 6503,
+      "split_pieces": 6503
+    },
+    {
+      "width": 64,
+      "length": 2,
+      "queries": 12788,
+      "pieces": 6554,
+      "split_pieces": 6554
+    },
+    {
+      "width": 64,
+      "length": 17,
+      "queries": 12788,
+      "pieces": 7748,
+      "split_pieces": 7748
+    },
+    {
+      "width": 64,
+      "length": 33,
+      "queries": 12788,
+      "pieces": 6842,
+      "split_pieces": 6842
+    }
+  ],
+  "numeric_comparisons": 296480,
+  "restricted_grid_cpu_counterexample": {
+    "x": 8388616.0,
+    "B_after_A": 8388616.0,
+    "C_after_A": 8388617.0
+  },
+  "limits": [
+    "native CPU arithmetic, not GPU",
+    "binary32 uses binary64 addition then struct storage",
+    "signed zero numerically identified",
+    "no NaN inputs or infinite operands",
+    "sampled standard formats, not exhaustive binary32 or binary64"
+  ],
+  "sha256": {
+    "/Users/boyjayy/Documents/researchtry2/research_discovery_2026_11_07/research_continuation_2026_11_14/review/check_native_cpu.py": "a2c0a5abddc0c385b1ed464dd9764de9f557dca52623a0f2edb14217aa95a1b8",
+    "/Users/boyjayy/Documents/researchtry2/research_discovery_2026_11_07/research_continuation_2026_11_14/math/merge_indices.py": "5ef331c5f5c6729bea2419d11116ef4091abd5eb4cf45d5ada6c2dec9f5d959c"
+  }
+}

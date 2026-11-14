@@ -1,0 +1,388 @@
+\providecommand{\mergeind}[1]{\mathbf{1}_{\{#1\}}}
+\section{Operand-free composition of whole-format indices}\label{merge:section}
+\subsection{Record format and access contract}
+
+
+Fix a binary format of precision $p\geq2$ with $E\geq1$ normal binades
+and gradual underflow. Every addition is correctly rounded separately to
+nearest, with ties to even. Inputs and operands are finite representable
+numbers. The two signed zeros are identified numerically; NaNs, exception
+flags, and zero-sign recovery are excluded. The outputs $-\infty$ and
+$+\infty$ are absorbing under further finite additions. Scale values by
+the subnormal spacing, so that this spacing is one. There are
+\[
+ N=2^p(E+1)-1
+\]
+finite numerical inputs, ordered by rank $0,\ldots,N-1$.
+
+The whole-format index of Section~\ref{sec:full-format} partitions these ranks into
+contiguous intervals refining $2E+1$ fixed dyadic input progressions.
+On a finite-output piece of length $n$, the local inputs are $x_0+di$,
+$0\leq i<n$, and the stored output is
+\begin{equation}\label{merge:eq:record}
+ f(i)=c+2H\left\lfloor\frac{i}{P}\right\rfloor
+       +H\bigl(\mergeind{i\bmod P\geq t_1}+\mergeind{i\bmod P\geq t_2}\bigr),
+ \qquad P=\frac{2H}{d},
+\end{equation}
+where $d,H$ are dyadic powers,
+\[
+ P\in\mathbb Z_{>0},\qquad 1\leq t_1\leq t_2\leq\min(P,n).
+\]
+The height $H=d/2$ is allowed. A threshold can be clipped to $n<P$;
+the formula need only describe the stored interval. Infinite-output
+pieces are constant. The full represented function is nondecreasing.
+For the whole-format merge, a valid index covers every finite rank
+without gaps, has finite outputs in the format, and uses heights from
+$\{1/2,1,2,\ldots,2^{E-1}\}$. These invariants hold for the earlier
+constructor and are preserved by the merge. The local closure lemma
+itself does not need a bound on the height exponents.
+
+Figure~\ref{merge:fig:record} illustrates a record produced by one
+addition. In the format $p=4$, $E=2$, take the integer inputs $x=8+i$,
+$0\leq i<8$, and the operand $8$. The input spacing is one, while the
+outputs lie in the spacing-two binade $[16,32)$. In
+\eqref{merge:eq:record}, this gives $c=16$, $H=2$, $P=4$, $t_1=2$,
+and $t_2=3$. The unequal threshold positions encode the tie rule:
+$17$ rounds to $16$, whereas $19$ rounds to $20$.
+
+\begin{figure}[htbp]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(260,132)
+\put(25,18){\vector(1,0){215}}
+\put(25,18){\vector(0,1){99}}
+\put(241,14){\makebox(12,10)[l]{$i$}}
+\put(0,120){\makebox(235,10)[l]{$\RN(16+i)-16$}}
+\multiput(25,16)(27,0){8}{\line(0,1){4}}
+\put(22,4){\makebox(6,9){$0$}}
+\put(49,4){\makebox(6,9){$1$}}
+\put(76,4){\makebox(6,9){$2$}}
+\put(103,4){\makebox(6,9){$3$}}
+\put(130,4){\makebox(6,9){$4$}}
+\put(157,4){\makebox(6,9){$5$}}
+\put(184,4){\makebox(6,9){$6$}}
+\put(211,4){\makebox(6,9){$7$}}
+\put(10,34){\makebox(10,9){$2$}}
+\put(10,54){\makebox(10,9){$4$}}
+\put(10,74){\makebox(10,9){$6$}}
+\put(10,94){\makebox(10,9){$8$}}
+\multiput(23,38)(0,20){4}{\line(1,0){4}}
+\put(25,18){\circle*{4}}
+\put(52,18){\circle*{4}}
+\put(79,38){\circle*{4}}
+\put(106,58){\circle*{4}}
+\put(133,58){\circle*{4}}
+\put(160,58){\circle*{4}}
+\put(187,78){\circle*{4}}
+\put(214,98){\circle*{4}}
+\end{picture}
+\caption{An attained two-threshold record. Only integer query indices are
+plotted. Translating the input index by $P=4$ translates the output by
+$2H=4$. On the first period the two upward crossings occur at indices
+$2$ and $3$.}
+\label{merge:fig:record}
+\end{figure}
+
+The merge receives only these records and the public format. It does not
+receive the operands or their rounding history. We count abstract exact
+arithmetic and comparison operations. Integer bit costs are separate.
+
+Finite-state transfer composition and tree-based prefix computation are
+established tools \cite{ref1,ref2}. Likewise, pulling an interval
+boundary back through a monotone map produces one cut; analogous
+breakpoint propagation is classical for monotone piecewise-linear
+composition \cite[Lemma~2.1]{ref14}. We use these facts
+without claiming them as new. The question addressed here is whether the
+particular dyadic records remain closed under composition, and whether
+the resulting records can be constructed directly from two indices.
+The generalized-inverse composition principle is also classical:
+for nondecreasing periodic integer maps, Connes and Consani
+\cite[Proposition~4.1]{connesconsani2013} explicitly give the inverse
+threshold relation and its reverse-order composition law. The formulas
+below specialize this principle to the stored rounding records.
+
+\subsection{Explicit inversion and local closure}
+
+\begin{lemma}[Inverse of one record]\label{merge:lem:inverse}
+For a finite record \eqref{merge:eq:record}, let $\operatorname{inv}_f(z)$ be the first
+$i\in\{0,\ldots,n-1\}$ with $f(i)\geq z$, or $n$ if none exists.
+If $z\leq c$ then $\operatorname{inv}_f(z)=0$. Otherwise put
+\[
+ k=\left\lceil\frac{z-c}{H}\right\rceil,\qquad
+ q=\left\lfloor\frac{k-1}{2}\right\rfloor,\qquad s=k-2q\in\{1,2\}.
+\]
+Then
+\begin{equation}\label{merge:eq:inverse}
+ \operatorname{inv}_f(z)=\min\{n,qP+t_s\}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+In each period, the first crossing of level $c+(2q+1)H$ is $qP+t_1$,
+and the first crossing of $c+(2q+2)H$ is $qP+t_2$. A threshold equal
+to $P$ is the first index of the next period, giving the same crossing.
+Coincident thresholds skip the middle level and give both crossings
+at the same index. Every output lies in $c+H\mathbb Z$, so crossing $z$ is
+equivalent to crossing $c+kH$.
+
+If a threshold was clipped to $n<P$, extend the displayed formula using
+that stored threshold. It remains monotone and agrees with the record
+on $0\leq i<n$. Clipping its inverse at $n$ removes any artificial
+crossing outside the interval. The case $P=1$, where both thresholds
+equal one, is included. The difference $z-c$ also covers negative
+anchors and targets.
+\end{proof}
+
+\begin{corollary}[Inverse queries]\label{merge:cor:inverse-query}
+On a whole-format index with $q$ pieces, the first input rank whose
+output is at least a finite target $z$, or strictly greater than $z$,
+can be found in $O(\log(q+1))$ abstract operations. The exact preimage
+of a finite closed output interval $[a,b]$, $a\leq b$, is a half-open
+input-rank interval computable in the same bound.
+\end{corollary}
+
+\begin{proof}
+The last outputs of successive pieces are nondecreasing. Binary search
+finds the first piece whose last output meets the requested inequality;
+the explicit inverse then finds its first satisfying input. For a strict
+inequality, return the piece start if $z<c$, and otherwise replace $k$
+in Lemma~\ref{merge:lem:inverse} by $\lfloor(z-c)/H\rfloor+1$.
+Constant infinite pieces are handled by their order relative to the
+finite target. The preimage of $[a,b]$ runs from the first output at
+least $a$ up to, but excluding, the first output strictly greater than
+$b$. An absent crossing uses the end-of-domain sentinel.
+\end{proof}
+
+\begin{lemma}[Local composition]\label{merge:lem:closure}
+Let $A$ and $B$ be finite records of the form \eqref{merge:eq:record}.
+Suppose the image under $A$ of a contiguous input interval $I$ lies
+within the valid input interval of $B$. On $I$, the composite has the
+same record form, with input spacing $d_A$ and height
+\[
+ H=\max(H_A,H_B).
+\]
+The assertion includes clipped thresholds, fictitious half-input-spacings,
+and constant restrictions.
+\end{lemma}
+
+\begin{proof}
+Extend the formula for $A$ to every integer local index. It is monotone,
+has values in $c_A+H_A\mathbb Z$, and commutes with displacement $2H_A$ in
+numerical input units.
+
+For $B$, with numerical input origin $y_B$, define an artificial extension
+to every real $y$. Set
+\[
+ u=\frac{y-y_B}{d_B},\qquad q=\left\lfloor\frac{u}{P_B}\right\rfloor,
+ \qquad r=u-qP_B,
+\]
+and put
+\[
+ b_{\mathrm{ext}}(y)=c_B+2H_Bq+
+ H_B\bigl(\mergeind{r\geq t_{1,B}}+\mergeind{r\geq t_{2,B}}\bigr).
+\]
+This agrees with the valid $B$ record, is nondecreasing, has range in
+$c_B+H_B\mathbb Z$, and satisfies
+\[
+ b_{\mathrm{ext}}(y+2H_B)=b_{\mathrm{ext}}(y)+2H_B.
+\]
+At a period boundary its left limit is at most the next period's initial
+value, including when thresholds coincide or equal $P_B$. Clipped
+thresholds merely select a possibly artificial continuation.
+
+Let $G=b_{\mathrm{ext}}\circ A$ on integer indices. Since $2H$ is an
+integer multiple of both numerical periods, and $2H/d_A$ is a positive
+integer,
+\[
+ G(i+2H/d_A)=G(i)+2H.
+\]
+If $H_B\geq H_A$, its values lie in $G(0)+H\mathbb Z$ by the range property
+of $B$. If $H_A>H_B$, the dyadic relation implies $H_A$ is an integer
+multiple of $2H_B$. All differences between $A$ values are multiples of
+$H_A$, and the equivariance of $b_{\mathrm{ext}}$ preserves each such
+difference exactly. The same coset property follows.
+
+On one period, monotonicity and equivariance bound $G$ between $G(0)$
+and $G(0)+2H$. The coset leaves only these two levels and $G(0)+H$.
+Their first crossing indices are the two thresholds. Rebase at the first
+index of $I$ and clip to its length. On $I$ both extensions agree with
+the actual records, proving the assertion.
+\end{proof}
+
+\begin{remark}
+The proof does not assume that the extension of $A$ lies everywhere on
+the input lattice of $B$. Such an assumption would require special care
+when a stored height is a fictitious half-input-spacing. The real
+extension in the proof removes that requirement. No values outside a
+valid record need to be evaluated by the algorithm.
+\end{remark}
+
+\subsection{A linear-work merge}
+
+\begin{theorem}\label{merge:thm:merge}
+Let $A,B$ be valid whole-format indices with $q_A,q_B$ pieces. Extend
+both to the two infinities by absorption. From their records alone, one
+can construct an index for $B\circ A$ with
+\[
+ q_{\mathrm{out}}\leq\min\{N,q_A+q_B-1\}
+\]
+pieces using $O(q_A+q_B)$ abstract arithmetic and comparison operations
+and $O(q_A+q_B)$ auxiliary storage. The output has the same record
+format, with fixed-width description size
+\[
+ O\bigl(q_{\mathrm{out}}(p+\log(E+1))\bigr).
+\]
+\end{theorem}
+
+\begin{proof}
+For every internal $B$-piece boundary, let $y_j$ be the numerical input
+of the piece immediately to its right. Find the first finite input rank
+$i$ with $A(i)\geq y_j$. Monotonicity gives one cut, possibly at $0$ or
+$N$. Merge these at most $q_B-1$ cuts with the $q_A-1$ internal cuts
+of $A$ and the two endpoints. Repeated cuts give no empty pieces. Thus
+the number of nonempty intervals is at most $q_A+q_B-1$, and also
+at most $N$.
+
+Each resulting interval belongs to one $A$ record, and its finite image
+lies in one $B$ record. An image jump can skip several $B$ pieces; the
+corresponding preimage cuts then coincide. Infinite outputs of $A$ are
+already separated by its own endpoints and remain infinite. If the
+applicable $B$ piece is infinite, the composite is constant there.
+Otherwise Lemma~\ref{merge:lem:closure} applies.
+
+For construction, sweep the sorted boundary values $y_j$ through the
+last outputs of the sorted $A$ pieces. Advance past a piece when its
+last output is below the current boundary. Use Lemma~\ref{merge:lem:inverse}
+on the first remaining piece. Each pointer advances only linearly many
+times, so all preimage cuts cost $O(q_A+q_B)$ operations. Merge the
+two sorted cut lists in linear work. The numerical input origins of
+$B$ pieces are computed by one sweep through the fixed input
+progressions. These number $2E+1\leq q_B$, because their boundaries
+are retained.
+
+Now sweep the new intervals and their parent records. For a finite
+interval $[l,r)$, evaluate $c=B(A(l))$, put
+\[
+ H=\max(H_A,H_B),\qquad P=2H/d_A,\qquad T=\min(P,r-l),
+\]
+and recover the two thresholds. For target $z=c+jH$, first invert the
+parent $B$ record. If its inverse returns the stop sentinel, the new
+threshold is $T$. Otherwise convert that input rank to its numerical
+value $y$ using the parent's input origin and spacing, invert the
+parent $A$ record at $y$, and clip the resulting rank to $[l,l+T]$.
+Subtracting $l$ gives the new local threshold. This is exact: on the
+interval, $B(A(i))\geq z$ holds precisely when $A(i)$ has reached the
+first $B$ input whose output is at least $z$. Two applications of the
+explicit inverse suffice for each target. Thus each new interval costs
+constant work after its parents have been identified.
+
+For the bit bound, rank endpoints and finite anchors use
+$O(p+\log(E+1))$ bits. The dyadic spacings and heights have $O(E)$
+possible exponents. Taking a maximum introduces no new exponent range.
+Thresholds are clipped to a piece length smaller than $2^p$, because
+the initial progression boundaries are retained. Constant infinities
+require only a tag. These fields give the asserted fixed-width bound.
+\end{proof}
+
+\begin{remark}
+Composition is associative for the represented functions and admits
+the identity. The theorem does not require a unique encoding or
+byte-for-byte equality under different merge parenthesizations.
+\end{remark}
+
+\subsection{Balanced construction}
+
+\begin{lemma}\label{merge:lem:leaf}
+A one-addition whole-format index can be built in $O(E)$ abstract
+operations with at most $\min(N,4E+1)$ pieces.
+\end{lemma}
+
+\begin{proof}
+Begin with the $2E+1$ initial input progressions. Pull back the
+$2(E-1)$ interior rounding-region boundaries and the two overflow
+thresholds under $x\mapsto x+a$, and merge the sorted cuts linearly.
+For the negative overflow threshold $-\tau$, use the first exact sum
+strictly greater than $-\tau$; for positive overflow use the first
+exact sum at least $\tau$. Thus both overflow ties belong to the
+infinite tails. These cuts add at most $2E$ pieces.
+
+On each finite interval the operation is one uniform rounder
+$\RN_h(x+a)$. For a requested output level $z$, put $k=\lceil z/h\rceil$.
+The first exact value whose rounded output is at least $z$ is
+$h(k-1/2)$, included if $k$ is even and excluded if $k$ is odd.
+Solving the resulting non-strict or strict inequality on the local
+progression $x_l+di+a$ gives each threshold in constant operations.
+The anchor is one rounded addition. Both the input and rounding-region
+lists can be traversed once, giving total $O(E)$ work.
+\end{proof}
+
+\begin{corollary}\label{merge:cor:balanced}
+For a block of $m\geq1$ finite operands, a whole-format index can be
+constructed in
+\[
+ O\bigl(E(1+m\log(m+1))\bigr)
+\]
+abstract operations, with at most $\min(N,4Em+1)$ pieces, query cost
+$O(\log(E(m+1)+2))$, and description length
+\[
+ O\bigl(\min(N,4Em+1)(p+\log(E+1))\bigr).
+\]
+For $m=0$, the $2E+1$-piece identity costs $O(E)$ to initialize.
+\end{corollary}
+
+\begin{proof}
+Build the $m$ leaves with Lemma~\ref{merge:lem:leaf} and compose adjacent
+blocks in a balanced binary tree. Induction using
+Theorem~\ref{merge:thm:merge} gives at most $4Es+1$ pieces at a node
+containing $s$ operands. Each level has total record count $O(Em)$,
+and there are $O(\log(m+1))$ levels. This gives the work bound.
+Discarding consumed levels gives $O(Em)$ storage. The query and bit
+bounds follow from the record representation.
+\end{proof}
+
+The piece constant is larger than the earlier sequential constructor's
+$2E+1+2Em$. The gain is an operand-free merge and an improved abstract
+preprocessing bound, not a smaller guaranteed final index. With sequential
+linear merges, the critical-path sum is $O(Em)$; the corollary therefore
+does not establish sublinear parallel depth or a GPU speedup. In the
+scaled-integer implementation, values can occupy $O(p+E)$ bits, so
+the arithmetic-operation count is not a machine-word cost bound.
+
+\subsection{An obstruction for a restricted query grid}
+
+\begin{theorem}\label{merge:prop:obstruction}
+For $p\geq6$, put $R=2^p$ and
+\[
+ X_\ast=\{R/2+8+4i:0\leq i<R/16-2\}.
+\]
+There is no general composition rule determined only by the restrictions
+of two block transfer functions to $X_\ast$, even when their trajectories
+satisfy the original two-binade corridor promise.
+\end{theorem}
+
+\begin{proof}
+Take $A=(1)$, $B=(3/2,-3/2)$, and $C=(0,0)$. These operands are
+representable under the original format assumptions. Both $B$ and $C$
+have real sum zero and return zero from zero. Every $x\in X_\ast$ is
+divisible by four, lies at most $3R/4-4$, and all relevant exact and
+rounded states remain in the lower unit-spaced binade. Ties-to-even gives
+\[
+ \RN(x+3/2)=x+2,\qquad
+ \RN(x+2-3/2)=\RN(x+1/2)=x.
+\]
+Thus $F_B|_{X_\ast}=F_C|_{X_\ast}$ is the identity. But $F_A(x)=x+1$,
+and
+\[
+ \RN(x+1+3/2)=\RN(x+5/2)=x+2,
+ \qquad F_B(F_A(x))=x,
+\]
+whereas $F_C(F_A(x))=x+1$. A rule receiving only the restrictions cannot
+distinguish $B$ and $C$, yet their composites with $A$ differ at every
+query. This is a contradiction.
+\end{proof}
+
+The proposition concerns summaries determined only by the restricted
+function. It does not exclude encodings that preserve additional
+off-grid behavior or the original operands. Whole-format indices retain
+the required behavior and cover absorbing infinities, which explains
+why Theorem~\ref{merge:thm:merge} has a different conclusion.

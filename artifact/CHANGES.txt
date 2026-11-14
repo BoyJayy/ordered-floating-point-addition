@@ -1,0 +1,45 @@
+VERSION 1.1.0
+
+Added
+- Operand-free merge of whole-format binary transfer indices, local inverse
+  queries, and balanced construction.
+- Separately written record checks and sampled native CPU comparisons.
+- Tagged transfer indices for every integer radix: one threshold in odd
+  radix, two in even radix, plus a separate affine record.
+- Exact-model audit of refined partitions, large powers, negative anchors,
+  overflow, subnormals, inverse queries, and missing-precondition witnesses.
+- A bounded Python pilot with retained inputs, outputs, raw timing samples,
+  allocation measurements, query caching and lazy tree construction.
+
+Corrections and interpretation
+- The initial next_theorem/radix_indices.py is retained to reproduce its
+  historical numerical checks and the operation-count comparison. Its
+  singleton constructor repeats a region search and is quadratic in E.
+  The linear implementation is radix_hard_audit/math/radix_indices_checked.py.
+- Whole-format tagged indices must be globally monotone, format-valued,
+  cover all finite input ranks, refine the original input progressions and
+  use heights in the format's bounded radix-power range. Raw internal Piece
+  and Index objects are not validators for untrusted external records.
+- Format-table preparation is paid separately. Abstract integer-operation
+  counts are not constant-bit-cost or hardware performance bounds.
+- Odd-radix midpoint exclusion, nested-floor algebra, generalized inverse
+  composition and monotone boundary counting are known ingredients.
+  The all-radix construction is an extension of the paper's index; binary
+  information lower bounds retain their stated binary assumptions.
+- No external peer review, proof-assistant certification, new GPU benchmark,
+  or definitive worldwide-priority claim is made. Full-text comparisons with
+  Andrlon et al. (2019), DOI 10.1109/ARITH.2019.00038, and Gallois-Wong,
+  Boldo and Cuoq (2020), DOI 10.1007/s11075-019-00711-z, remain unresolved.
+
+Reproduction and history
+The previous v1.0.0 research files are retained byte for byte. Their old
+release checks are in validation/v1.0.0_checks.json. Selected continuation
+sources and experimental records retain their numerical evidence. The public
+copy of check_radix.py omits a hash read of an obsolete proof draft; its
+numerical checks are unchanged. New portable packaging checks run in temporary copies.
+Historical source hashes may name files outside this compact archive; the
+current file inventory and license mapping are SHA256SUMS and FILE_LICENSES.csv.
+
+The package contains code and evidence only. Manuscripts, purchased literature,
+correspondence, search logs, work instructions and duplicate working drafts
+are not part of this archive.

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "seed": 2026111452,
+  "blocks": 108,
+  "comparisons": 7092,
+  "lengths": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    17,
+    31,
+    32,
+    33
+  ],
+  "descriptor_identity": true,
+  "one_pass_iterator_inputs": true,
+  "oracle": "independent representable-neighbor oracle"
+}

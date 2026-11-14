@@ -1,0 +1,32 @@
+         2312169 function calls in 0.515 seconds
+
+   Ordered by: cumulative time
+   List reduced from 28 to 24 due to restriction <24>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.515    0.515 benchmark.py:182(<lambda>)
+        1    0.004    0.004    0.515    0.515 merge_indices.py:219(balanced)
+       31    0.087    0.003    0.310    0.010 merge_indices.py:120(merge)
+       32    0.066    0.002    0.200    0.006 merge_indices.py:174(singleton)
+       63    0.036    0.001    0.100    0.002 merge_indices.py:58(preimages)
+   144598    0.060    0.000    0.086    0.000 merge_indices.py:28(inverse2)
+   150550    0.053    0.000    0.060    0.000 full_format_reference.py:83(at)
+    71603    0.038    0.000    0.038    0.000 <string>:2(__init__)
+       63    0.021    0.000    0.032    0.001 merge_indices.py:96(sorted_union)
+    23328    0.012    0.000    0.024    0.000 full_format_reference.py:48(round)
+   187406    0.021    0.000    0.021    0.000 merge_indices.py:16(ceil_div)
+   325450    0.021    0.000    0.021    0.000 {method 'append' of 'list' objects}
+   490043    0.018    0.000    0.018    0.000 {built-in method builtins.len}
+   321799    0.017    0.000    0.017    0.000 {built-in method builtins.divmod}
+       32    0.005    0.000    0.017    0.001 full_format_reference.py:94(__init__)
+   254736    0.015    0.000    0.015    0.000 {built-in method builtins.min}
+   162099    0.010    0.000    0.010    0.000 {built-in method builtins.max}
+       63    0.008    0.000    0.010    0.000 merge_indices.py:45(piece_input_origins)
+    86576    0.008    0.000    0.008    0.000 merge_indices.py:20(at_least2)
+    23328    0.005    0.000    0.008    0.000 full_format_reference.py:15(uniform_round)
+       32    0.003    0.000    0.004    0.000 full_format_reference.py:21(__init__)
+    46720    0.003    0.000    0.003    0.000 {built-in method builtins.abs}
+    23360    0.001    0.000    0.001    0.000 {method 'bit_length' of 'int' objects}
+       63    0.001    0.000    0.001    0.000 merge_indices.py:111(from_pieces)
+
+

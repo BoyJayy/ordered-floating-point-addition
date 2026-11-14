@@ -1,0 +1,20 @@
+         1920002 function calls in 0.273 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.010    0.010    0.273    0.273 benchmark.py:181(<lambda>)
+   128000    0.027    0.000    0.263    0.000 full_format_reference.py:104(evaluate)
+   128000    0.039    0.000    0.141    0.000 full_format_reference.py:64(index_of)
+   128000    0.033    0.000    0.095    0.000 full_format_reference.py:100(evaluate_index)
+   128000    0.053    0.000    0.081    0.000 full_format_reference.py:43(finite)
+   128000    0.040    0.000    0.045    0.000 full_format_reference.py:83(at)
+   256000    0.024    0.000    0.024    0.000 {built-in method _bisect.bisect_right}
+   256000    0.015    0.000    0.015    0.000 {built-in method builtins.divmod}
+   256000    0.011    0.000    0.011    0.000 {built-in method builtins.abs}
+   256000    0.010    0.000    0.010    0.000 {built-in method builtins.isinstance}
+   128000    0.006    0.000    0.006    0.000 {built-in method builtins.max}
+   128000    0.006    0.000    0.006    0.000 {method 'bit_length' of 'int' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

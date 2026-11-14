@@ -1,5 +1,5 @@
 {
-  "path_base": "research/ in the proposed artifact",
+  "path_base": "research/ in this artifact",
   "table_rows": [
     {
       "table": "table_1",
@@ -310,8 +310,83 @@
         "adversarial/root/boundary_attacks.json",
         "adversarial/math/manuscript_scope_results.json"
       ]
+    },
+    {
+      "section": "Operand-free whole-format composition",
+      "code": [
+        "research_continuation_2026_11_14/math/merge_indices.py",
+        "research_continuation_2026_11_14/math/check_merge.py"
+      ],
+      "records": [
+        "research_continuation_2026_11_14/math/merge_results.json"
+      ],
+      "qualification": "Exact integer-model checks; no hardware throughput result."
+    },
+    {
+      "section": "Separately written binary record and CPU checks",
+      "code": [
+        "research_continuation_2026_11_14/review/check_record_closure.py",
+        "research_continuation_2026_11_14/review/check_native_cpu.py"
+      ],
+      "records": [
+        "research_continuation_2026_11_14/review/record_closure_results.json",
+        "research_continuation_2026_11_14/review/native_cpu_results.json"
+      ],
+      "qualification": "62,570 synthetic compositions and 296,480 native CPU comparisons in retained runs; not external peer review."
+    },
+    {
+      "section": "Transfer indices in other integer radices: initial checks",
+      "code": [
+        "research_continuation_2026_11_14/next_theorem/radix_indices.py",
+        "research_continuation_2026_11_14/next_theorem/check_radix.py"
+      ],
+      "records": [
+        "research_continuation_2026_11_14/next_theorem/radix_results.json"
+      ],
+      "qualification": "Initial numerically checked constructor; singleton region searches are quadratic in E. Use the corrected implementation for the linear construction bound."
+    },
+    {
+      "section": "Transfer indices in other integer radices: corrected constructor and audit",
+      "code": [
+        "research_continuation_2026_11_14/radix_hard_audit/math/radix_indices_checked.py",
+        "research_continuation_2026_11_14/radix_hard_audit/math/check_adversarial.py"
+      ],
+      "records": [
+        "research_continuation_2026_11_14/radix_hard_audit/math/audit_results.json"
+      ],
+      "qualification": "243 blocks, 274,241 forward comparisons, 4,536 inverse queries, 165 refined merges, 6,600 synthetic compositions. Validity and height-range conditions are explicit; operation counters are not elapsed-time benchmarks."
+    },
+    {
+      "section": "Implementation pilot",
+      "code": [
+        "research_continuation_2026_11_14/performance/benchmark.py",
+        "research_continuation_2026_11_14/performance/benchmark_lazy.py",
+        "research_continuation_2026_11_14/performance/query_cache.py",
+        "research_continuation_2026_11_14/performance/lazy_build.py",
+        "research_continuation_2026_11_14/performance/verify_independent.py",
+        "research_continuation_2026_11_14/performance/trace_schedules.py"
+      ],
+      "records": [
+        "research_continuation_2026_11_14/performance/REPORT.json",
+        "research_continuation_2026_11_14/performance/inputs.json",
+        "research_continuation_2026_11_14/performance/query_outputs.json",
+        "research_continuation_2026_11_14/performance/timings.json",
+        "research_continuation_2026_11_14/performance/lazy_timings.json",
+        "research_continuation_2026_11_14/performance/allocations.json",
+        "research_continuation_2026_11_14/performance/lazy_allocations.json",
+        "research_continuation_2026_11_14/performance/independent_correctness.json"
+      ],
+      "qualification": "Ten synthetic Python workloads. Setup and memory costs retained; crossover estimates are not direct end-to-end measurements or native FP/GPU speedups."
     }
   ],
   "article_title": "Information bounds and exact indices for ordered floating-point addition",
-  "scope": "Code and retained records supporting the article tables and sections. Counts below describe the retained runs."
+  "scope": "Code and retained records supporting the article tables and sections. Counts below describe the retained runs.",
+  "packaging_adaptations": [
+    {
+      "path": "research/research_continuation_2026_11_14/next_theorem/check_radix.py",
+      "original_source_sha256": "b284cc555ef5f45759c6d491e2d0a78c111f9e692a07a14c0bf6f6efa1305925",
+      "packaged_source_sha256": "a19fff7e4fc408721e023640ca0e95700ede28f2ce4e7514b04e9fa3444b0803",
+      "reason": "Remove obsolete proof-draft hash dependency; arithmetic checks unchanged."
+    }
+  ]
 }

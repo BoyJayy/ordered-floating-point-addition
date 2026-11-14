@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "time_moscow": "2026-11-14T23:23:02.308060+03:00",
+  "counts": {
+    "single_round_oracle_comparisons": 29407,
+    "output_comparisons": 4854320,
+    "indices_checked": 92376,
+    "identity_merges": 678,
+    "exhaustive_pairs": 29407,
+    "exhaustive_triples": 30976,
+    "odd_additions_not_midpoints": 9051,
+    "sampled_output_comparisons": 164488,
+    "explicit_inverse_vs_binary_search": 138469,
+    "random_blocks": 500,
+    "synthetic_record_compositions": 35751,
+    "synthetic_output_comparisons": 222309
+  },
+  "formats": [
+    {
+      "beta": 2,
+      "p": 2,
+      "E": 1,
+      "N": 7,
+      "all_pairs": true,
+      "all_triples": true
+    },
+    {
+      "beta": 2,
+      "p": 2,
+      "E": 2,
+      "N": 11,
+      "all_pairs": true,
+      "all_triples": true
+    },
+    {
+      "beta": 3,
+      "p": 2,
+      "E": 1,
+      "N": 17,
+      "all_pairs": true,
+      "all_triples": true
+    },
+    {
+      "beta": 3,
+      "p": 2,
+      "E": 2,
+      "N": 29,
+      "all_pairs": true,
+      "all_triples": true
+    },
+    {
+      "beta": 4,
+      "p": 2,
+      "E": 2,
+      "N": 55,
+      "all_pairs": true,
+      "all_triples": false
+    },
+    {
+      "beta": 5,
+      "p": 2,
+      "E": 2,
+      "N": 89,
+      "all_pairs": true,
+      "all_triples": false
+    },
+    {
+      "beta": 6,
+      "p": 2,
+      "E": 2,
+      "N": 131,
+      "all_pairs": true,
+      "all_triples": false
+    },
+    {
+      "beta": 3,
+      "p": 5,
+      "E": 5,
+      "N": 1781,
+      "random_blocks": 100,
+      "seed": 2026111423
+    },
+    {
+      "beta": 5,
+      "p": 3,
+      "E": 4,
+      "N": 849,
+      "random_blocks": 100,
+      "seed": 2026111423
+    },
+    {
+      "beta": 6,
+      "p": 3,
+      "E": 4,
+      "N": 1511,
+      "random_blocks": 100,
+      "seed": 2026111423
+    },
+    {
+      "beta": 10,
+      "p": 4,
+      "E": 4,
+      "N": 73999,
+      "random_blocks": 100,
+      "seed": 2026111423
+    },
+    {
+      "beta": 16,
+      "p": 3,
+      "E": 4,
+      "N": 31231,
+      "random_blocks": 100,
+      "seed": 2026111423
+    }
+  ],
+  "counterexamples": {
+    "even_radix_one_threshold_refuted": {
+      "beta": 2,
+      "p": 3,
+      "E": 2,
+      "operand": 4,
+      "inputs": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "outputs": [
+        8,
+        8,
+        10,
+        12
+      ],
+      "asserted_period_increment": 2,
+      "observed": 4
+    },
+    "odd_radix_arbitrary_real_operand_refuted": {
+      "h": 3,
+      "operand": "3/2",
+      "input_spacing": 3,
+      "outputs": [
+        0,
+        6,
+        6,
+        12,
+        12
+      ],
+      "asserted_period_increment": 3,
+      "observed": 6
+    }
+  },
+  "limits": [
+    "exact integer software checks; no hardware timing",
+    "exhaustive only for listed small formats and block lengths",
+    "not proof-assistant certification or external review"
+  ],
+  "sha256": {
+    "radix_indices.py": "b33dbf81d98e19a24a3d38063565824c3a8eaa493443cdb6017bab374cc168ff",
+    "check_radix.py": "b284cc555ef5f45759c6d491e2d0a78c111f9e692a07a14c0bf6f6efa1305925",
+    "PROOF_GENERAL_RADIX.txt": "2e29bb4cf1c1cd9e601828f57ea923fbdddd3d8099b8e99c9ddaab61da73bd34"
+  }
+}

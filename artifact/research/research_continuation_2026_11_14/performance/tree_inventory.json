@@ -1,0 +1,3749 @@
+[
+  {
+    "id": "p8_E8_m1_small_steps",
+    "leaves": 1,
+    "merges": 0,
+    "leaf_piece_counts": [
+      29
+    ],
+    "materialized_all_leaf_pieces": 29,
+    "lazy_max_forest_nodes": 1,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 29,
+    "final_pieces": 29,
+    "events": []
+  },
+  {
+    "id": "p8_E8_m32_cancellation",
+    "leaves": 32,
+    "merges": 31,
+    "leaf_piece_counts": [
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28,
+      32,
+      32,
+      29,
+      28
+    ],
+    "materialized_all_leaf_pieces": 968,
+    "lazy_max_forest_nodes": 6,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 398,
+    "final_pieces": 76,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 74,
+        "right_pieces": 74,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 9,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 13,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 74,
+        "right_pieces": 74,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 76,
+        "right_pieces": 76,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 17,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 21,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 74,
+        "right_pieces": 74,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 25,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 29,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 28,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 74
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 74,
+        "right_pieces": 74,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 76,
+        "right_pieces": 76,
+        "output_pieces": 76
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 76,
+        "right_pieces": 76,
+        "output_pieces": 76
+      }
+    ]
+  },
+  {
+    "id": "p8_E8_m128_random_exponents",
+    "leaves": 128,
+    "merges": 127,
+    "leaf_piece_counts": [
+      32,
+      31,
+      31,
+      32,
+      29,
+      32,
+      32,
+      30,
+      32,
+      32,
+      32,
+      32,
+      32,
+      28,
+      32,
+      30,
+      32,
+      32,
+      32,
+      32,
+      32,
+      31,
+      32,
+      30,
+      30,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      27,
+      32,
+      31,
+      32,
+      31,
+      32,
+      32,
+      32,
+      32,
+      32,
+      31,
+      32,
+      31,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      30,
+      30,
+      31,
+      32,
+      32,
+      32,
+      30,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      31,
+      32,
+      25,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      29,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      31,
+      28,
+      30,
+      32,
+      32,
+      32,
+      32,
+      32,
+      28,
+      32,
+      30,
+      32,
+      30,
+      32,
+      31,
+      32,
+      32,
+      27,
+      32,
+      32,
+      30,
+      32,
+      32,
+      30,
+      32,
+      25,
+      32,
+      32,
+      32,
+      31,
+      32,
+      32,
+      32,
+      32,
+      29,
+      32,
+      32
+    ],
+    "materialized_all_leaf_pieces": 4015,
+    "lazy_max_forest_nodes": 8,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 961,
+    "final_pieces": 107,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 31,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 54,
+        "output_pieces": 68
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 29,
+        "right_pieces": 32,
+        "output_pieces": 46
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 51
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 46,
+        "right_pieces": 51,
+        "output_pieces": 50
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 68,
+        "right_pieces": 50,
+        "output_pieces": 101
+      },
+      {
+        "phase": "carry",
+        "input_position": 9,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 55,
+        "output_pieces": 89
+      },
+      {
+        "phase": "carry",
+        "input_position": 13,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 28,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 54,
+        "right_pieces": 55,
+        "output_pieces": 77
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 89,
+        "right_pieces": 77,
+        "output_pieces": 142
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 101,
+        "right_pieces": 142,
+        "output_pieces": 107
+      },
+      {
+        "phase": "carry",
+        "input_position": 17,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 55,
+        "output_pieces": 96
+      },
+      {
+        "phase": "carry",
+        "input_position": 21,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 45,
+        "output_pieces": 85
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 96,
+        "right_pieces": 85,
+        "output_pieces": 165
+      },
+      {
+        "phase": "carry",
+        "input_position": 25,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 30,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 51
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 54,
+        "right_pieces": 51,
+        "output_pieces": 89
+      },
+      {
+        "phase": "carry",
+        "input_position": 29,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 27,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 54,
+        "right_pieces": 45,
+        "output_pieces": 81
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 89,
+        "right_pieces": 81,
+        "output_pieces": 142
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 165,
+        "right_pieces": 142,
+        "output_pieces": 179
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 107,
+        "right_pieces": 179,
+        "output_pieces": 107
+      },
+      {
+        "phase": "carry",
+        "input_position": 33,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 57
+      },
+      {
+        "phase": "carry",
+        "input_position": 35,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 35,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 57,
+        "right_pieces": 54,
+        "output_pieces": 94
+      },
+      {
+        "phase": "carry",
+        "input_position": 37,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 56,
+        "right_pieces": 54,
+        "output_pieces": 91
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 94,
+        "right_pieces": 91,
+        "output_pieces": 150
+      },
+      {
+        "phase": "carry",
+        "input_position": 41,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 43,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 43,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 53,
+        "output_pieces": 96
+      },
+      {
+        "phase": "carry",
+        "input_position": 45,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 56,
+        "output_pieces": 96
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 96,
+        "right_pieces": 96,
+        "output_pieces": 158
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 150,
+        "right_pieces": 158,
+        "output_pieces": 158
+      },
+      {
+        "phase": "carry",
+        "input_position": 49,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 51,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 51,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 56,
+        "right_pieces": 55,
+        "output_pieces": 87
+      },
+      {
+        "phase": "carry",
+        "input_position": 53,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 30,
+        "right_pieces": 30,
+        "output_pieces": 50
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 31,
+        "right_pieces": 32,
+        "output_pieces": 50
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 50,
+        "right_pieces": 50,
+        "output_pieces": 61
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 87,
+        "right_pieces": 61,
+        "output_pieces": 100
+      },
+      {
+        "phase": "carry",
+        "input_position": 57,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 59,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 30,
+        "right_pieces": 32,
+        "output_pieces": 51
+      },
+      {
+        "phase": "carry",
+        "input_position": 59,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 51,
+        "output_pieces": 89
+      },
+      {
+        "phase": "carry",
+        "input_position": 61,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 55,
+        "output_pieces": 89
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 89,
+        "right_pieces": 89,
+        "output_pieces": 146
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 100,
+        "right_pieces": 146,
+        "output_pieces": 107
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 158,
+        "right_pieces": 107,
+        "output_pieces": 161
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 32,
+        "right_steps": 32,
+        "left_pieces": 107,
+        "right_pieces": 161,
+        "output_pieces": 107
+      },
+      {
+        "phase": "carry",
+        "input_position": 65,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 67,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 25,
+        "output_pieces": 48
+      },
+      {
+        "phase": "carry",
+        "input_position": 67,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 54,
+        "right_pieces": 48,
+        "output_pieces": 79
+      },
+      {
+        "phase": "carry",
+        "input_position": 69,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 56,
+        "right_pieces": 56,
+        "output_pieces": 96
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 79,
+        "right_pieces": 96,
+        "output_pieces": 119
+      },
+      {
+        "phase": "carry",
+        "input_position": 73,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 75,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 75,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 55,
+        "output_pieces": 94
+      },
+      {
+        "phase": "carry",
+        "input_position": 77,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 57
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 57,
+        "right_pieces": 54,
+        "output_pieces": 98
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 94,
+        "right_pieces": 98,
+        "output_pieces": 157
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 119,
+        "right_pieces": 157,
+        "output_pieces": 192
+      },
+      {
+        "phase": "carry",
+        "input_position": 81,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 29,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 83,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 57
+      },
+      {
+        "phase": "carry",
+        "input_position": 83,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 53,
+        "right_pieces": 57,
+        "output_pieces": 90
+      },
+      {
+        "phase": "carry",
+        "input_position": 85,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 56,
+        "right_pieces": 54,
+        "output_pieces": 92
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 90,
+        "right_pieces": 92,
+        "output_pieces": 103
+      },
+      {
+        "phase": "carry",
+        "input_position": 89,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 91,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 91,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 55,
+        "output_pieces": 100
+      },
+      {
+        "phase": "carry",
+        "input_position": 93,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 28,
+        "right_pieces": 30,
+        "output_pieces": 46
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 46,
+        "right_pieces": 56,
+        "output_pieces": 91
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 100,
+        "right_pieces": 91,
+        "output_pieces": 135
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 103,
+        "right_pieces": 135,
+        "output_pieces": 151
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 192,
+        "right_pieces": 151,
+        "output_pieces": 219
+      },
+      {
+        "phase": "carry",
+        "input_position": 97,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 57
+      },
+      {
+        "phase": "carry",
+        "input_position": 99,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 28,
+        "output_pieces": 48
+      },
+      {
+        "phase": "carry",
+        "input_position": 99,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 57,
+        "right_pieces": 48,
+        "output_pieces": 90
+      },
+      {
+        "phase": "carry",
+        "input_position": 101,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 49
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 49,
+        "right_pieces": 53,
+        "output_pieces": 73
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 90,
+        "right_pieces": 73,
+        "output_pieces": 147
+      },
+      {
+        "phase": "carry",
+        "input_position": 105,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 31,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 107,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 107,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 55,
+        "right_pieces": 54,
+        "output_pieces": 86
+      },
+      {
+        "phase": "carry",
+        "input_position": 109,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 27,
+        "right_pieces": 32,
+        "output_pieces": 47
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 30,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 47,
+        "right_pieces": 54,
+        "output_pieces": 92
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 86,
+        "right_pieces": 92,
+        "output_pieces": 125
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 147,
+        "right_pieces": 125,
+        "output_pieces": 185
+      },
+      {
+        "phase": "carry",
+        "input_position": 113,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 115,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 30,
+        "right_pieces": 32,
+        "output_pieces": 54
+      },
+      {
+        "phase": "carry",
+        "input_position": 115,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 56,
+        "right_pieces": 54,
+        "output_pieces": 93
+      },
+      {
+        "phase": "carry",
+        "input_position": 117,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 25,
+        "right_pieces": 32,
+        "output_pieces": 45
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 56
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 45,
+        "right_pieces": 56,
+        "output_pieces": 64
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 93,
+        "right_pieces": 64,
+        "output_pieces": 136
+      },
+      {
+        "phase": "carry",
+        "input_position": 121,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 31,
+        "right_pieces": 32,
+        "output_pieces": 49
+      },
+      {
+        "phase": "carry",
+        "input_position": 123,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 55
+      },
+      {
+        "phase": "carry",
+        "input_position": 123,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 49,
+        "right_pieces": 55,
+        "output_pieces": 88
+      },
+      {
+        "phase": "carry",
+        "input_position": 125,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 29,
+        "output_pieces": 48
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 32,
+        "right_pieces": 32,
+        "output_pieces": 53
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 48,
+        "right_pieces": 53,
+        "output_pieces": 81
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 88,
+        "right_pieces": 81,
+        "output_pieces": 127
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 136,
+        "right_pieces": 127,
+        "output_pieces": 187
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 185,
+        "right_pieces": 187,
+        "output_pieces": 185
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 32,
+        "right_steps": 32,
+        "left_pieces": 219,
+        "right_pieces": 185,
+        "output_pieces": 228
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 64,
+        "right_steps": 64,
+        "left_pieces": 107,
+        "right_pieces": 228,
+        "output_pieces": 107
+      }
+    ]
+  },
+  {
+    "id": "p24_E254_m1_small_steps",
+    "leaves": 1,
+    "merges": 0,
+    "leaf_piece_counts": [
+      730
+    ],
+    "materialized_all_leaf_pieces": 730,
+    "lazy_max_forest_nodes": 1,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 730,
+    "final_pieces": 730,
+    "events": []
+  },
+  {
+    "id": "p24_E254_m8_cancellation",
+    "leaves": 8,
+    "merges": 7,
+    "leaf_piece_counts": [
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728
+    ],
+    "materialized_all_leaf_pieces": 5744,
+    "lazy_max_forest_nodes": 4,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 4431,
+    "final_pieces": 1058,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      }
+    ]
+  },
+  {
+    "id": "p24_E254_m32_small_steps",
+    "leaves": 32,
+    "merges": 31,
+    "leaf_piece_counts": [
+      730,
+      730,
+      728,
+      730,
+      728,
+      728,
+      730,
+      728,
+      730,
+      730,
+      728,
+      730,
+      728,
+      728,
+      730,
+      728,
+      730,
+      730,
+      728,
+      730,
+      728,
+      728,
+      730,
+      728,
+      730,
+      730,
+      728,
+      730,
+      728,
+      728,
+      730,
+      728
+    ],
+    "materialized_all_leaf_pieces": 23328,
+    "lazy_max_forest_nodes": 6,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 6765,
+    "final_pieces": 1185,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 730,
+        "output_pieces": 867
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 730,
+        "output_pieces": 973
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 867,
+        "right_pieces": 973,
+        "output_pieces": 1079
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 728,
+        "output_pieces": 866
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 866,
+        "right_pieces": 992,
+        "output_pieces": 1146
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1079,
+        "right_pieces": 1146,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 9,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 730,
+        "output_pieces": 867
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 730,
+        "output_pieces": 973
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 867,
+        "right_pieces": 973,
+        "output_pieces": 1079
+      },
+      {
+        "phase": "carry",
+        "input_position": 13,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 728,
+        "output_pieces": 866
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 866,
+        "right_pieces": 992,
+        "output_pieces": 1146
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1079,
+        "right_pieces": 1146,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1185,
+        "right_pieces": 1185,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 17,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 730,
+        "output_pieces": 867
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 730,
+        "output_pieces": 973
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 867,
+        "right_pieces": 973,
+        "output_pieces": 1079
+      },
+      {
+        "phase": "carry",
+        "input_position": 21,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 728,
+        "output_pieces": 866
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 866,
+        "right_pieces": 992,
+        "output_pieces": 1146
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1079,
+        "right_pieces": 1146,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 25,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 730,
+        "output_pieces": 867
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 730,
+        "output_pieces": 973
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 867,
+        "right_pieces": 973,
+        "output_pieces": 1079
+      },
+      {
+        "phase": "carry",
+        "input_position": 29,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 728,
+        "right_pieces": 728,
+        "output_pieces": 866
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 866,
+        "right_pieces": 992,
+        "output_pieces": 1146
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1079,
+        "right_pieces": 1146,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1185,
+        "right_pieces": 1185,
+        "output_pieces": 1185
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1185,
+        "right_pieces": 1185,
+        "output_pieces": 1185
+      }
+    ]
+  },
+  {
+    "id": "p24_E254_m128_cancellation",
+    "leaves": 128,
+    "merges": 127,
+    "leaf_piece_counts": [
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728,
+      708,
+      706,
+      730,
+      728
+    ],
+    "materialized_all_leaf_pieces": 91904,
+    "lazy_max_forest_nodes": 8,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 8663,
+    "final_pieces": 1058,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 9,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 13,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 17,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 21,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 25,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 29,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 33,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 35,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 35,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 37,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 39,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 41,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 43,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 43,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 45,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 47,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 49,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 51,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 51,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 53,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 55,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 57,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 59,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 59,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 61,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 63,
+        "left_steps": 32,
+        "right_steps": 32,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 65,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 67,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 67,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 69,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 71,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 73,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 75,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 75,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 77,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 79,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 81,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 83,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 83,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 85,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 87,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 89,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 91,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 91,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 93,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 95,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 97,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 99,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 99,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 101,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 103,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 105,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 107,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 107,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 109,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 111,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 113,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 115,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 115,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 117,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 119,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 121,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 123,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 123,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 125,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 708,
+        "right_pieces": 706,
+        "output_pieces": 925
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 730,
+        "right_pieces": 728,
+        "output_pieces": 992
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 925,
+        "right_pieces": 992,
+        "output_pieces": 1056
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1056,
+        "right_pieces": 1056,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 32,
+        "right_steps": 32,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      },
+      {
+        "phase": "carry",
+        "input_position": 127,
+        "left_steps": 64,
+        "right_steps": 64,
+        "left_pieces": 1058,
+        "right_pieces": 1058,
+        "output_pieces": 1058
+      }
+    ]
+  },
+  {
+    "id": "p24_E254_m32_random_exponents",
+    "leaves": 32,
+    "merges": 31,
+    "leaf_piece_counts": [
+      782,
+      790,
+      724,
+      715,
+      727,
+      575,
+      609,
+      607,
+      654,
+      768,
+      765,
+      661,
+      807,
+      750,
+      690,
+      743,
+      643,
+      765,
+      722,
+      649,
+      699,
+      747,
+      610,
+      706,
+      791,
+      675,
+      796,
+      703,
+      797,
+      793,
+      731,
+      739
+    ],
+    "materialized_all_leaf_pieces": 22933,
+    "lazy_max_forest_nodes": 6,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 7185,
+    "final_pieces": 1708,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 782,
+        "right_pieces": 790,
+        "output_pieces": 1044
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 724,
+        "right_pieces": 715,
+        "output_pieces": 971
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 1044,
+        "right_pieces": 971,
+        "output_pieces": 1277
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 727,
+        "right_pieces": 575,
+        "output_pieces": 837
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 609,
+        "right_pieces": 607,
+        "output_pieces": 750
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 837,
+        "right_pieces": 750,
+        "output_pieces": 991
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1277,
+        "right_pieces": 991,
+        "output_pieces": 1630
+      },
+      {
+        "phase": "carry",
+        "input_position": 9,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 654,
+        "right_pieces": 768,
+        "output_pieces": 707
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 765,
+        "right_pieces": 661,
+        "output_pieces": 959
+      },
+      {
+        "phase": "carry",
+        "input_position": 11,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 707,
+        "right_pieces": 959,
+        "output_pieces": 883
+      },
+      {
+        "phase": "carry",
+        "input_position": 13,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 807,
+        "right_pieces": 750,
+        "output_pieces": 941
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 690,
+        "right_pieces": 743,
+        "output_pieces": 767
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 941,
+        "right_pieces": 767,
+        "output_pieces": 1241
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 883,
+        "right_pieces": 1241,
+        "output_pieces": 935
+      },
+      {
+        "phase": "carry",
+        "input_position": 15,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1630,
+        "right_pieces": 935,
+        "output_pieces": 1650
+      },
+      {
+        "phase": "carry",
+        "input_position": 17,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 643,
+        "right_pieces": 765,
+        "output_pieces": 718
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 722,
+        "right_pieces": 649,
+        "output_pieces": 904
+      },
+      {
+        "phase": "carry",
+        "input_position": 19,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 718,
+        "right_pieces": 904,
+        "output_pieces": 844
+      },
+      {
+        "phase": "carry",
+        "input_position": 21,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 699,
+        "right_pieces": 747,
+        "output_pieces": 754
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 610,
+        "right_pieces": 706,
+        "output_pieces": 689
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 754,
+        "right_pieces": 689,
+        "output_pieces": 934
+      },
+      {
+        "phase": "carry",
+        "input_position": 23,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 844,
+        "right_pieces": 934,
+        "output_pieces": 1040
+      },
+      {
+        "phase": "carry",
+        "input_position": 25,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 791,
+        "right_pieces": 675,
+        "output_pieces": 912
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 796,
+        "right_pieces": 703,
+        "output_pieces": 917
+      },
+      {
+        "phase": "carry",
+        "input_position": 27,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 912,
+        "right_pieces": 917,
+        "output_pieces": 1045
+      },
+      {
+        "phase": "carry",
+        "input_position": 29,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 797,
+        "right_pieces": 793,
+        "output_pieces": 1122
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 731,
+        "right_pieces": 739,
+        "output_pieces": 858
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 1122,
+        "right_pieces": 858,
+        "output_pieces": 1386
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 1045,
+        "right_pieces": 1386,
+        "output_pieces": 1060
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 8,
+        "right_steps": 8,
+        "left_pieces": 1040,
+        "right_pieces": 1060,
+        "output_pieces": 1064
+      },
+      {
+        "phase": "carry",
+        "input_position": 31,
+        "left_steps": 16,
+        "right_steps": 16,
+        "left_pieces": 1650,
+        "right_pieces": 1064,
+        "output_pieces": 1708
+      }
+    ]
+  },
+  {
+    "id": "p53_E2046_m1_small_steps",
+    "leaves": 1,
+    "merges": 0,
+    "leaf_piece_counts": [
+      5326
+    ],
+    "materialized_all_leaf_pieces": 5326,
+    "lazy_max_forest_nodes": 1,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 5326,
+    "final_pieces": 5326,
+    "events": []
+  },
+  {
+    "id": "p53_E2046_m8_cancellation",
+    "leaves": 8,
+    "merges": 7,
+    "leaf_piece_counts": [
+      5275,
+      5273,
+      5326,
+      5324,
+      5275,
+      5273,
+      5326,
+      5324
+    ],
+    "materialized_all_leaf_pieces": 42396,
+    "lazy_max_forest_nodes": 4,
+    "lazy_peak_logical_pieces_including_merge_inputs_and_output": 30621,
+    "final_pieces": 6811,
+    "events": [
+      {
+        "phase": "carry",
+        "input_position": 1,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 5275,
+        "right_pieces": 5273,
+        "output_pieces": 6504
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 5326,
+        "right_pieces": 5324,
+        "output_pieces": 6658
+      },
+      {
+        "phase": "carry",
+        "input_position": 3,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 6504,
+        "right_pieces": 6658,
+        "output_pieces": 6809
+      },
+      {
+        "phase": "carry",
+        "input_position": 5,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 5275,
+        "right_pieces": 5273,
+        "output_pieces": 6504
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 1,
+        "right_steps": 1,
+        "left_pieces": 5326,
+        "right_pieces": 5324,
+        "output_pieces": 6658
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 2,
+        "right_steps": 2,
+        "left_pieces": 6504,
+        "right_pieces": 6658,
+        "output_pieces": 6809
+      },
+      {
+        "phase": "carry",
+        "input_position": 7,
+        "left_steps": 4,
+        "right_steps": 4,
+        "left_pieces": 6809,
+        "right_pieces": 6809,
+        "output_pieces": 6811
+      }
+    ]
+  }
+]

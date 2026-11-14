@@ -1,0 +1,350 @@
+{
+  "status": "PASS_WITH_QUALIFICATIONS",
+  "time_moscow": "2026-11-14T23:42:33.515902+03:00",
+  "full_domain": {
+    "status": "PASS",
+    "counts": {
+      "formats": 15,
+      "blocks": 243,
+      "forward_comparisons": 274241,
+      "numeric_lookup": 11917,
+      "global_inverse": 4536,
+      "rejected_inputs": 205,
+      "refined_merges": 165
+    },
+    "formats": [
+      {
+        "beta": 2,
+        "p": 2,
+        "E": 1,
+        "N": 7,
+        "blocks": 12,
+        "queries_per_block": 7
+      },
+      {
+        "beta": 3,
+        "p": 2,
+        "E": 1,
+        "N": 17,
+        "blocks": 12,
+        "queries_per_block": 17
+      },
+      {
+        "beta": 4,
+        "p": 2,
+        "E": 3,
+        "N": 79,
+        "blocks": 18,
+        "queries_per_block": 79
+      },
+      {
+        "beta": 5,
+        "p": 2,
+        "E": 3,
+        "N": 129,
+        "blocks": 18,
+        "queries_per_block": 129
+      },
+      {
+        "beta": 6,
+        "p": 2,
+        "E": 3,
+        "N": 191,
+        "blocks": 18,
+        "queries_per_block": 191
+      },
+      {
+        "beta": 7,
+        "p": 2,
+        "E": 2,
+        "N": 181,
+        "blocks": 15,
+        "queries_per_block": 181
+      },
+      {
+        "beta": 8,
+        "p": 2,
+        "E": 2,
+        "N": 239,
+        "blocks": 15,
+        "queries_per_block": 239
+      },
+      {
+        "beta": 9,
+        "p": 2,
+        "E": 2,
+        "N": 305,
+        "blocks": 15,
+        "queries_per_block": 305
+      },
+      {
+        "beta": 10,
+        "p": 2,
+        "E": 3,
+        "N": 559,
+        "blocks": 18,
+        "queries_per_block": 559
+      },
+      {
+        "beta": 12,
+        "p": 2,
+        "E": 2,
+        "N": 551,
+        "blocks": 15,
+        "queries_per_block": 551
+      },
+      {
+        "beta": 16,
+        "p": 2,
+        "E": 2,
+        "N": 991,
+        "blocks": 15,
+        "queries_per_block": 991
+      },
+      {
+        "beta": 3,
+        "p": 3,
+        "E": 3,
+        "N": 125,
+        "blocks": 18,
+        "queries_per_block": 125
+      },
+      {
+        "beta": 2,
+        "p": 2,
+        "E": 257,
+        "N": 1031,
+        "blocks": 18,
+        "queries_per_block": 1803
+      },
+      {
+        "beta": 3,
+        "p": 2,
+        "E": 129,
+        "N": 1553,
+        "blocks": 18,
+        "queries_per_block": 1035
+      },
+      {
+        "beta": 10,
+        "p": 2,
+        "E": 33,
+        "N": 5959,
+        "blocks": 18,
+        "queries_per_block": 458
+      }
+    ]
+  },
+  "arbitrary_records": {
+    "status": "PASS",
+    "counts": {
+      "compositions": 6600,
+      "values": 76839,
+      "large_exponent": 2235,
+      "affine_A": 2123,
+      "affine_B": 2239,
+      "clipped": 549
+    },
+    "seed": 2026111432
+  },
+  "nested_floor": {
+    "status": "PASS",
+    "comparisons": 1123750,
+    "non_nested_counterexample": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      6
+    ],
+    "meaning": "nested integer floor identity is elementary prior algebra, not new novelty"
+  },
+  "findings": {
+    "singleton_original_operation_counts": [
+      {
+        "E": 1,
+        "pieces": 4,
+        "calls": 7,
+        "loop_tests": 7
+      },
+      {
+        "E": 2,
+        "pieces": 8,
+        "calls": 15,
+        "loop_tests": 21
+      },
+      {
+        "E": 4,
+        "pieces": 13,
+        "calls": 27,
+        "loop_tests": 61
+      },
+      {
+        "E": 8,
+        "pieces": 25,
+        "calls": 51,
+        "loop_tests": 213
+      },
+      {
+        "E": 16,
+        "pieces": 49,
+        "calls": 99,
+        "loop_tests": 805
+      },
+      {
+        "E": 32,
+        "pieces": 97,
+        "calls": 195,
+        "loop_tests": 3141
+      },
+      {
+        "E": 64,
+        "pieces": 193,
+        "calls": 387,
+        "loop_tests": 12421
+      },
+      {
+        "E": 128,
+        "pieces": 385,
+        "calls": 771,
+        "loop_tests": 49413
+      }
+    ],
+    "singleton_corrected_operation_counts": [
+      {
+        "E": 1,
+        "pieces": 4,
+        "generic_round_calls": 0,
+        "boundary_accesses": 0,
+        "power_accesses": 3,
+        "numeric_region_accesses": 2
+      },
+      {
+        "E": 2,
+        "pieces": 8,
+        "generic_round_calls": 0,
+        "boundary_accesses": 7,
+        "power_accesses": 7,
+        "numeric_region_accesses": 3
+      },
+      {
+        "E": 4,
+        "pieces": 13,
+        "generic_round_calls": 0,
+        "boundary_accesses": 18,
+        "power_accesses": 13,
+        "numeric_region_accesses": 4
+      },
+      {
+        "E": 8,
+        "pieces": 25,
+        "generic_round_calls": 0,
+        "boundary_accesses": 38,
+        "power_accesses": 25,
+        "numeric_region_accesses": 5
+      },
+      {
+        "E": 16,
+        "pieces": 49,
+        "generic_round_calls": 0,
+        "boundary_accesses": 78,
+        "power_accesses": 49,
+        "numeric_region_accesses": 6
+      },
+      {
+        "E": 32,
+        "pieces": 97,
+        "generic_round_calls": 0,
+        "boundary_accesses": 158,
+        "power_accesses": 97,
+        "numeric_region_accesses": 7
+      },
+      {
+        "E": 64,
+        "pieces": 193,
+        "generic_round_calls": 0,
+        "boundary_accesses": 318,
+        "power_accesses": 193,
+        "numeric_region_accesses": 8
+      },
+      {
+        "E": 128,
+        "pieces": 385,
+        "generic_round_calls": 0,
+        "boundary_accesses": 638,
+        "power_accesses": 385,
+        "numeric_region_accesses": 9
+      }
+    ],
+    "nonmonotone_precondition_witness": {
+      "beta": 2,
+      "p": 3,
+      "E": 2,
+      "outputs": [
+        0,
+        2,
+        4,
+        6,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        4,
+        6
+      ],
+      "merge_with_identity_asserts": true,
+      "caveat": "locally valid records; not a valid globally monotone transfer index"
+    },
+    "unbounded_height_encoding_witness": [
+      {
+        "p": 2,
+        "E": 1,
+        "N": 7,
+        "stored_height_exponent": 10,
+        "exponent_bits": 4,
+        "same_identity_function": true
+      },
+      {
+        "p": 2,
+        "E": 1,
+        "N": 7,
+        "stored_height_exponent": 100,
+        "exponent_bits": 7,
+        "same_identity_function": true
+      },
+      {
+        "p": 2,
+        "E": 1,
+        "N": 7,
+        "stored_height_exponent": 1000,
+        "exponent_bits": 10,
+        "same_identity_function": true
+      }
+    ]
+  },
+  "source_hashes": {
+    "/Users/boyjayy/Documents/researchtry2/research_discovery_2026_11_07/research_continuation_2026_11_14/radix_hard_audit/math/check_adversarial.py": "449d522294e7f022106afc5e9c128da2273b4293d7cb5a0461e720108f2c6008",
+    "/Users/boyjayy/Documents/researchtry2/research_discovery_2026_11_07/research_continuation_2026_11_14/radix_hard_audit/math/radix_indices_checked.py": "4978dd0a75574f8a7d854c468b443fd486166dbcef682640c419e4b239bcdbe1",
+    "/Users/boyjayy/Documents/researchtry2/research_discovery_2026_11_07/research_continuation_2026_11_14/next_theorem/radix_indices.py": "b33dbf81d98e19a24a3d38063565824c3a8eaa493443cdb6017bab374cc168ff"
+  },
+  "limits": [
+    "bounded exact tests; no proof assistant or external review",
+    "original results and manuscript not modified",
+    "operation counters are not timing measurements"
+  ]
+}

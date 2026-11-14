@@ -1,0 +1,816 @@
+{
+  "status": "PASS",
+  "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "scope": "finite exact-model checks; optional sampled CPU arithmetic; no GPU or performance benchmark",
+  "native_cpu_executed": true,
+  "full_initial_suites_executed": true,
+  "original_files_modified": false,
+  "checks": [
+    {
+      "check": "corrected_radix_audit",
+      "command": [
+        "python3",
+        "-B",
+        "radix_hard_audit/math/check_adversarial.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "status": "PASS_WITH_QUALIFICATIONS",
+        "time_moscow": "2026-11-15T00:03:10.620754+03:00",
+        "full_domain": {
+          "status": "PASS",
+          "counts": {
+            "formats": 15,
+            "blocks": 243,
+            "forward_comparisons": 274241,
+            "numeric_lookup": 11917,
+            "global_inverse": 4536,
+            "rejected_inputs": 205,
+            "refined_merges": 165
+          },
+          "formats": [
+            {
+              "beta": 2,
+              "p": 2,
+              "E": 1,
+              "N": 7,
+              "blocks": 12,
+              "queries_per_block": 7
+            },
+            {
+              "beta": 3,
+              "p": 2,
+              "E": 1,
+              "N": 17,
+              "blocks": 12,
+              "queries_per_block": 17
+            },
+            {
+              "beta": 4,
+              "p": 2,
+              "E": 3,
+              "N": 79,
+              "blocks": 18,
+              "queries_per_block": 79
+            },
+            {
+              "beta": 5,
+              "p": 2,
+              "E": 3,
+              "N": 129,
+              "blocks": 18,
+              "queries_per_block": 129
+            },
+            {
+              "beta": 6,
+              "p": 2,
+              "E": 3,
+              "N": 191,
+              "blocks": 18,
+              "queries_per_block": 191
+            },
+            {
+              "beta": 7,
+              "p": 2,
+              "E": 2,
+              "N": 181,
+              "blocks": 15,
+              "queries_per_block": 181
+            },
+            {
+              "beta": 8,
+              "p": 2,
+              "E": 2,
+              "N": 239,
+              "blocks": 15,
+              "queries_per_block": 239
+            },
+            {
+              "beta": 9,
+              "p": 2,
+              "E": 2,
+              "N": 305,
+              "blocks": 15,
+              "queries_per_block": 305
+            },
+            {
+              "beta": 10,
+              "p": 2,
+              "E": 3,
+              "N": 559,
+              "blocks": 18,
+              "queries_per_block": 559
+            },
+            {
+              "beta": 12,
+              "p": 2,
+              "E": 2,
+              "N": 551,
+              "blocks": 15,
+              "queries_per_block": 551
+            },
+            {
+              "beta": 16,
+              "p": 2,
+              "E": 2,
+              "N": 991,
+              "blocks": 15,
+              "queries_per_block": 991
+            },
+            {
+              "beta": 3,
+              "p": 3,
+              "E": 3,
+              "N": 125,
+              "blocks": 18,
+              "queries_per_block": 125
+            },
+            {
+              "beta": 2,
+              "p": 2,
+              "E": 257,
+              "N": 1031,
+              "blocks": 18,
+              "queries_per_block": 1803
+            },
+            {
+              "beta": 3,
+              "p": 2,
+              "E": 129,
+              "N": 1553,
+              "blocks": 18,
+              "queries_per_block": 1035
+            },
+            {
+              "beta": 10,
+              "p": 2,
+              "E": 33,
+              "N": 5959,
+              "blocks": 18,
+              "queries_per_block": 458
+            }
+          ]
+        },
+        "arbitrary_records": {
+          "status": "PASS",
+          "counts": {
+            "compositions": 6600,
+            "values": 76839,
+            "large_exponent": 2235,
+            "affine_A": 2123,
+            "affine_B": 2239,
+            "clipped": 549
+          },
+          "seed": 2026111432
+        },
+        "nested_floor": {
+          "status": "PASS",
+          "comparisons": 1123750,
+          "non_nested_counterexample": [
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            6
+          ],
+          "meaning": "nested integer floor identity is elementary prior algebra, not new novelty"
+        },
+        "findings": {
+          "singleton_original_operation_counts": [
+            {
+              "E": 1,
+              "pieces": 4,
+              "calls": 7,
+              "loop_tests": 7
+            },
+            {
+              "E": 2,
+              "pieces": 8,
+              "calls": 15,
+              "loop_tests": 21
+            },
+            {
+              "E": 4,
+              "pieces": 13,
+              "calls": 27,
+              "loop_tests": 61
+            },
+            {
+              "E": 8,
+              "pieces": 25,
+              "calls": 51,
+              "loop_tests": 213
+            },
+            {
+              "E": 16,
+              "pieces": 49,
+              "calls": 99,
+              "loop_tests": 805
+            },
+            {
+              "E": 32,
+              "pieces": 97,
+              "calls": 195,
+              "loop_tests": 3141
+            },
+            {
+              "E": 64,
+              "pieces": 193,
+              "calls": 387,
+              "loop_tests": 12421
+            },
+            {
+              "E": 128,
+              "pieces": 385,
+              "calls": 771,
+              "loop_tests": 49413
+            }
+          ],
+          "singleton_corrected_operation_counts": [
+            {
+              "E": 1,
+              "pieces": 4,
+              "generic_round_calls": 0,
+              "boundary_accesses": 0,
+              "power_accesses": 3,
+              "numeric_region_accesses": 2
+            },
+            {
+              "E": 2,
+              "pieces": 8,
+              "generic_round_calls": 0,
+              "boundary_accesses": 7,
+              "power_accesses": 7,
+              "numeric_region_accesses": 3
+            },
+            {
+              "E": 4,
+              "pieces": 13,
+              "generic_round_calls": 0,
+              "boundary_accesses": 18,
+              "power_accesses": 13,
+              "numeric_region_accesses": 4
+            },
+            {
+              "E": 8,
+              "pieces": 25,
+              "generic_round_calls": 0,
+              "boundary_accesses": 38,
+              "power_accesses": 25,
+              "numeric_region_accesses": 5
+            },
+            {
+              "E": 16,
+              "pieces": 49,
+              "generic_round_calls": 0,
+              "boundary_accesses": 78,
+              "power_accesses": 49,
+              "numeric_region_accesses": 6
+            },
+            {
+              "E": 32,
+              "pieces": 97,
+              "generic_round_calls": 0,
+              "boundary_accesses": 158,
+              "power_accesses": 97,
+              "numeric_region_accesses": 7
+            },
+            {
+              "E": 64,
+              "pieces": 193,
+              "generic_round_calls": 0,
+              "boundary_accesses": 318,
+              "power_accesses": 193,
+              "numeric_region_accesses": 8
+            },
+            {
+              "E": 128,
+              "pieces": 385,
+              "generic_round_calls": 0,
+              "boundary_accesses": 638,
+              "power_accesses": 385,
+              "numeric_region_accesses": 9
+            }
+          ],
+          "nonmonotone_precondition_witness": {
+            "beta": 2,
+            "p": 3,
+            "E": 2,
+            "outputs": [
+              0,
+              2,
+              4,
+              6,
+              0,
+              1,
+              2,
+              3,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              0,
+              1,
+              2,
+              3,
+              0,
+              2,
+              4,
+              6
+            ],
+            "merge_with_identity_asserts": true,
+            "caveat": "locally valid records; not a valid globally monotone transfer index"
+          },
+          "unbounded_height_encoding_witness": [
+            {
+              "p": 2,
+              "E": 1,
+              "N": 7,
+              "stored_height_exponent": 10,
+              "exponent_bits": 4,
+              "same_identity_function": true
+            },
+            {
+              "p": 2,
+              "E": 1,
+              "N": 7,
+              "stored_height_exponent": 100,
+              "exponent_bits": 7,
+              "same_identity_function": true
+            },
+            {
+              "p": 2,
+              "E": 1,
+              "N": 7,
+              "stored_height_exponent": 1000,
+              "exponent_bits": 10,
+              "same_identity_function": true
+            }
+          ]
+        },
+        "source_hashes": {
+          "research/research_continuation_2026_11_14/radix_hard_audit/math/check_adversarial.py": "449d522294e7f022106afc5e9c128da2273b4293d7cb5a0461e720108f2c6008",
+          "research/research_continuation_2026_11_14/radix_hard_audit/math/radix_indices_checked.py": "4978dd0a75574f8a7d854c468b443fd486166dbcef682640c419e4b239bcdbe1",
+          "research/research_continuation_2026_11_14/next_theorem/radix_indices.py": "b33dbf81d98e19a24a3d38063565824c3a8eaa493443cdb6017bab374cc168ff"
+        },
+        "limits": [
+          "bounded exact tests; no proof assistant or external review",
+          "original results and manuscript not modified",
+          "operation counters are not timing measurements"
+        ]
+      },
+      "elapsed_seconds": 1.276
+    },
+    {
+      "check": "synthetic_binary_records",
+      "command": [
+        "python3",
+        "-B",
+        "review/check_record_closure.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "status": "PASS",
+        "counts": {
+          "base_records": 1098,
+          "compositions": 62570,
+          "comparisons": 646200,
+          "constant_restrictions": 8631,
+          "half_height": 8836,
+          "rebased": 30147
+        },
+        "seed": 2026111421,
+        "figure_outputs": [
+          0,
+          0,
+          2,
+          4,
+          4,
+          4,
+          6,
+          8
+        ],
+        "coverage": "synthetic records; clipped/coincident thresholds; affine half-heights; shifted domains; constant restrictions",
+        "limitations": "bounded exact enumeration; not a formal proof or a hardware benchmark",
+        "code_sha256": "4eb78a77e68409f3a3d1659839e41f3c17fa1105042e7fa0fddb63d1ef609746"
+      },
+      "elapsed_seconds": 4.443
+    },
+    {
+      "check": "query_cache_oracle",
+      "command": [
+        "python3",
+        "-B",
+        "performance/verify_independent.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "status": "PASS",
+        "seed": 2026111451,
+        "blocks": 100,
+        "comparisons": 28260,
+        "formats": [
+          {
+            "p": 2,
+            "E": 1,
+            "number_of_values": 7
+          },
+          {
+            "p": 2,
+            "E": 4,
+            "number_of_values": 19
+          },
+          {
+            "p": 3,
+            "E": 3,
+            "number_of_values": 31
+          },
+          {
+            "p": 4,
+            "E": 5,
+            "number_of_values": 95
+          },
+          {
+            "p": 6,
+            "E": 4,
+            "number_of_values": 319
+          }
+        ],
+        "oracle": "enumerated neighboring representable values; independent of round/add/piece formula",
+        "limits": "bounded toy-format exhaustive input domains and random blocks; not a proof or exhaustive operand-space verification"
+      },
+      "elapsed_seconds": 0.151
+    },
+    {
+      "check": "whole_format_merge",
+      "command": [
+        "python3",
+        "-B",
+        "math/check_merge.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "scope": "Exact numerical binary format; finite operands; RN-even; gradual underflow; absorbing infinity; signed zeros identified; no NaN/flags",
+        "new_result": "Operand-free whole-format composition and balanced construction; no world-novelty claim",
+        "tests": {
+          "inverse": {
+            "status": "PASS",
+            "synthetic_records": 1941,
+            "inverse_probes": 104127,
+            "covers": "negative anchors; half-integer targets; coincident/clipped thresholds; period-one; nonzero start",
+            "elapsed_seconds": 0.12230387498857453
+          },
+          "exhaustive": {
+            "status": "PASS",
+            "formats": [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "exhaustive_length_three_blocks": 17216,
+            "singleton_checks": 56,
+            "compositions": 35468,
+            "full_input_query_comparisons": 732220,
+            "different_serializations_same_function": [],
+            "elapsed_seconds": 1.2951041659980547
+          },
+          "randomized": {
+            "status": "PASS",
+            "seed": 2026111401,
+            "blocks": 140,
+            "full_input_query_comparisons": 308908,
+            "maximum_piece_count": 239,
+            "coverage": "empty blocks; very unequal lengths; random and adversarial operands; absorbing overflow; zeros; gradual underflow",
+            "elapsed_seconds": 1.2734942919923924
+          },
+          "large_domains": {
+            "status": "PASS",
+            "seed": 2026111402,
+            "cases": [
+              {
+                "p": 24,
+                "E": 254,
+                "block_length": 32,
+                "finite_input_count": 4278190079,
+                "pieces": 1104,
+                "sampled_queries": 205,
+                "construction_seconds": 0.18687325000064448,
+                "oracle": "exact scalar integer rounder; not native hardware measurement"
+              },
+              {
+                "p": 53,
+                "E": 2046,
+                "block_length": 8,
+                "finite_input_count": 18437736874454810623,
+                "pieces": 6962,
+                "sampled_queries": 205,
+                "construction_seconds": 0.753095874999417,
+                "oracle": "exact scalar integer rounder; not native hardware measurement"
+              }
+            ],
+            "elapsed_seconds": 0.9469599169970024
+          },
+          "corridor_counterexample": {
+            "status": "PASS",
+            "kind": "counterexample to closure of restricted-transfer maps",
+            "A": [
+              "1"
+            ],
+            "B": [
+              "3/2",
+              "-3/2"
+            ],
+            "C": [
+              "0",
+              "0"
+            ],
+            "checked_grid_inputs": 494,
+            "cases": [
+              {
+                "p": 6,
+                "grid_length": 2,
+                "first_input": 40,
+                "B_after_A": 40,
+                "C_after_A": 41
+              },
+              {
+                "p": 7,
+                "grid_length": 6,
+                "first_input": 72,
+                "B_after_A": 72,
+                "C_after_A": 73
+              },
+              {
+                "p": 8,
+                "grid_length": 14,
+                "first_input": 136,
+                "B_after_A": 136,
+                "C_after_A": 137
+              },
+              {
+                "p": 9,
+                "grid_length": 30,
+                "first_input": 264,
+                "B_after_A": 264,
+                "C_after_A": 265
+              },
+              {
+                "p": 10,
+                "grid_length": 62,
+                "first_input": 520,
+                "B_after_A": 520,
+                "C_after_A": 521
+              },
+              {
+                "p": 11,
+                "grid_length": 126,
+                "first_input": 1032,
+                "B_after_A": 1032,
+                "C_after_A": 1033
+              },
+              {
+                "p": 12,
+                "grid_length": 254,
+                "first_input": 2056,
+                "B_after_A": 2056,
+                "C_after_A": 2057
+              }
+            ],
+            "meaning": "B and C induce identical maps on X*, but B after A and C after A differ on every X* input",
+            "elapsed_seconds": 0.015769541991176084
+          },
+          "inverse_queries": {
+            "status": "PASS",
+            "seed": 2026111403,
+            "lower_upper_bound_comparisons": 127740,
+            "exact_interval_preimages": 3600,
+            "scope": "finite half-integer targets; absorbing infinities excluded from finite output intervals",
+            "elapsed_seconds": 0.6757059579831548
+          }
+        },
+        "status": "PASS",
+        "source_sha256": {
+          "check_merge.py": "ccc95cd959ca8664a496286025f7cf5f74a7539d122137265d9f6b9a51d84134",
+          "merge_indices.py": "5ef331c5f5c6729bea2419d11116ef4091abd5eb4cf45d5ada6c2dec9f5d959c"
+        }
+      },
+      "elapsed_seconds": 4.362
+    },
+    {
+      "check": "initial_radix_numerical_checks",
+      "command": [
+        "python3",
+        "-B",
+        "next_theorem/check_radix.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "status": "PASS",
+        "time_moscow": "2026-11-15T00:03:27.143650+03:00",
+        "counts": {
+          "single_round_oracle_comparisons": 29407,
+          "output_comparisons": 4854320,
+          "indices_checked": 92376,
+          "identity_merges": 678,
+          "exhaustive_pairs": 29407,
+          "exhaustive_triples": 30976,
+          "odd_additions_not_midpoints": 9051,
+          "sampled_output_comparisons": 164488,
+          "explicit_inverse_vs_binary_search": 138469,
+          "random_blocks": 500,
+          "synthetic_record_compositions": 35751,
+          "synthetic_output_comparisons": 222309
+        },
+        "formats": [
+          {
+            "beta": 2,
+            "p": 2,
+            "E": 1,
+            "N": 7,
+            "all_pairs": true,
+            "all_triples": true
+          },
+          {
+            "beta": 2,
+            "p": 2,
+            "E": 2,
+            "N": 11,
+            "all_pairs": true,
+            "all_triples": true
+          },
+          {
+            "beta": 3,
+            "p": 2,
+            "E": 1,
+            "N": 17,
+            "all_pairs": true,
+            "all_triples": true
+          },
+          {
+            "beta": 3,
+            "p": 2,
+            "E": 2,
+            "N": 29,
+            "all_pairs": true,
+            "all_triples": true
+          },
+          {
+            "beta": 4,
+            "p": 2,
+            "E": 2,
+            "N": 55,
+            "all_pairs": true,
+            "all_triples": false
+          },
+          {
+            "beta": 5,
+            "p": 2,
+            "E": 2,
+            "N": 89,
+            "all_pairs": true,
+            "all_triples": false
+          },
+          {
+            "beta": 6,
+            "p": 2,
+            "E": 2,
+            "N": 131,
+            "all_pairs": true,
+            "all_triples": false
+          },
+          {
+            "beta": 3,
+            "p": 5,
+            "E": 5,
+            "N": 1781,
+            "random_blocks": 100,
+            "seed": 2026111423
+          },
+          {
+            "beta": 5,
+            "p": 3,
+            "E": 4,
+            "N": 849,
+            "random_blocks": 100,
+            "seed": 2026111423
+          },
+          {
+            "beta": 6,
+            "p": 3,
+            "E": 4,
+            "N": 1511,
+            "random_blocks": 100,
+            "seed": 2026111423
+          },
+          {
+            "beta": 10,
+            "p": 4,
+            "E": 4,
+            "N": 73999,
+            "random_blocks": 100,
+            "seed": 2026111423
+          },
+          {
+            "beta": 16,
+            "p": 3,
+            "E": 4,
+            "N": 31231,
+            "random_blocks": 100,
+            "seed": 2026111423
+          }
+        ],
+        "counterexamples": {
+          "even_radix_one_threshold_refuted": {
+            "beta": 2,
+            "p": 3,
+            "E": 2,
+            "operand": 4,
+            "inputs": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "outputs": [
+              8,
+              8,
+              10,
+              12
+            ],
+            "asserted_period_increment": 2,
+            "observed": 4
+          },
+          "odd_radix_arbitrary_real_operand_refuted": {
+            "h": 3,
+            "operand": "3/2",
+            "input_spacing": 3,
+            "outputs": [
+              0,
+              6,
+              6,
+              12,
+              12
+            ],
+            "asserted_period_increment": 3,
+            "observed": 6
+          }
+        },
+        "limits": [
+          "exact integer software checks; no hardware timing",
+          "exhaustive only for listed small formats and block lengths",
+          "not proof-assistant certification or external review"
+        ],
+        "sha256": {
+          "radix_indices.py": "b33dbf81d98e19a24a3d38063565824c3a8eaa493443cdb6017bab374cc168ff",
+          "check_radix.py": "a19fff7e4fc408721e023640ca0e95700ede28f2ce4e7514b04e9fa3444b0803"
+        }
+      },
+      "elapsed_seconds": 6.328
+    },
+    {
+      "check": "native_cpu_comparison",
+      "command": [
+        "python3",
+        "-B",
+        "review/check_native_cpu.py"
+      ],
+      "cwd": "research/research_continuation_2026_11_14",
+      "result": {
+        "status": "PASS",
+        "numeric_comparisons": 296480,
+        "restricted_grid_cpu_counterexample": {
+          "x": 8388616.0,
+          "B_after_A": 8388616.0,
+          "C_after_A": 8388617.0
+        },
+        "limits": [
+          "native CPU arithmetic, not GPU",
+          "binary32 uses binary64 addition then struct storage",
+          "signed zero numerically identified",
+          "no NaN inputs or infinite operands",
+          "sampled standard formats, not exhaustive binary32 or binary64"
+        ]
+      },
+      "elapsed_seconds": 13.36
+    }
+  ]
+}
