@@ -154,10 +154,12 @@ The rebuilt PDF is `paper/build/main.pdf`.
 
 ## Cite
 
-Cite the preprint for the mathematical results and the artifact for the code
-and retained experimental records. The two Zenodo records have separate DOIs
-covering all archived versions. [Preprint](https://doi.org/10.5281/zenodo.24045376)
-· [Artifact](https://doi.org/10.5281/zenodo.24044236)
+Cite [preprint 1.2](https://doi.org/10.5281/zenodo.24403389) for the
+mathematical results and [artifact 1.2.0](https://doi.org/10.5281/zenodo.24403356)
+for the code and retained experimental records. Both were published on
+20 November 2026. Zenodo also lists all archived versions of the
+[preprint](https://doi.org/10.5281/zenodo.24045376) and the
+[artifact](https://doi.org/10.5281/zenodo.24044236).
 
 The 15 November 2026 releases have version-specific DOIs for
 [preprint 1.1](https://doi.org/10.5281/zenodo.24231880) and

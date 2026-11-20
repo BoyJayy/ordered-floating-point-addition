@@ -2,6 +2,9 @@
 
 ## 1.2 — 20 November 2026
 
+[Preprint 1.2](https://doi.org/10.5281/zenodo.24403389) ·
+[Reproducibility artifact 1.2.0](https://doi.org/10.5281/zenodo.24403356)
+
 - Clarified the proof of Corollary 9.2 for finite real targets. Added a
   binary32 example giving both ranks of the preimage of 1 under rounded
   addition of 1, with a standalone C++20 reproduction.
