@@ -18,6 +18,19 @@ To add sampled actual CPU arithmetic (standard library, no GPU):
 Both options can be used together. These checks are finite tests, not a
 formal proof or external review.
 
+To run just the rational inverse regression from the archive root:
+    python3 -B research/research_continuation_2026_11_14/math/check_inverse_targets.py
+The three explicit tables cover 534 weak and strict cuts and 12,015 closed
+intervals. Targets include negative fractions and values within 2^-400 of 1.
+
+To run the standalone binary32 example for Corollary 9.2 from the archive
+root, use a C++20 compiler with strict floating-point support (Clang here):
+    example_dir=$(mktemp -d)
+    clang++ -std=c++20 -O2 -ffp-model=strict research/examples/corollary_9_2.cpp -o "$example_dir/example"
+    "$example_dir/example"
+The half-open input rank interval is [1283457023, 3003121664). It contains
+1,719,664,641 numerical inputs, with signed zeros counted once.
+
 2. Additional exact checks
 Make a working copy before the commands below: several scripts write results
 beside their source. Keep new results separate from the retained records.

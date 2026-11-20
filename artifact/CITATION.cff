@@ -1,9 +1,9 @@
 {
   "cff-version": "1.2.0",
-  "message": "Please cite this version of the artifact and the associated article separately.",
+  "message": "Please cite the artifact for the code and the associated article for the mathematical results. The artifact DOI below covers all versions.",
   "type": "software",
   "title": "Reproducibility artifact for Information bounds and exact indices for ordered floating-point addition",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "authors": [
     {
       "family-names": "Popkov",
@@ -20,7 +20,12 @@
     "exact indexing"
   ],
   "repository-code": "https://github.com/BoyJayy/ordered-floating-point-addition",
-  "doi": "10.5281/zenodo.24231263",
-  "date-released": "2026-11-15",
-  "url": "https://doi.org/10.5281/zenodo.24231263"
+  "identifiers": [
+    {
+      "type": "doi",
+      "value": "10.5281/zenodo.24044236",
+      "description": "Concept DOI covering all artifact versions"
+    }
+  ],
+  "url": "https://doi.org/10.5281/zenodo.24044236"
 }

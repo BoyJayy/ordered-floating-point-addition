@@ -2,11 +2,13 @@ path,license
 CHANGES.txt,CC-BY-4.0
 CITATION.cff,CC-BY-4.0
 EVIDENCE_MAP.json,CC-BY-4.0
+FILE_LICENSES.csv,CC-BY-4.0
 LICENSES/CC-BY-4.0.txt,License text
 LICENSES/MIT.txt,License text
 LICENSE_SCOPE.txt,CC-BY-4.0
 README.txt,CC-BY-4.0
 REPRODUCE.txt,CC-BY-4.0
+SHA256SUMS,CC-BY-4.0
 checks.json,CC-BY-4.0
 research/adversarial/math/independent_audit.py,MIT
 research/adversarial/math/independent_results.json,CC-BY-4.0
@@ -17,6 +19,7 @@ research/adversarial/math/reference_results.json,CC-BY-4.0
 research/adversarial/root/boundary_attacks.json,CC-BY-4.0
 research/adversarial/root/boundary_attacks.py,MIT
 research/adversarial/root/corridor_strengthened_check.json,CC-BY-4.0
+research/examples/corollary_9_2.cpp,MIT
 research/experiments/check_corridor_summary.py,MIT
 research/experiments/corridor_summary.py,MIT
 research/experiments/metal_fold.metal,MIT
@@ -65,6 +68,7 @@ research/independent/extension_results.json,CC-BY-4.0
 research/independent/results.json,CC-BY-4.0
 research/lower_bound/proofcheck.json,CC-BY-4.0
 research/lower_bound/proofcheck.py,MIT
+research/research_continuation_2026_11_14/math/check_inverse_targets.py,MIT
 research/research_continuation_2026_11_14/math/check_merge.py,MIT
 research/research_continuation_2026_11_14/math/merge_indices.py,MIT
 research/research_continuation_2026_11_14/math/merge_results.json,CC-BY-4.0
@@ -141,5 +145,3 @@ validation/extension_checks.json,CC-BY-4.0
 validation/quick_checks.json,CC-BY-4.0
 validation/v1.0.0_checks.json,CC-BY-4.0
 verify_release.py,MIT
-FILE_LICENSES.csv,CC-BY-4.0
-SHA256SUMS,CC-BY-4.0

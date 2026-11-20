@@ -301,7 +301,7 @@
       ]
     },
     {
-      "section": "12 / limits and counterexamples",
+      "section": "Limitations and open questions",
       "code": [
         "adversarial/root/boundary_attacks.py",
         "adversarial/math/manuscript_scope_check.py"
@@ -321,6 +321,14 @@
         "research_continuation_2026_11_14/math/merge_results.json"
       ],
       "qualification": "Exact integer-model checks; no hardware throughput result."
+    },
+    {
+      "section": "9 / Corollary 9.2, inverse queries",
+      "code": [
+        "examples/corollary_9_2.cpp",
+        "research_continuation_2026_11_14/math/check_inverse_targets.py"
+      ],
+      "qualification": "The standalone C++ example obtains the two binary32 ranks for RN(x+1)=1. The portable regression compares 534 cuts and 12,015 intervals with direct searches in three explicit output tables."
     },
     {
       "section": "Separately written binary record and CPU checks",

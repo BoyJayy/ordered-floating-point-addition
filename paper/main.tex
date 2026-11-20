@@ -40,7 +40,7 @@
 
 \title[Ordered floating-point addition]{Information bounds and exact indices\protect\\ for ordered floating-point addition}
 \author{Artem D. Popkov}
-\date{Version 1.1, November 15, 2026}
+\date{Version 1.2, November 20, 2026}
 \subjclass[2020]{Primary 65G50, 68Q11; Secondary 68P30}
 \keywords{Floating-point arithmetic, ordered accumulation, transfer function,
   communication complexity, succinct representation}
@@ -297,14 +297,17 @@ classical objects~\cite[Definition~2.2 and Proposition~4.1]{connesconsani2013}.
 Their inverse-composition law is a general tool used by our construction;
 the rounding-specific step is preservation of the small record class.
 
-Optimal inverse bounds for a single floating-point addition are studied
-by Andrlon et al.~\cite{andrlon2019} and Gallois-Wong et
-al.~\cite{galloiswong2020}. The former explicitly considers arbitrary
-radices and rounding modes. Single-operation inversion is therefore an
-established ingredient. Our access contract requires a reusable description
-of an entire fixed chain, with the original operand list absent during
-query evaluation and merging. Backward propagation through the retained
-list would have a different access contract.
+Andrlon et al.~\cite{andrlon2019} and Gallois-Wong et
+al.~\cite{galloiswong2020} study optimal inverse bounds for a single
+floating-point addition. The former treat arbitrary radices and rounding
+modes. In the extended analysis, Nazecic-Andrlon
+\cite[Theorem~4.3.23]{nazecicandrlon2023} bounds the cost of computing
+optimal addend bounds by $O(p)$ arithmetic operations and $O(1)$
+evaluations of an interval preimage under rounding, under the hypotheses
+of that theorem. For a fixed addend, monotonicity makes the preimage of
+an interval an interval. Applying this operation backwards through a
+block requires access to its operands at query time. Our index answers
+the same interval query from the stored records of the block.
 
 Monotone piecewise-constant lists and their operations are established
 data structures. Henzinger et al. control their size through
@@ -1654,10 +1657,10 @@ and operation counts, not running time or peak memory.
 
 
 \subsection{Checks for operand-free composition}
-The implementation accompanying Section~\ref{merge:section} is checked in
-\texttt{merge\_indices.py} and \texttt{check\_merge.py}. Exhaustive tests
-cover every length-three block in four small formats and every finite input:
-17,216 blocks and 35,468 merges, with 732,220 query comparisons including
+The tests in \path{check_merge.py} exercise the index in
+Section~\ref{merge:section}. They cover every length-three block in four
+small formats and every finite input. There are 17,216 blocks and
+35,468 merges, with 732,220 query comparisons including
 shorter-block checks. Another 140 random and adversarial blocks give
 308,908 comparisons. The record inverse passes 104,127 probes; global
 inverse queries pass 127,740 comparisons and 3,600 interval-preimage tests.
@@ -1673,8 +1676,8 @@ including coincident and clipped thresholds, fictitious half-spacings,
 constant restrictions, and rebasing inside a parent record. This test does
 not import the merge implementation or its inverse. It also verifies the
 eight plotted values in Figure~\ref{merge:fig:record}.
-These records accompany version~1.1.0 of the research artifact; the
-archived version~1.0.0 retains the earlier results unchanged.
+These validation records were first released in version~1.1.0 of the
+research artifact.
 
 \input{performance_section}
 
@@ -1796,8 +1799,11 @@ it establishes neither native floating-point acceleration nor a GPU speedup.
 
 \section{Reproduction}\label{sec:artifact}
 
-The accompanying research artifact, version~1.1.0, is available at
-\url{https://doi.org/10.5281/zenodo.24231263}. Its \path{README.txt}
+The research artifact has an all-versions DOI,
+\url{https://doi.org/10.5281/zenodo.24044236}. This revision uses
+artifact version~1.2.0. The standalone C++ example in
+\path{research/examples/corollary_9_2.cpp} reproduces the two binary32
+ranks in Corollary~\ref{merge:cor:inverse-query}. The artifact's \path{README.txt}
 describes the package, \path{REPRODUCE.txt} gives the dependencies and
 commands, and \path{EVIDENCE_MAP.json} maps the paper's validation results
 to code and data. The source code is in \path{research/experiments/},
@@ -2026,6 +2032,11 @@ Todd Mytkowicz, Madanlal Musuvathi, and Wolfram Schulte, \emph{Data-parallel
   Conference on Architectural Support for Programming Languages and Operating
   Systems ({ASPLOS} '14), ACM, 2014,
   \url{https://doi.org/10.1145/2541940.2541988}.
+
+\bibitem{nazecicandrlon2023}
+Mak Nazecic-Andrlon, \emph{Efficient interval reasoning for floating-point
+  arithmetic}, Ph.D. thesis, The University of Melbourne, 2023,
+  \url{https://hdl.handle.net/11343/338132}.
 
 \bibitem{ref12}
 Franz Nowak, Ryan Cotterell, and Reda Boumasmoud, \emph{An algebraic view of

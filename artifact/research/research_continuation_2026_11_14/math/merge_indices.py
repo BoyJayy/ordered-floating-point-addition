@@ -5,6 +5,7 @@ All arithmetic is integer arithmetic in subnormal-ulp units.  The imported
 absorbing infinities; it never receives or recovers either operand list.
 Operation bounds below count arbitrary-width integer operations abstractly.
 """
+from math import ceil, floor
 from pathlib import Path
 import sys
 
@@ -71,10 +72,12 @@ def preimages(summary, targets2):
 def global_inverse2(summary, target2, strict=False):
     """First finite input rank with output >= (or >) target2/2, in O(log q).
 
-    Targets are finite. Outputs are integer multiples of the scaled ulp,
-    so adding one in doubled units turns a strict test into a weak one.
+    target2 is the finite doubled target in subnormal-ulp units. Use an
+    exact rational for a nonintegral target that must be represented exactly.
+    Doubled finite outputs are integers, so the search compares them with
+    the least integer satisfying the requested inequality.
     """
-    effective = target2 + int(strict)
+    effective = floor(target2) + 1 if strict else ceil(target2)
     lo, hi = 0, len(summary.pieces)
     while lo < hi:
         mid = (lo+hi)//2

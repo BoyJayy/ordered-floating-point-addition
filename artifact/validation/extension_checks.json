@@ -17,7 +17,7 @@
       "cwd": "research/research_continuation_2026_11_14",
       "result": {
         "status": "PASS_WITH_QUALIFICATIONS",
-        "time_moscow": "2026-11-15T00:03:10.620754+03:00",
+        "time_moscow": "2026-11-20T19:30:12.660822+03:00",
         "full_domain": {
           "status": "PASS",
           "counts": {
@@ -365,7 +365,7 @@
           "operation counters are not timing measurements"
         ]
       },
-      "elapsed_seconds": 1.276
+      "elapsed_seconds": 1.279
     },
     {
       "check": "synthetic_binary_records",
@@ -400,7 +400,7 @@
         "limitations": "bounded exact enumeration; not a formal proof or a hardware benchmark",
         "code_sha256": "4eb78a77e68409f3a3d1659839e41f3c17fa1105042e7fa0fddb63d1ef609746"
       },
-      "elapsed_seconds": 4.443
+      "elapsed_seconds": 4.431
     },
     {
       "check": "query_cache_oracle",
@@ -445,7 +445,7 @@
         "oracle": "enumerated neighboring representable values; independent of round/add/piece formula",
         "limits": "bounded toy-format exhaustive input domains and random blocks; not a proof or exhaustive operand-space verification"
       },
-      "elapsed_seconds": 0.151
+      "elapsed_seconds": 0.147
     },
     {
       "check": "whole_format_merge",
@@ -464,7 +464,7 @@
             "synthetic_records": 1941,
             "inverse_probes": 104127,
             "covers": "negative anchors; half-integer targets; coincident/clipped thresholds; period-one; nonzero start",
-            "elapsed_seconds": 0.12230387498857453
+            "elapsed_seconds": 0.12099770799977705
           },
           "exhaustive": {
             "status": "PASS",
@@ -491,7 +491,7 @@
             "compositions": 35468,
             "full_input_query_comparisons": 732220,
             "different_serializations_same_function": [],
-            "elapsed_seconds": 1.2951041659980547
+            "elapsed_seconds": 1.2875536669998837
           },
           "randomized": {
             "status": "PASS",
@@ -500,7 +500,7 @@
             "full_input_query_comparisons": 308908,
             "maximum_piece_count": 239,
             "coverage": "empty blocks; very unequal lengths; random and adversarial operands; absorbing overflow; zeros; gradual underflow",
-            "elapsed_seconds": 1.2734942919923924
+            "elapsed_seconds": 1.2414531249996799
           },
           "large_domains": {
             "status": "PASS",
@@ -513,7 +513,7 @@
                 "finite_input_count": 4278190079,
                 "pieces": 1104,
                 "sampled_queries": 205,
-                "construction_seconds": 0.18687325000064448,
+                "construction_seconds": 0.17858791599792312,
                 "oracle": "exact scalar integer rounder; not native hardware measurement"
               },
               {
@@ -523,11 +523,11 @@
                 "finite_input_count": 18437736874454810623,
                 "pieces": 6962,
                 "sampled_queries": 205,
-                "construction_seconds": 0.753095874999417,
+                "construction_seconds": 0.6948948330027633,
                 "oracle": "exact scalar integer rounder; not native hardware measurement"
               }
             ],
-            "elapsed_seconds": 0.9469599169970024
+            "elapsed_seconds": 0.8799289999988105
           },
           "corridor_counterexample": {
             "status": "PASS",
@@ -596,7 +596,7 @@
               }
             ],
             "meaning": "B and C induce identical maps on X*, but B after A and C after A differ on every X* input",
-            "elapsed_seconds": 0.015769541991176084
+            "elapsed_seconds": 0.014913041999534471
           },
           "inverse_queries": {
             "status": "PASS",
@@ -604,16 +604,16 @@
             "lower_upper_bound_comparisons": 127740,
             "exact_interval_preimages": 3600,
             "scope": "finite half-integer targets; absorbing infinities excluded from finite output intervals",
-            "elapsed_seconds": 0.6757059579831548
+            "elapsed_seconds": 0.6623517920015729
           }
         },
         "status": "PASS",
         "source_sha256": {
           "check_merge.py": "ccc95cd959ca8664a496286025f7cf5f74a7539d122137265d9f6b9a51d84134",
-          "merge_indices.py": "5ef331c5f5c6729bea2419d11116ef4091abd5eb4cf45d5ada6c2dec9f5d959c"
+          "merge_indices.py": "738d7df719d19c8e612dbdd2076ab2a12a78effdf61d4aa1bc2e788ba5e3a001"
         }
       },
-      "elapsed_seconds": 4.362
+      "elapsed_seconds": 4.238
     },
     {
       "check": "initial_radix_numerical_checks",
@@ -625,7 +625,7 @@
       "cwd": "research/research_continuation_2026_11_14",
       "result": {
         "status": "PASS",
-        "time_moscow": "2026-11-15T00:03:27.143650+03:00",
+        "time_moscow": "2026-11-20T19:30:28.909711+03:00",
         "counts": {
           "single_round_oracle_comparisons": 29407,
           "output_comparisons": 4854320,
@@ -784,7 +784,7 @@
           "check_radix.py": "a19fff7e4fc408721e023640ca0e95700ede28f2ce4e7514b04e9fa3444b0803"
         }
       },
-      "elapsed_seconds": 6.328
+      "elapsed_seconds": 6.188
     },
     {
       "check": "native_cpu_comparison",
@@ -810,7 +810,7 @@
           "sampled standard formats, not exhaustive binary32 or binary64"
         ]
       },
-      "elapsed_seconds": 13.36
+      "elapsed_seconds": 12.359
     }
   ]
 }

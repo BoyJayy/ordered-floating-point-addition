@@ -4,9 +4,6 @@
 
 Artem D. Popkov · [ORCID](https://orcid.org/0009-0005-8977-0400)
 
-[![Preprint DOI](https://img.shields.io/badge/preprint-10.5281%2Fzenodo.24231880-blue)](https://doi.org/10.5281/zenodo.24231880)
-[![Artifact DOI](https://img.shields.io/badge/artifact-10.5281%2Fzenodo.24231263-blue)](https://doi.org/10.5281/zenodo.24231263)
-
 A fixed block of floating-point additions defines a function of its incoming
 accumulator. When each addition is rounded separately, blocks with the same
 real sum can define different functions. This work asks how much information
@@ -14,7 +11,6 @@ is needed to describe that function before the incoming value is known, and
 how to evaluate it exactly without first building a table of every input.
 
 **[Read the paper](paper/article.pdf)** ·
-[Preprint version 1.1](https://doi.org/10.5281/zenodo.24231880) ·
 [Reproduction instructions](artifact/REPRODUCE.txt) ·
 [Code and evidence map](artifact/EVIDENCE_MAP.json)
 
@@ -45,9 +41,10 @@ generalized-inverse ideas; it is not presented as an independent major
 discovery. A bounded Python pilot includes setup and memory costs. Practical
 speedups over native floating-point summation have not been established.
 
-**Status:** preprint, version 1.1, dated 15 November 2026. It has not
-undergone external peer review. The results concern standalone descriptions; they do not
-establish a lower bound on unrestricted parallel running time.
+**Status.** This repository contains the 20 November 2026 revision of the
+preprint (1.2) and its reproducibility artifact (1.2.0).
+The manuscript awaits external peer review. The lower bounds measure the
+length of a standalone description when its evaluation time is unrestricted.
 
 ## Run the checks
 
@@ -65,14 +62,20 @@ nonzero status on failure.
 - `verify_release.py` checks the archived file hashes, license mapping, and
   retained release status.
 - `run_quick_checks.py` checks retained records and reruns bounded exact
-  arithmetic cases, including counterexamples, small whole-format cases,
-  and the corrected all-radix constructor and its operation counts.
+  arithmetic cases, including rational targets for inverse queries, small
+  whole-format cases, and the all-radix constructor and its operation counts.
   It works in a temporary copy and leaves the archived files unchanged.
 
 The GitHub Actions workflow runs these portable checks. It does not execute
 GPU kernels, native floating-point experiments, or a proof assistant.
 Full enumerations, solver checks, and native CPU/Metal runs have separate
 requirements in [REPRODUCE.txt](artifact/REPRODUCE.txt).
+
+The [C++20 example for Corollary 9.2](artifact/research/examples/corollary_9_2.cpp)
+finds all finite binary32 inputs for which adding 1 rounds to 1 under
+round-to-nearest, ties-to-even. It prints the half-open rank interval
+`[1283457023, 3003121664)` and checks both endpoints and their neighbours.
+The reproduction instructions include the compiler command.
 
 For the additional composition, radix and cache checks:
 
@@ -107,7 +110,7 @@ peer review.
 
 ```text
 paper/
-  article.pdf         English preprint, version 1.1, 46 pages
+  article.pdf         English preprint, revision 1.2
   main.tex            Main LaTeX source with bibliography
   merge_section.tex   Whole-format composition
   performance_section.tex  Bounded implementation pilot
@@ -121,18 +124,20 @@ CITATION.cff          Citation metadata, with the paper as preferred citation
 LICENSE.md           License scope for the paper, code, and data
 ```
 
-The `artifact/` directory is a byte-for-byte copy of the Zenodo
-artifact v1.1.0. Preserve it when reproducing the archived results; run checks
-that write output in a separate working copy, as described in its instructions.
-Paper and artifact have distinct DOIs. Earlier versions remain in the
-repository history and the Zenodo version history.
+The `artifact/` directory contains version 1.2.0. Run checks that write
+output in a separate working copy, as described in the reproduction instructions.
 
 The initial radix implementation is retained with its old numerical results.
-Its singleton constructor repeated a region search; the corrected linear
+Its singleton constructor repeated a region search. The corrected linear
 constructor is identified in [CHANGES.txt](artifact/CHANGES.txt). The complete
-article states the valid-index and finite-height requirements. Full-text
-comparison with two close inverse-addition papers remains open; no exhaustive
-worldwide-priority guarantee is claimed.
+article states the valid-index and finite-height requirements.
+
+For inverse queries, the paper compares the single-addition results of
+Gallois-Wong, Boldo and Cuoq (Theorems 2–4) and Nazecic-Andrlon's extended
+treatment (Chapter 4, Theorem 4.3.23) with querying a stored block index
+without its operands. The original 2019 ARITH proceedings text still awaits
+direct comparison. [Gallois-Wong et al.](https://doi.org/10.1007/s11075-019-00711-z)
+· [Nazecic-Andrlon’s thesis](https://hdl.handle.net/11343/338132)
 
 To rebuild the paper, use a TeX installation with `pdflatex`, `amsart`, and the
 packages listed in `paper/main.tex`. Keep all four `.tex` files together.
@@ -145,18 +150,18 @@ pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.te
 pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
 ```
 
-The rebuilt PDF is `paper/build/main.pdf`; the published PDF remains unchanged.
+The rebuilt PDF is `paper/build/main.pdf`.
 
 ## Cite
 
-For the mathematical results:
+Cite the preprint for the mathematical results and the artifact for the code
+and retained experimental records. The two Zenodo records have separate DOIs
+covering all archived versions. [Preprint](https://doi.org/10.5281/zenodo.24045376)
+· [Artifact](https://doi.org/10.5281/zenodo.24044236)
 
-> Popkov, A. D. (2026). *Information bounds and exact indices for ordered
-> floating-point addition* (Version 1.1) [Preprint]. Zenodo.
-> https://doi.org/10.5281/zenodo.24231880
-
-For the code and retained experimental records, also cite the
-[reproducibility artifact, version 1.1.0](https://doi.org/10.5281/zenodo.24231263).
+The 15 November 2026 releases have version-specific DOIs for
+[preprint 1.1](https://doi.org/10.5281/zenodo.24231880) and
+[artifact 1.1.0](https://doi.org/10.5281/zenodo.24231263).
 GitHub's **Cite this repository** menu uses [CITATION.cff](CITATION.cff).
 
 ## Feedback

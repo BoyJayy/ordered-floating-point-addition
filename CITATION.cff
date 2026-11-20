@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: >-
-  Cite the preprint for the mathematical results. If you use the code or
-  retained experimental records, also cite the archived artifact below.
+  Cite the preprint for the mathematical results and the artifact for the
+  code and retained experimental records. Each Zenodo DOI below covers all
+  archived versions.
 type: software
 title: >-
   Reproducibility artifact for Information bounds and exact indices for
@@ -10,10 +11,13 @@ authors:
   - family-names: Popkov
     given-names: Artem D.
     orcid: https://orcid.org/0009-0005-8977-0400
-version: 1.1.0
-date-released: '2026-11-15'
-doi: 10.5281/zenodo.24231263
-url: https://zenodo.org/records/24231263
+version: 1.2.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24044236
+    description: Concept DOI covering all artifact versions
+repository-code: https://github.com/BoyJayy/ordered-floating-point-addition
+url: https://doi.org/10.5281/zenodo.24044236
 keywords:
   - floating-point arithmetic
   - ordered summation
@@ -29,9 +33,10 @@ preferred-citation:
       orcid: https://orcid.org/0009-0005-8977-0400
   year: 2026
   month: 11
-  version: '1.1'
-  doi: 10.5281/zenodo.24231880
-  url: https://doi.org/10.5281/zenodo.24231880
-  publisher:
-    name: Zenodo
-  notes: Preprint; has not undergone external peer review.
+  version: '1.2'
+  identifiers:
+    - type: doi
+      value: 10.5281/zenodo.24045376
+      description: Concept DOI covering all preprint versions
+  url: https://doi.org/10.5281/zenodo.24045376
+  notes: Unreviewed preprint, revised on 20 November 2026.

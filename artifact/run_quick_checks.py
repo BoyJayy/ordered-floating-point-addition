@@ -21,6 +21,7 @@ def main():
         ('boundary_counterexamples', '.', ['adversarial/root/boundary_attacks.py']),
         ('thresholds_p4_p5_p6', 'independent', ['-c', "import json; from check_fp_markers import exhaust, check_group_index; print(json.dumps({'exhaustive':[exhaust(p) for p in (4,5,6)], 'group_index':[check_group_index(p) for p in (4,5,6)]}))"]),
         ('k_dependence', '.', ['extensions/multibinade_2026_11_07/independent_review/check_K_dependence.py']),
+        ('rational_inverse_targets', 'research_continuation_2026_11_14/math', ['check_inverse_targets.py']),
         ('full_format_microcases', 'extensions/strengthening_2026_11_07/independent_math', ['-c', "import json; from check_full_format import local_checks, exhaustive_checks, fixtures; print(json.dumps({'local':local_checks(), 'exhaustive':exhaustive_checks(), 'fixtures':fixtures()}))"]),
         ('corrected_radix_constructor', 'research_continuation_2026_11_14/radix_hard_audit/math', ['-c', "import json; from check_adversarial import full_domain_checks, findings; print(json.dumps({'status':'PASS', 'domain':full_domain_checks(), 'operation_counts_and_witnesses':findings()}))"]),
     ]

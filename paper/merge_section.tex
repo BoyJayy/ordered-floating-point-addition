@@ -135,7 +135,7 @@ anchors and targets.
 
 \begin{corollary}[Inverse queries]\label{merge:cor:inverse-query}
 On a whole-format index with $q$ pieces, the first input rank whose
-output is at least a finite target $z$, or strictly greater than $z$,
+output is at least a finite real target $z$, or strictly greater than $z$,
 can be found in $O(\log(q+1))$ abstract operations. The exact preimage
 of a finite closed output interval $[a,b]$, $a\leq b$, is a half-open
 input-rank interval computable in the same bound.
@@ -150,8 +150,22 @@ in Lemma~\ref{merge:lem:inverse} by $\lfloor(z-c)/H\rfloor+1$.
 Constant infinite pieces are handled by their order relative to the
 finite target. The preimage of $[a,b]$ runs from the first output at
 least $a$ up to, but excluding, the first output strictly greater than
-$b$. An absent crossing uses the end-of-domain sentinel.
+$b$. An absent crossing has rank $N$. In subnormal-spacing units each
+finite output $y$ is an integer. For a doubled target $t=2z$, the two
+tests are therefore $2y\geq\lceil t\rceil$ and
+$2y\geq\lfloor t\rfloor+1$, respectively. These formulas apply to
+nonintegral $t$ as well.
 \end{proof}
+
+\noindent\emph{Binary32 example.}
+In ordinary numerical units let $f(x)=\RN(x+1)$ and take $z=1$.
+The binary32 neighbours of $1$ are $1-2^{-24}$ and $1+2^{-23}$.
+Both midpoints round to $1$ by the even tie rule, so $f(x)=1$
+holds exactly for the binary32 inputs in $[-2^{-25},2^{-24}]$.
+In ascending order of finite numerical inputs, counting from zero and
+identifying the two zeros, the first rank with $f(x)\geq1$ is
+$1\,283\,457\,023$. The first rank with $f(x)>1$ is $3\,003\,121\,664$.
+The half-open rank interval thus contains $1\,719\,664\,641$ inputs.
 
 \begin{lemma}[Local composition]\label{merge:lem:closure}
 Let $A$ and $B$ be finite records of the form \eqref{merge:eq:record}.
@@ -308,8 +322,9 @@ infinite tails. These cuts add at most $2E$ pieces.
 
 On each finite interval the operation is one uniform rounder
 $\RN_h(x+a)$. For a requested output level $z$, put $k=\lceil z/h\rceil$.
-The first exact value whose rounded output is at least $z$ is
-$h(k-1/2)$, included if $k$ is even and excluded if $k$ is odd.
+The lower boundary of the exact inputs whose rounded output is at least
+$z$ is $h(k-1/2)$. This boundary is included if $k$ is even and excluded
+if $k$ is odd.
 Solving the resulting non-strict or strict inequality on the local
 progression $x_l+di+a$ gives each threshold in constant operations.
 The anchor is one rounded addition. Both the input and rounding-region

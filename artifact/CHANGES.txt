@@ -1,3 +1,24 @@
+VERSION 1.2.0
+
+The binary whole-format inverse now accepts finite fractional doubled
+targets. For target z and t=2z, the weak comparison uses ceil(t) and
+the strict comparison uses floor(t)+1. In version 1.1.0, for the identity
+on the integers from -3 to 3 and z=3/4, the strict query returned the
+rank of 2. The corrected query returns the rank of 1. The interval query
+uses the same correction for its right endpoint.
+
+The portable checks now exercise rational targets on three explicit
+output tables. The C++ example in research/examples/corollary_9_2.cpp
+reproduces the two binary32 ranks in Corollary 9.2.
+
+Theorems 2–4 of Gallois-Wong, Boldo and Cuoq (2020),
+https://doi.org/10.1007/s11075-019-00711-z, were compared with the
+single-addition problem. For Andrlon et al. (ARITH 2019),
+https://doi.org/10.1109/ARITH.2019.00038, the comparison uses the expanded
+account in Chapter 4 of Nazecic-Andrlon's 2023 thesis, particularly
+Theorem 4.3.23 (https://hdl.handle.net/11343/338132). Comparison with the
+original 2019 proceedings text remains open.
+
 VERSION 1.1.0
 
 Added
@@ -26,10 +47,8 @@ Corrections and interpretation
   composition and monotone boundary counting are known ingredients.
   The all-radix construction is an extension of the paper's index; binary
   information lower bounds retain their stated binary assumptions.
-- No external peer review, proof-assistant certification, new GPU benchmark,
-  or definitive worldwide-priority claim is made. Full-text comparisons with
-  Andrlon et al. (2019), DOI 10.1109/ARITH.2019.00038, and Gallois-Wong,
-  Boldo and Cuoq (2020), DOI 10.1007/s11075-019-00711-z, remain unresolved.
+- The literature review at the time of version 1.1.0 left two inverse-addition
+  comparisons open. Their updated status is recorded under version 1.2.0.
 
 Reproduction and history
 The previous v1.0.0 research files are retained byte for byte. Their old

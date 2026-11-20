@@ -1,8 +1,8 @@
 ORDERED FLOATING-POINT ADDITION
-Reproducibility artifact, version 1.1.0
+Reproducibility artifact, version 1.2.0
 Artem D. Popkov | ORCID 0009-0005-8977-0400
-Version DOI: https://doi.org/10.5281/zenodo.24231263
-All versions: https://doi.org/10.5281/zenodo.24044236
+Artifact, all versions: https://doi.org/10.5281/zenodo.24044236
+Article, all versions: https://doi.org/10.5281/zenodo.24045376
 
 Code and data accompanying "Information bounds and exact indices for
 ordered floating-point addition".
@@ -13,18 +13,23 @@ Start here (Python 3.10+, standard library):
     python3 -B run_extension_checks.py
 
 The first command verifies file hashes and licenses. The second checks saved
-records and runs bounded exact-arithmetic tests in a temporary copy.
+records and runs bounded exact-arithmetic tests in a temporary copy,
+including inverse queries with exact rational targets.
 The third command checks the corrected radix constructor, binary record
 closure, and query cache against separately written exact models.
 These commands do not run a GPU experiment or modify the released files.
+
+The C++ example for Corollary 9.2 finds both ends of the binary32 input
+interval whose outputs round to 1 after adding 1. See REPRODUCE.txt for
+the build command and the expected ranks.
 
 Contents
     research/          Implementations, checks, fixtures and retained results.
     REPRODUCE.txt      Commands and requirements for the remaining checks.
     EVIDENCE_MAP.json  Article tables and sections mapped to code and records.
     checks.json        Release validation, with hardware scope recorded explicitly.
-    CHANGES.txt        Additions, corrections and the scope of version 1.1.0.
-    validation/       Earlier release checks and current rerun records.
+    CHANGES.txt        Version history and corrections.
+    validation/        Earlier release checks and current rerun records.
     CITATION.cff       Citation metadata.
     LICENSES/          MIT (code), CC BY 4.0 (documentation and data).
     FILE_LICENSES.csv  File-by-file license map.
@@ -41,10 +46,10 @@ arbitrary-precision software models, not native floating-point throughput.
 The cost of preparing an index is substantial; the reported crossover is
 an estimate from timing samples, not an end-to-end application measurement.
 
-The extension to other integer radices is a specialized construction using
-known rounding and floor-function facts. It is not presented as a separate
-major discovery. Full-text comparison with two close inverse-addition papers
-remains open. See CHANGES.txt and the paper for exact scope and attribution.
+Gallois-Wong, Boldo and Cuoq give inverse projections for a single binary
+addition. Nazecic-Andrlon's 2023 thesis treats the corresponding problem in
+arbitrary radix. The article discusses both results in relation to reusable
+indices for a whole block. CHANGES.txt identifies the primary sources.
 
 Some retained numerical reports contain hashes of historical manuscript drafts;
 those drafts are not dependencies of this release. Numerical inputs, outputs,
